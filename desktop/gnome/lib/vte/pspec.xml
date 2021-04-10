@@ -1,0 +1,141 @@
+<PISI>
+    <Source>
+        <Name>vte</Name>
+        <Homepage>https://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <Summary>Xft powered terminal widget</Summary>
+        <Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>graphite2-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>harfbuzz-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>libpcre2-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>vala-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="409b16e9c727335fc838ea2611725d6ccc448066" type="tarxz">mirrors://gnome/vte/0.63/vte-0.63.91.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>vte</Name>
+        <Summary>Development files for vte</Summary>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpcre2</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/profile.d</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Vte-0.0.gir</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/pygtk</Path>
+            <Path fileType="data">/usr/share/vte</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>vte-docs</Name>
+        <Summary>GTK reference documents for vte</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>vte-devel</Name>
+        <Summary>Development files for vte</Summary>
+        <RuntimeDependencies>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency release="current">vte</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="7">
+            <Date>2021-04-06</Date>
+            <Version>0.63.91</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2020-01-25</Date>
+            <Version>0.56.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2019-01-15</Date>
+            <Version>0.54.3</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2018-07-31</Date>
+            <Version>0.28.2</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2017-05-11</Date>
+            <Version>0.28.2</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2016-05-02</Date>
+            <Version>0.28.2</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2014-05-16</Date>
+            <Version>0.28.2</Version>
+            <Comment>First release</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

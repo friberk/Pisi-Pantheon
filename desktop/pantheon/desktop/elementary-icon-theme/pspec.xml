@@ -1,0 +1,41 @@
+<PISI>
+    <Source>
+        <Name>elementary-icon-theme</Name>
+        <Homepage>https://github.com/elementary/icons</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop.lookandfeel</PartOf>
+        <Summary>Named, vector icons for elementary OS</Summary>
+        <Description>Named, vector icons for elementary OS</Description>
+        <BuildDependencies>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="87a2528311979071b0162e8f2fe17876fa051956" type="targz">https://github.com/elementary/icons/archive/refs/tags/5.3.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>elementary-icon-theme</Name>
+        <Summary>Named, vector icons for elementary OS</Summary>
+        <Files>
+            <Path fileType="data">/.VolumeIcon.icns</Path>
+            <Path fileType="data">/.VolumeIcon.png</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/gimp/*</Path>
+            <Path fileType="data">/usr/share/icons/*</Path>
+            <Path fileType="data">/usr/share/inkscape/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>5.3.1</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

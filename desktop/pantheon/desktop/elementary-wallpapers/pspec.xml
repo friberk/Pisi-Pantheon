@@ -1,0 +1,33 @@
+<PISI>
+    <Source>
+        <Name>elementary-wallpapers</Name>
+        <Homepage>https://github.com/elementary/wallpapers</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop.lookandfeel</PartOf>
+        <Summary>Collection of wallpapers for Pantheon DE</Summary>
+        <Description>Collection of wallpapers for Pantheon DE</Description>
+        <Archive type="targz" sha1sum="2f29d8e89c68275330a155cc612b3b76940314f8">https://github.com/elementary/wallpapers/archive/refs/tags/5.5.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>elementary-wallpapers</Name>
+        <Summary>Collection of wallpapers for Pantheon DE</Summary>
+        <Files>
+            <Path fileType="data">/usr/share/backgrounds/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>5.5.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,86 @@
+<PISI>
+    <Source>
+        <Name>gala</Name>
+        <Homepage>https://github.com/elementary/gala</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Summary>
+        <Description>A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Description>
+        <BuildDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>gnome-settings-daemon-devel</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>libcanberra-gtk3-devel</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libhandy-devel</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>mutter</Dependency>
+            <Dependency>mutter-devel</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>plank-devel</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>vala-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="65c97a14cab444506bfab063cd8585adf3e9734d" type="targz">https://github.com/elementary/gala/archive/refs/tags/3.3.2.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>gala</Name>
+        <Summary>A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="data">/usr/etc/*</Path>
+            <Path fileType="library">/usr/lib/gala/*</Path>
+            <Path fileType="library">/usr/lib/libgala.so</Path>
+            <Path fileType="library">/usr/lib/libgala.so.0</Path>
+            <Path fileType="library">/usr/lib/libgala.so.0.0.0</Path>
+            <Path fileType="data">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/gala/*</Path>
+            <Path fileType="data">/usr/share/glib-2.0/*</Path>
+            <Path fileType="data">/usr/share/icons/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+            <Path fileType="data">/usr/share/vala/*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gala-devel</Name>
+        <Summary>A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Summary>
+        <Files>
+            <Path fileType="header">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>3.3.2</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>switchboard-plug-bluetooth</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-bluetooth</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>Switchboard Applications Plug</Summary>
+        <Description>Switchboard Bluetooth Plug</Description>
+        <BuildDependencies>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="0092dda723b06c51f8eaa433833684530e5bd5e7" type="targz">https://github.com/elementary/switchboard-plug-bluetooth/archive/refs/tags/2.3.5.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>switchboard-plug-bluetooth</Name>
+        <Summary>Switchboard Bluetooth Plug</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="library">/usr/libexec/*</Path>
+            <Path fileType="data">/usr/share/contractor/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-07</Date>
+            <Version>2.3.5</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

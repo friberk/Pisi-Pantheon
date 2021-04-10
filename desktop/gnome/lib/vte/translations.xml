@@ -1,0 +1,12 @@
+<PISI>
+    <Source>
+        <Name>vte</Name>
+        <Summary xml:lang="fr">Widget terminal utilisant Xft</Summary>
+    </Source>
+    <Package>
+        <Name>vte-docs</Name>
+    </Package>
+    <Package>
+        <Name>vte-devel</Name>
+    </Package>
+</PISI>

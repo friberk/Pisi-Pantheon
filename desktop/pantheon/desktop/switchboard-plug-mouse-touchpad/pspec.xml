@@ -1,0 +1,41 @@
+<PISI>
+    <Source>
+        <Name>switchboard-plug-mouse-touchpad</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-applications</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>Switchboard Applications Plug</Summary>
+        <Description>Switchboard Mouse &amp; Touchpad Plug</Description>
+        <BuildDependencies>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="19b5e14631768dc94cb3c6021e16d77d6dd0629a" type="targz">https://github.com/elementary/switchboard-plug-mouse-touchpad/archive/refs/tags/2.4.2.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>switchboard-plug-mouse-touchpad</Name>
+        <Summary>Switchboard Mouse &amp; Touchpad Plug</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>2.4.2</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

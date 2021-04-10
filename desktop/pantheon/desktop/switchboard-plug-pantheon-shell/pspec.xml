@@ -1,0 +1,48 @@
+<PISI>
+    <Source>
+        <Name>switchboard-plug-pantheon-shell</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-pantheon-shell</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>Switchboard Applications Plug</Summary>
+        <Description>Switchboard Desktop Plug</Description>
+        <BuildDependencies>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>gnome-settings-daemon-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>libgexiv2-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>plank-devel</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="fa998d52028d3e5acbab6f7566fe4ee64565b070" type="targz">https://github.com/elementary/switchboard-plug-pantheon-shell/archive/refs/tags/2.8.4.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>switchboard-plug-pantheon-shell</Name>
+        <Summary>Switchboard Desktop Plug</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="library">/usr/libexec/*</Path>
+            <Path fileType="data">/usr/share/contractor/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>2.8.4</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

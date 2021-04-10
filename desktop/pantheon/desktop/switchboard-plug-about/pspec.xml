@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>switchboard-plug-about</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-about</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>Switchboard About Plug</Summary>
+        <Description>Switchboard About Plug</Description>
+        <BuildDependencies>
+            <Dependency>appstream-devel</Dependency>
+            <Dependency>fwupd-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libgtop-devel</Dependency>
+            <Dependency>libhandy-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="38ce7730590b8fed032c40bf8679fe94c9483d82" type="targz">https://github.com/elementary/switchboard-plug-about/archive/refs/tags/2.6.3.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>switchboard-plug-about</Name>
+        <Summary>Switchboard About Plug</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>2.6.3</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

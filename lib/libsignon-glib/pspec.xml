@@ -1,0 +1,51 @@
+<PISI>
+    <Source>
+        <Name>libsignon-glib</Name>
+        <Homepage>https://gitlab.com/accounts-sso/libsignon-glib</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <PartOf>programming.misc</PartOf>
+        <Summary>Single signon authentication library for GLib applications</Summary>
+        <Description>Single signon authentication library for GLib applications</Description>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="8b82fc2ec1ecdeb3cbd6f6f9e6a67cbbe02fb3ac" type="targz">https://gitlab.com/accounts-sso/libsignon-glib/-/archive/master/libsignon-glib-master.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>libsignon-glib</Name>
+        <Summary>Single signon authentication library for GLib applications</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
+            <Path fileType="library">/usr/lib/libsignon-glib.so</Path>
+            <Path fileType="library">/usr/lib/libsignon-glib.so.2</Path>
+            <Path fileType="library">/usr/lib/libsignon-glib.so.2.0.0</Path>
+            <Path fileType="library">/usr/lib/python3.8/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/gir-1.0/*</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/*</Path>
+            <Path fileType="data">/usr/share/vala/*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libsignon-glib-devel</Name>
+        <Summary>Single signon authentication library for GLib applications</Summary>
+        <Files>
+            <Path fileType="header">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-07</Date>
+            <Version>2.1.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
