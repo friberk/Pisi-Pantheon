@@ -26,6 +26,16 @@
     <Package>
         <Name>wingpanel</Name>
         <Summary>The extensible top panel for Pantheon. </Summary>
+        <RuntimeDependencies>
+            <Dependency>gala</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>mutter</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="data">/etc/*</Path>
             <Path fileType="executable">/usr/bin/*</Path>
@@ -44,6 +54,9 @@
     </Package>
     <Package>
         <Name>wingpanel-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

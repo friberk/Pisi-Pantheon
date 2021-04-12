@@ -49,6 +49,24 @@
     <Package>
         <Name>gala</Name>
         <Summary>A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Summary>
+        <RuntimeDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gsettings-desktop-schemas</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>mutter</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="data">/usr/etc/*</Path>
@@ -68,6 +86,9 @@
     </Package>
     <Package>
         <Name>gala-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>gala</Dependency>
+        </RuntimeDependencies>
         <Summary>A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Summary>
         <Files>
             <Path fileType="header">/usr/include/*</Path>

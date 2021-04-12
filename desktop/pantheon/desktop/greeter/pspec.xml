@@ -33,6 +33,20 @@
         <Name>greeter</Name>
         <Summary>Login and Lock Screen greeter for Pantheon, using LightDM
 </Summary>
+        <RuntimeDependencies>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>lightdm</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>mutter</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/*</Path>
             <Path fileType="executable">/usr/bin/*</Path>

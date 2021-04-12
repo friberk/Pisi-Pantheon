@@ -25,6 +25,16 @@
     <Package>
         <Name>wingpanel-indicator-datetime</Name>
         <Summary>Wingpanel Date &amp; Time Indicator</Summary>
+        <RuntimeDependencies>
+            <Dependency>evolution</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>libnma</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>

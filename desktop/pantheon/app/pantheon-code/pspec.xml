@@ -32,6 +32,22 @@
     <Package>
         <Name>pantheon-code</Name>
         <Summary>Code editor designed for Pantheon DE</Summary>
+        <RuntimeDependencies>
+            <Dependency>editorconfig-core-c</Dependency>
+            <Dependency>git</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gtksourceview3</Dependency>
+            <Dependency>gtkspell3</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libgit2</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>vte</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/io.elementary.code/*</Path>
@@ -50,6 +66,9 @@
     </Package>
     <Package>
         <Name>pantheon-code-devel</Name>
+            <RuntimeDependencies>
+            <Dependency>pantheon-code</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

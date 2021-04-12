@@ -31,6 +31,22 @@
     <Package>
         <Name>applications-menu</Name>
         <Summary>Lightweight and stylish app launcher.</Summary>
+        <RuntimeDependencies>
+            <Dependency>appstream</Dependency>
+            <Dependency>gnome-menus</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libhandy0</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="data">/etc/*</Path>
             <Path fileType="library">/usr/lib/*</Path>

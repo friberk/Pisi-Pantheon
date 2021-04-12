@@ -25,6 +25,12 @@
     <Package>
         <Name>granite</Name>
         <Summary>Granite is a companion library for GTK and GLib.</Summary>
+        <RuntimeDependencies>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
@@ -42,6 +48,9 @@
     </Package>
     <Package>
         <Name>granite-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>granite</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

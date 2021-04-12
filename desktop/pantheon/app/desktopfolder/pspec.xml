@@ -26,6 +26,16 @@
     <Package>
         <Name>desktopfolder</Name>
         <Summary>Bring your desktop back to life.</Summary>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtksourceview3</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/*</Path>
             <Path fileType="executable">/usr/bin/*</Path>

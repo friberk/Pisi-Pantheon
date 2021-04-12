@@ -24,6 +24,15 @@
     <Package>
         <Name>wingpanel-indicator-network</Name>
         <Summary>Wingpanel Network Indicator</Summary>
+        <BuildDependencies>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libnma</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </BuildDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>

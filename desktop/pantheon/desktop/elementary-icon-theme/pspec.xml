@@ -19,6 +19,10 @@
     <Package>
         <Name>elementary-icon-theme</Name>
         <Summary>Named, vector icons for elementary OS</Summary>
+        <RuntimeDependencies>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>librsvg</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="data">/.VolumeIcon.icns</Path>
             <Path fileType="data">/.VolumeIcon.png</Path>
