@@ -20,6 +20,9 @@
             <Dependency>pam-devel</Dependency>
         </BuildDependencies>
         <Archive type="tarxz" sha1sum="d91966f79f173825ac8bb51973842f9fb6c9ef1b">https://github.com/CanonicalLtd/lightdm/releases/download/1.30.0/lightdm-1.30.0.tar.xz</Archive>
+        <Patches>
+            <Patch>lightdm-default-config.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>lightdm</Name>
@@ -46,6 +49,9 @@
             <Path fileType="data">/usr/share/polkit-1/*</Path>
             <Path fileType="data">/usr/share/vala/*</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/lightdm/Xsession">Xsession</AdditionalFile>
+        </AdditionalFiles>
     </Package>
     <Package>
         <Name>lightdm-devel</Name>

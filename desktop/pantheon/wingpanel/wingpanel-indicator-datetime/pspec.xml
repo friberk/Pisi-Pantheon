@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>wingpanel-indicator-datetime</Name>
+        <Homepage>https://github.com/elementary/wingpanel-indicator-datetime</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>Wingpanel Network Indicator</Summary>
+        <Description>Wingpanel Date &amp; Time Indicator</Description>
+        <BuildDependencies>
+            <Dependency>evolution-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libical-devel</Dependency>
+            <Dependency>libnma-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="e75713a4724efa454a2a3c359d3e4f58c45fee8b" type="targz">https://github.com/elementary/wingpanel-indicator-datetime/archive/refs/tags/2.2.5.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>wingpanel-indicator-datetime</Name>
+        <Summary>Wingpanel Date &amp; Time Indicator</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/glib-2.0/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-10</Date>
+            <Version>2.2.5</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

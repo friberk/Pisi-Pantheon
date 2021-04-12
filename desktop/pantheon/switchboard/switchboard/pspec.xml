@@ -12,6 +12,10 @@
         <Summary>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Summary>
         <Description>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Description>
         <BuildDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+            <Dependency>clutter-gtk-devel</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>granite</Dependency>
@@ -25,7 +29,7 @@
             <Dependency>vala</Dependency>
             <Dependency>vala-devel</Dependency>
         </BuildDependencies>
-        <Archive type="zip" sha1sum="92df42a4a7a852a7538b12d9cb2e51bbbc30343c">https://github.com/elementary/switchboard/archive/refs/heads/master.zip</Archive>
+        <Archive sha1sum="74d7a25f34e15e8eb21a9cfc1b44ab90ed978940" type="targz">https://github.com/elementary/switchboard/archive/2.4.0.tar.gz</Archive>
     </Source>
     <Package>
         <Name>switchboard</Name>
