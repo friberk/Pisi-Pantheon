@@ -49,7 +49,7 @@
     <Package>
         <Name>granite-devel</Name>
         <RuntimeDependencies>
-            <Dependency>granite</Dependency>
+            <Dependency release="current">granite</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>

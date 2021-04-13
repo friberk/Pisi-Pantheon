@@ -67,7 +67,7 @@
     <Package>
         <Name>pantheon-code-devel</Name>
             <RuntimeDependencies>
-            <Dependency>pantheon-code</Dependency>
+            <Dependency release="current">pantheon-code</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>

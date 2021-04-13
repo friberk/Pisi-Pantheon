@@ -19,6 +19,10 @@
     <Package>
         <Name>libgit2-glib</Name>
         <Summary>libgit2-glib is a glib wrapper library around the libgit2 git access library.</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgit2</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
             <Path fileType="library">/usr/lib/libgit2-glib-1.0.so</Path>
@@ -33,6 +37,7 @@
     <Package>
         <Name>libgit2-glib-devel</Name>
         <Summary>libgit2-glib is a glib wrapper library around the libgit2 git access library.</Summary>
+        <Dependency release="current">libgit2-glib</Dependency>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

@@ -52,6 +52,25 @@ GNOME Session and the applications that run under it.</Summary>
         <Name>gnome-settings-daemon</Name>
         <Summary>The GNOME Settings Daemon is responsible for setting various parameters of a
 GNOME Session and the applications that run under it.</Summary>
+        <RuntimeDependencies>
+            <Dependency>colord</Dependency>
+            <Dependency>elogind</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gcr</Dependency>
+            <Dependency>geoclue</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>lcms2</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libgweather</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>pulseaudio</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>xorg-input-wacom</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="data">/etc/*</Path>
             <Path fileType="library">/lib/*</Path>
@@ -67,6 +86,7 @@ GNOME Session and the applications that run under it.</Summary>
     </Package>
     <Package>
         <Name>gnome-settings-daemon-devel</Name>
+        <Dependency release="current">gnome-settings-daemon</Dependency>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

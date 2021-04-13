@@ -54,7 +54,7 @@
         <Name>switchboard-devel</Name>
         <Summary>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Summary>
         <RuntimeDependencies>
-            <Dependency>switchboard</Dependency>
+            <Dependency release="current">switchboard</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>

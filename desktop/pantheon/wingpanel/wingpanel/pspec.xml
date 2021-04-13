@@ -55,7 +55,7 @@
     <Package>
         <Name>wingpanel-devel</Name>
         <RuntimeDependencies>
-            <Dependency>wingpanel</Dependency>
+            <Dependency release="current">wingpanel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>

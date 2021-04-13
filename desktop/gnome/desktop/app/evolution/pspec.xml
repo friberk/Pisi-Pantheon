@@ -33,6 +33,20 @@ the Evolution Team.</Description>
         <Name>evolution</Name>
         <Summary>Evolution is the integrated mail, calendar and address book suite from
 the Evolution Team.</Summary>
+        <RuntimeDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>enchant2</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>geoclue</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>glade</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>icon-theme-adwaita</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/evolution-data-server/*</Path>
@@ -53,6 +67,7 @@ the Evolution Team.</Summary>
     </Package>
     <Package>
         <Name>evolution-devel</Name>
+        <Dependency release="current">evolution</Dependency>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>
