@@ -29,10 +29,12 @@ using GTK/GNOME.</Summary>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
             <Path fileType="library">/usr/lib/libhandy-1.so</Path>
             <Path fileType="library">/usr/lib/libhandy-1.so.0</Path>
+            <Path fileType="library">/usr/lib/glade/*</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>
             <Path fileType="data">/usr/share/gir-1.0/*</Path>
             <Path fileType="localedata">/usr/share/locale/*</Path>
             <Path fileType="data">/usr/share/vala/*</Path>
+            <Path fileType="library">/usr/share/glade/*</Path>
         </Files>
     </Package>
     <Package>
