@@ -34,7 +34,7 @@ using GTK/GNOME.</Summary>
             <Path fileType="data">/usr/share/gir-1.0/*</Path>
             <Path fileType="localedata">/usr/share/locale/*</Path>
             <Path fileType="data">/usr/share/vala/*</Path>
-            <Path fileType="library">/usr/share/glade/*</Path>
+            <Path fileType="data">/usr/share/glade/*</Path>
         </Files>
     </Package>
     <Package>
