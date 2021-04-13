@@ -13,11 +13,8 @@ stacktraces which are then interpreted by the userspace program
 "sysprof".</Summary>
         <Description>Sysprof is a sampling profiler that uses a kernel module to generate stacktraces which are then interpreted by the userspace program"sysprof".</Description>
         <BuildDependencies>
-            <Dependency>gtk3</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>libdazzle</Dependency>
             <Dependency>libdazzle-devel</Dependency>
-            <Dependency>polkit</Dependency>
             <Dependency>polkit-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="a0e69a063b4bf728c2c1add08521924c4c995b9d" type="tarxz">https://download.gnome.org/sources/sysprof/3.36/sysprof-3.36.0.tar.xz</Archive>
@@ -27,6 +24,11 @@ stacktraces which are then interpreted by the userspace program
         <Summary>Sysprof is a sampling profiler that uses a kernel module to generate
 stacktraces which are then interpreted by the userspace program
 "sysprof".</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libdazzle</Dependency>
+            <Dependency>polkit</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/libsysprof-3.so</Path>
@@ -48,6 +50,9 @@ stacktraces which are then interpreted by the userspace program
     </Package>
     <Package>
         <Name>sysprof-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">sysprof</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

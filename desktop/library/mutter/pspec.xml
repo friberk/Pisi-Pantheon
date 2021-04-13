@@ -55,6 +55,9 @@
     <Package>
         <Name>mutter-devel</Name>
         <Summary>Mutter is a Wayland display server and X11 window manager and compositor library.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mutter</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

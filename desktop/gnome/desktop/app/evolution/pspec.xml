@@ -67,7 +67,9 @@ the Evolution Team.</Summary>
     </Package>
     <Package>
         <Name>evolution-devel</Name>
-        <Dependency release="current">evolution</Dependency>
+        <RuntimeDependencies>
+            <Dependency release="current">evolution</Dependency>
+        <RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

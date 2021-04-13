@@ -25,6 +25,10 @@ load.</Description>
     <Package>
         <Name>geocode-glib</Name>
         <Summary>geocode-glib is a convenience library for the geocoding and reverse geocoding</Summary>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.4.4">json-glib</Dependency>
+            <Dependency versionFrom="2.68.3">libsoup</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
             <Path fileType="library">/usr/lib/libgeocode-glib.so</Path>
@@ -37,6 +41,9 @@ load.</Description>
     <Package>
         <Name>geocode-glib-devel</Name>
         <Summary>geocode-glib is a convenience library for the geocoding and reverse geocoding</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">geocode-glib</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>
