@@ -8,7 +8,7 @@
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
+        <Summary>Switchboard Locale Plug</Summary>
         <Description>Switchboard Locale Plug</Description>
         <BuildDependencies>
             <Dependency>accountsservice-devel</Dependency>
@@ -25,6 +25,16 @@
     <Package>
         <Name>switchboard-plug-locale</Name>
         <Summary>Switchboard Locale Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>ibus</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="library">/usr/libexec/*</Path>

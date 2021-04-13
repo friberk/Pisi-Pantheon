@@ -8,7 +8,7 @@
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
+        <Summary>Switchboard Power Plug</Summary>
         <Description>Switchboard Power Plug</Description>
         <BuildDependencies>
             <Dependency>dbus-devel</Dependency>
@@ -23,6 +23,14 @@
     <Package>
         <Name>switchboard-plug-power</Name>
         <Summary>Switchboard Power Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="library">/usr/libexec/*</Path>

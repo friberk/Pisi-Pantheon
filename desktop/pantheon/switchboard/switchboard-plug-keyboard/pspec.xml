@@ -8,7 +8,7 @@
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
+        <Summary>Switchboard Keyboard Plug</Summary>
         <Description>Switchboard Keyboard Plug</Description>
         <BuildDependencies>
             <Dependency>gnomekbd-devel</Dependency>
@@ -27,6 +27,18 @@
     <Package>
         <Name>switchboard-plug-keyboard</Name>
         <Summary>Switchboard Keyboard Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>ibus</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libxklavier</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>

@@ -8,7 +8,7 @@
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
+        <Summary>Switchboard Online Accounts Plug</Summary>
         <Description>Switchboard Online Accounts Plug</Description>
         <BuildDependencies>
             <Dependency>glib2-devel</Dependency>
@@ -30,6 +30,20 @@
         <Name>switchboard-plug-onlineaccounts</Name>
         <Summary>Switchboard Online Accounts Plug
 </Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libaccounts-glib</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>librest</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>signon</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="library">/usr/libexec/*</Path>

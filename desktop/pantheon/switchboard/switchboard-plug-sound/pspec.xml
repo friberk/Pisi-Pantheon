@@ -8,7 +8,7 @@
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
+        <Summary>Switchboard Sound Plug</Summary>
         <Description>Switchboard Sound Plug</Description>
         <BuildDependencies>
             <Dependency>granite-devel</Dependency>
@@ -24,6 +24,15 @@
     <Package>
         <Name>switchboard-plug-sound</Name>
         <Summary>Switchboard Sound Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="library">/usr/libexec/*</Path>
@@ -36,7 +45,7 @@
     <History>
         <Update release="1">
             <Date>2021-04-06</Date>
-            <Version>2.2.6</Version>
+            <Version>2.8.4</Version>
             <Comment>First release for Pisi Linux</Comment>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>

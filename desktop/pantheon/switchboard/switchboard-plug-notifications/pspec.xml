@@ -8,7 +8,7 @@
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
+        <Summary>Switchboard Notifications Plug</Summary>
         <Description>Switchboard Notifications Plug</Description>
         <BuildDependencies>
             <Dependency>granite-devel</Dependency>
@@ -21,6 +21,12 @@
     <Package>
         <Name>switchboard-plug-notifications</Name>
         <Summary>Switchboard Notifications Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>granite</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="library">/usr/libexec/*</Path>

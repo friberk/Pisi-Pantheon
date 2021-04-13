@@ -26,6 +26,17 @@
     <Package>
         <Name>switchboard-plug-about</Name>
         <Summary>Switchboard About Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>appstream</Dependency>
+            <Dependency>fwupd</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="doc">/usr/share/doc/*</Path>

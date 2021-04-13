@@ -12,19 +12,12 @@
         <Summary>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Summary>
         <Description>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Description>
         <BuildDependencies>
-            <Dependency>clutter</Dependency>
             <Dependency>clutter-devel</Dependency>
-            <Dependency>clutter-gtk</Dependency>
             <Dependency>clutter-gtk-devel</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>glib2-devel</Dependency>
-            <Dependency>granite</Dependency>
             <Dependency>granite-devel</Dependency>
-            <Dependency>gtk3</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>libgee</Dependency>
             <Dependency>libgee-devel</Dependency>
-            <Dependency>libhandy</Dependency>
             <Dependency>libhandy-devel</Dependency>
             <Dependency>vala</Dependency>
             <Dependency>vala-devel</Dependency>
@@ -34,6 +27,16 @@
     <Package>
         <Name>switchboard</Name>
         <Summary>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Summary>
+        <RuntimeDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/libswitchboard-2.0.so</Path>
@@ -50,6 +53,9 @@
     <Package>
         <Name>switchboard-devel</Name>
         <Summary>Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Summary>
+        <RuntimeDependencies>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

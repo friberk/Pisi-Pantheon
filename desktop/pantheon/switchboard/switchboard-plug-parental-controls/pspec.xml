@@ -1,15 +1,15 @@
 <PISI>
     <Source>
         <Name>switchboard-plug-parental-controls</Name>
-        <Homepage>https://github.com/elementary/switchboard-plug-power</Homepage>
+        <Homepage>https://github.com/elementary/switchboard-plug-parental-controls</Homepage>
         <Packager>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv3</License>
         <PartOf>desktop</PartOf>
-        <Summary>Switchboard Applications Plug</Summary>
-        <Description>Switchboard Power Plug</Description>
+        <Summary>Switchboard Parental Controls Plug</Summary>
+        <Description>Switchboard Parental Controls Plug</Description>
         <BuildDependencies>
             <Dependency>accountsservice-devel</Dependency>
             <Dependency>dbus-devel</Dependency>
@@ -26,6 +26,17 @@
     <Package>
         <Name>switchboard-plug-parental-controls</Name>
         <Summary>Switchboard Power Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>switchboard</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
             <Path fileType="library">/usr/libexec/*</Path>
