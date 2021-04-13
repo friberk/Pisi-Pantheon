@@ -11,7 +11,7 @@
         <Summary>Switchboard Keyboard Plug</Summary>
         <Description>Switchboard Keyboard Plug</Description>
         <BuildDependencies>
-            <Dependency>gnomekbd-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
             <Dependency>granite-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>ibus-devel</Dependency>
