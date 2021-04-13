@@ -25,6 +25,11 @@ services for numerous locations.</Summary>
         <Name>libgweather</Name>
         <Summary>libgweather is a library to access weather information from online
 services for numerous locations.</Summary>
+        <RuntimeDependencies>
+            <Dependency versionFrom="3.36.2">geocode-glib</Dependency>
+            <Dependency versionFrom="3.24.20">gtk3</Dependency>
+            <Dependency versionFrom="2.68.3">libsoup</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
             <Path fileType="library">/usr/lib/libgweather-3.so</Path>
@@ -35,6 +40,9 @@ services for numerous locations.</Summary>
     </Package>
     <Package>
         <Name>libgweather-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libgweather</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

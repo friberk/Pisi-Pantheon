@@ -21,6 +21,10 @@
     <Package>
         <Name>libdazzle</Name>
         <Summary>The libdazzle library is a companion library to GObject and Gtk+</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>vala</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
@@ -33,6 +37,9 @@
     </Package>
     <Package>
         <Name>libdazzle-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libdazzle</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libdazzle-1.0/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>

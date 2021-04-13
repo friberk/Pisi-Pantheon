@@ -34,6 +34,17 @@
     <Package>
         <Name>mutter</Name>
         <Summary>Mutter is a Wayland display server and X11 window manager and compositor library.</Summary>
+        <RuntimeDependencies>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>graphene</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>pipewire</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>zenity</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="library">/usr/lib/libmutter-6.so</Path>

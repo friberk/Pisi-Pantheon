@@ -21,6 +21,9 @@ using GTK/GNOME.</Summary>
         <Name>libhandy0</Name>
         <Summary>The aim of the Handy library is to help with developing UI for mobile devices
 using GTK/GNOME.</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>
             <Path fileType="data">/usr/lib/girepository-1.0/*</Path>
@@ -34,6 +37,9 @@ using GTK/GNOME.</Summary>
     <Package>
         <Name>libhandy0-devel</Name>
         <Summary>The aim of the Handy library is to help with developing UI for mobile devices using GTK/GNOME.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libhandy0</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>
