@@ -19,6 +19,10 @@
     <Package>
         <Name>libsignon-glib</Name>
         <Summary>Single signon authentication library for GLib applications</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
             <Path fileType="library">/usr/lib/libsignon-glib.so</Path>
@@ -34,6 +38,9 @@
     <Package>
         <Name>libsignon-glib-devel</Name>
         <Summary>Single signon authentication library for GLib applications</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libsignon-glib</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
             <Path fileType="library">/usr/lib/pkgconfig/*</Path>
