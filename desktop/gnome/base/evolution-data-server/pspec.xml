@@ -106,7 +106,7 @@ contacts, tasks, and calendar information.</Summary>
         <Summary>The Evolution Data Server package provides a unified backend for programs that work with
 contacts, tasks, and calendar information.</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">volution-data-server</Dependency>
+            <Dependency release="current">evolution-data-server</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/*</Path>
