@@ -13,6 +13,7 @@
         <Archive sha1sum="e6c4d07681416c9918d1efeaa87ef0de666c58ea">https://gitlab.gnome.org/GNOME/cogl/-/archive/1.22.6/cogl-1.22.6.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>pango-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
@@ -28,6 +29,8 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>glslang</Dependency>
             <Dependency>glslang-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>valgrind</Dependency>
         </BuildDependencies>
      </Source>
 
@@ -35,6 +38,7 @@
         <Name>cogl</Name>
         <RuntimeDependencies>
             <Dependency>pango</Dependency>
+            <Dependency>gnome-common</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>mesa</Dependency>
@@ -51,6 +55,8 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>glslang</Dependency>
             <Dependency>glslang-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>valgrind</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

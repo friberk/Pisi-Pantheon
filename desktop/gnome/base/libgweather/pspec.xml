@@ -12,11 +12,8 @@
 services for numerous locations.</Summary>
         <Description>libgweather is a library to access weather information from online services for numerous locations.</Description>
         <BuildDependencies>
-            <Dependency versionFrom="3.36.2">geocode-glib</Dependency>
             <Dependency versionFrom="3.36.2">geocode-glib-devel</Dependency>
-            <Dependency versionFrom="3.24.20">gtk3</Dependency>
             <Dependency versionFrom="3.24.20">gtk3-devel</Dependency>
-            <Dependency versionFrom="2.68.3">libsoup</Dependency>
             <Dependency versionFrom="2.68.3">libsoup-devel</Dependency>
         </BuildDependencies>
         <Archive type="tarxz" sha1sum="1f9f39d500bf862f8d9ed5aa939148e4554fcdf7">https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.2.tar.xz</Archive>

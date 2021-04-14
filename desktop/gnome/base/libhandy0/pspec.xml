@@ -12,8 +12,8 @@
 using GTK/GNOME.</Summary>
         <Description>The aim of the Handy library is to help with developing UI for mobile devices using GTK/GNOME.</Description>
         <BuildDependencies>
-            <Dependency>gtk3</Dependency>
             <Dependency>gtk3-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="251c4be80418844d87a26924d2cd2eb72aefe90a" type="tarbz2">https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.13/libhandy-v0.0.13.tar.bz2</Archive>
     </Source>
@@ -23,6 +23,7 @@ using GTK/GNOME.</Summary>
 using GTK/GNOME.</Summary>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
+            <Dependency>libglade</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>

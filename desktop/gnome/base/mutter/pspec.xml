@@ -11,23 +11,18 @@
         <Summary>Mutter is a Wayland display server and X11 window manager and compositor library.</Summary>
         <Description>Mutter is a Wayland display server and X11 window manager and compositor library.</Description>
         <BuildDependencies>
-            <Dependency>gnome-desktop</Dependency>
             <Dependency>gnome-desktop-devel</Dependency>
-            <Dependency>gnome-settings-daemon</Dependency>
             <Dependency>gnome-settings-daemon-devel</Dependency>
-            <Dependency>graphene</Dependency>
             <Dependency>graphene-devel</Dependency>
-            <Dependency>libcanberra</Dependency>
             <Dependency>libcanberra-devel</Dependency>
-            <Dependency>libwacom</Dependency>
             <Dependency>libwacom-devel</Dependency>
-            <Dependency>libxkbcommon</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
-            <Dependency>pipewire</Dependency>
             <Dependency>pipewire-devel</Dependency>
-            <Dependency>upower</Dependency>
             <Dependency>upower-devel</Dependency>
             <Dependency>zenity</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>libinput-devel</Dependency>
+            <Dependency>sysprof-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="b47b5d3a157c46853de8e6ef248d00eae7868df7" type="tarxz">https://download.gnome.org/sources/mutter/3.36/mutter-3.36.8.tar.xz</Archive>
     </Source>
@@ -44,6 +39,9 @@
             <Dependency>pipewire</Dependency>
             <Dependency>upower</Dependency>
             <Dependency>zenity</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>sysprof</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/*</Path>

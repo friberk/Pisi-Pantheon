@@ -15,7 +15,7 @@
             <Dependency>gtk3-devel</Dependency>
             <Dependency>polkit-devel</Dependency>
             <Dependency>meson</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>vala-devel</Dependency>
         </BuildDependencies>
     </Source>
 

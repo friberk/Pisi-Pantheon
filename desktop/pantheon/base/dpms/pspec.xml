@@ -30,6 +30,7 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -57,6 +58,7 @@
             <Dependency>libXrender</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libcanberra-gtk</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

@@ -11,13 +11,9 @@
         <Summary>Granite is a companion library for GTK and GLib.</Summary>
         <Description>Granite is a companion library for GTK and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.</Description>
         <BuildDependencies>
-            <Dependency>gobject-introspection</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
-            <Dependency>gtk3</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>libgee</Dependency>
             <Dependency>libgee-devel</Dependency>
-            <Dependency>vala</Dependency>
             <Dependency>vala-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="6a0cdfa35fb5a82ccb000bec03e0d820486b1a2a" type="zip">https://github.com/elementary/granite/archive/refs/tags/6.0.0.zip</Archive>
