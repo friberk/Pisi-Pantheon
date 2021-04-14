@@ -13,7 +13,7 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import mesontools
 
 def setup():
-    mesontools.configure("-Dglade_catalog=false")
+    mesontools.configure("-Dglade_catalog=disabled")
 
 def build():
     mesontools.build
