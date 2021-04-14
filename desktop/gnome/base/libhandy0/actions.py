@@ -3,6 +3,8 @@
 #
 # Licensed under the GNU General Public License, version 2
 # See the file http://www.gnu.org/copyleft/gpl.txt
+# TODO: glade catalog fails the build needs to be fixed
+# (it is probably about some missing dependencies on a fresh install)
 
 from pisi.actionsapi import get
 from pisi.actionsapi import autotools
@@ -11,7 +13,7 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import mesontools
 
 def setup():
-    mesontools.configure()
+    mesontools.configure("-Dglade_catalog=false")
 
 def build():
     mesontools.build
