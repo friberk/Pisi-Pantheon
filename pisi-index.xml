@@ -212,6 +212,7 @@
                 <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>libXrender-devel</Dependency>
                 <Dependency>libcanberra-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/base/dpms/pspec.xml</SourceURI>
         </Source>
@@ -238,6 +239,7 @@
                 <Dependency>libXrender</Dependency>
                 <Dependency>libcanberra</Dependency>
                 <Dependency>libcanberra-gtk</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -293,37 +295,22 @@
             <Description xml:lang="en">A window &amp; compositing manager based on libmutter and designed by elementary for use with Pantheon.</Description>
             <Archive type="targz" sha1sum="65c97a14cab444506bfab063cd8585adf3e9734d" name="3.3.2.tar.gz">https://github.com/elementary/gala/archive/refs/tags/3.3.2.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>clutter</Dependency>
                 <Dependency>clutter-devel</Dependency>
-                <Dependency>gettext</Dependency>
                 <Dependency>gettext-devel</Dependency>
-                <Dependency>glib2</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency>gnome-desktop</Dependency>
                 <Dependency>gnome-desktop-devel</Dependency>
-                <Dependency>gnome-settings-daemon</Dependency>
                 <Dependency>gnome-settings-daemon-devel</Dependency>
-                <Dependency>granite</Dependency>
                 <Dependency>granite-devel</Dependency>
-                <Dependency>gsettings-desktop-schemas</Dependency>
                 <Dependency>gsettings-desktop-schemas-devel</Dependency>
-                <Dependency>gtk3</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>libcanberra</Dependency>
                 <Dependency>libcanberra-devel</Dependency>
-                <Dependency>libcanberra-gtk3</Dependency>
                 <Dependency>libcanberra-gtk3-devel</Dependency>
-                <Dependency>libgee</Dependency>
                 <Dependency>libgee-devel</Dependency>
-                <Dependency>libhandy</Dependency>
                 <Dependency>libhandy-devel</Dependency>
-                <Dependency>libxml2</Dependency>
                 <Dependency>libxml2-devel</Dependency>
-                <Dependency>mutter</Dependency>
                 <Dependency>mutter-devel</Dependency>
-                <Dependency>plank</Dependency>
                 <Dependency>plank-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>bamf-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/base/gala/pspec.xml</SourceURI>
@@ -347,6 +334,7 @@
                 <Dependency>libxml2</Dependency>
                 <Dependency>mutter</Dependency>
                 <Dependency>plank</Dependency>
+                <Dependency>bamf</Dependency>
                 <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -405,7 +393,7 @@
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>polkit-devel</Dependency>
                 <Dependency>meson</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/base/pantheon-polkit/pspec.xml</SourceURI>
         </Source>
@@ -471,13 +459,9 @@
             <Description xml:lang="en">Granite is a companion library for GTK and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.</Description>
             <Archive type="zip" sha1sum="6a0cdfa35fb5a82ccb000bec03e0d820486b1a2a" name="6.0.0.zip">https://github.com/elementary/granite/archive/refs/tags/6.0.0.zip</Archive>
             <BuildDependencies>
-                <Dependency>gobject-introspection</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
-                <Dependency>gtk3</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>libgee</Dependency>
                 <Dependency>libgee-devel</Dependency>
-                <Dependency>vala</Dependency>
                 <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/base/granite/pspec.xml</SourceURI>
@@ -2261,8 +2245,8 @@ using GTK/GNOME.</Summary>
             <Description xml:lang="en">The aim of the Handy library is to help with developing UI for mobile devices using GTK/GNOME.</Description>
             <Archive type="tarbz2" sha1sum="251c4be80418844d87a26924d2cd2eb72aefe90a" name="libhandy-v0.0.13.tar.bz2">https://source.puri.sm/Librem5/libhandy/-/archive/v0.0.13/libhandy-v0.0.13.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>gtk3</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/base/libhandy0/pspec.xml</SourceURI>
         </Source>
@@ -2272,6 +2256,7 @@ using GTK/GNOME.</Summary>
 using GTK/GNOME.</Summary>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
+                <Dependency>libglade</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/*</Path>
@@ -2318,9 +2303,7 @@ using GTK/GNOME.</Summary>
             <Description xml:lang="en">The libdazzle library is a companion library to GObject and Gtk+</Description>
             <Archive type="tarxz" sha1sum="1c21e4f622054fb30d7a730f4f2b25dfe02b89ef" name="libdazzle-3.40.0.tar.xz">https://download.gnome.org/sources/libdazzle/3.40/libdazzle-3.40.0.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>gtk3</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>vala</Dependency>
                 <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/base/libdazzle/pspec.xml</SourceURI>
@@ -2503,39 +2486,26 @@ GNOME Session and the applications that run under it.</Summary>
             <Description xml:lang="en">The GNOME Settings Daemon is responsible for setting various parameters of a GNOME Session and the applications that run under it.</Description>
             <Archive type="tarxz" sha1sum="ca9f25f0609192fab5dff73d93fea3256e1ca9d0" name="gnome-settings-daemon-3.38.1.tar.xz">https://download.gnome.org/sources/gnome-settings-daemon/3.38/gnome-settings-daemon-3.38.1.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>colord</Dependency>
                 <Dependency>colord-devel</Dependency>
-                <Dependency>elogind</Dependency>
                 <Dependency>elogind-devel</Dependency>
-                <Dependency>fontconfig</Dependency>
                 <Dependency>fontconfig-devel</Dependency>
-                <Dependency>gcr</Dependency>
                 <Dependency>gcr-devel</Dependency>
-                <Dependency>geoclue</Dependency>
                 <Dependency>geoclue-devel</Dependency>
-                <Dependency>geocode-glib</Dependency>
                 <Dependency>geocode-glib-devel</Dependency>
-                <Dependency>gnome-desktop</Dependency>
                 <Dependency>gnome-desktop-devel</Dependency>
-                <Dependency>lcms2</Dependency>
                 <Dependency>lcms2-devel</Dependency>
-                <Dependency>libcanberra</Dependency>
                 <Dependency>libcanberra-devel</Dependency>
-                <Dependency>libgweather</Dependency>
                 <Dependency>libgweather-devel</Dependency>
-                <Dependency>libnotify</Dependency>
                 <Dependency>libnotify-devel</Dependency>
-                <Dependency>librsvg</Dependency>
                 <Dependency>librsvg-devel</Dependency>
-                <Dependency>libwacom</Dependency>
                 <Dependency>libwacom-devel</Dependency>
                 <Dependency>pulseaudio</Dependency>
-                <Dependency>pulseaudio-libs</Dependency>
                 <Dependency>pulseaudio-libs-devel</Dependency>
-                <Dependency>upower</Dependency>
                 <Dependency>upower-devel</Dependency>
-                <Dependency>xorg-input-wacom</Dependency>
                 <Dependency>xorg-input-wacom-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>cups-devel</Dependency>
+                <Dependency>libmm-glib-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/base/gnome-settings-daemon/pspec.xml</SourceURI>
         </Source>
@@ -2561,6 +2531,9 @@ GNOME Session and the applications that run under it.</Summary>
                 <Dependency>pulseaudio-libs</Dependency>
                 <Dependency>upower</Dependency>
                 <Dependency>xorg-input-wacom</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>cups</Dependency>
+                <Dependency>libmm-glib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/etc/*</Path>
@@ -2802,11 +2775,8 @@ services for numerous locations.</Summary>
             <Description xml:lang="en">libgweather is a library to access weather information from online services for numerous locations.</Description>
             <Archive type="tarxz" sha1sum="1f9f39d500bf862f8d9ed5aa939148e4554fcdf7" name="libgweather-3.36.2.tar.xz">https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.2.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency versionFrom="3.36.2">geocode-glib</Dependency>
                 <Dependency versionFrom="3.36.2">geocode-glib-devel</Dependency>
-                <Dependency versionFrom="3.24.20">gtk3</Dependency>
                 <Dependency versionFrom="3.24.20">gtk3-devel</Dependency>
-                <Dependency versionFrom="2.68.3">libsoup</Dependency>
                 <Dependency versionFrom="2.68.3">libsoup-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/base/libgweather/pspec.xml</SourceURI>
@@ -2920,23 +2890,18 @@ services for numerous locations.</Summary>
             <Description xml:lang="en">Mutter is a Wayland display server and X11 window manager and compositor library.</Description>
             <Archive type="tarxz" sha1sum="b47b5d3a157c46853de8e6ef248d00eae7868df7" name="mutter-3.36.8.tar.xz">https://download.gnome.org/sources/mutter/3.36/mutter-3.36.8.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>gnome-desktop</Dependency>
                 <Dependency>gnome-desktop-devel</Dependency>
-                <Dependency>gnome-settings-daemon</Dependency>
                 <Dependency>gnome-settings-daemon-devel</Dependency>
-                <Dependency>graphene</Dependency>
                 <Dependency>graphene-devel</Dependency>
-                <Dependency>libcanberra</Dependency>
                 <Dependency>libcanberra-devel</Dependency>
-                <Dependency>libwacom</Dependency>
                 <Dependency>libwacom-devel</Dependency>
-                <Dependency>libxkbcommon</Dependency>
                 <Dependency>libxkbcommon-devel</Dependency>
-                <Dependency>pipewire</Dependency>
                 <Dependency>pipewire-devel</Dependency>
-                <Dependency>upower</Dependency>
                 <Dependency>upower-devel</Dependency>
                 <Dependency>zenity</Dependency>
+                <Dependency>libxkbfile-devel</Dependency>
+                <Dependency>libinput-devel</Dependency>
+                <Dependency>sysprof-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/base/mutter/pspec.xml</SourceURI>
         </Source>
@@ -2953,6 +2918,9 @@ services for numerous locations.</Summary>
                 <Dependency>pipewire</Dependency>
                 <Dependency>upower</Dependency>
                 <Dependency>zenity</Dependency>
+                <Dependency>libxkbfile</Dependency>
+                <Dependency>libinput</Dependency>
+                <Dependency>sysprof</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/*</Path>
@@ -3008,7 +2976,6 @@ using GTK/GNOME.</Summary>
             <Description xml:lang="en">The aim of the Handy library is to help with developing UI for mobile devices using GTK/GNOME.</Description>
             <Archive type="tarxz" sha1sum="fb9f5429526c436ed9d48692da16651d3c07f11e" name="libhandy-1.2.0.tar.xz">https://download.gnome.org/sources/libhandy/1.2/libhandy-1.2.0.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>gtk3</Dependency>
                 <Dependency>gtk3-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/gnome/base/libhandy/pspec.xml</SourceURI>
@@ -3025,10 +2992,12 @@ using GTK/GNOME.</Summary>
                 <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
                 <Path fileType="library">/usr/lib/libhandy-1.so</Path>
                 <Path fileType="library">/usr/lib/libhandy-1.so.0</Path>
+                <Path fileType="library">/usr/lib/glade/*</Path>
                 <Path fileType="doc">/usr/share/doc/*</Path>
                 <Path fileType="data">/usr/share/gir-1.0/*</Path>
                 <Path fileType="localedata">/usr/share/locale/*</Path>
                 <Path fileType="data">/usr/share/vala/*</Path>
+                <Path fileType="data">/usr/share/glade/*</Path>
             </Files>
         </Package>
         <Package>
@@ -3496,6 +3465,7 @@ the Evolution Team.</Summary>
             <Archive sha1sum="e6c4d07681416c9918d1efeaa87ef0de666c58ea" name="cogl-1.22.6.tar.gz">https://gitlab.gnome.org/GNOME/cogl/-/archive/1.22.6/cogl-1.22.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>pango-devel</Dependency>
+                <Dependency>gnome-common</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>mesa-devel</Dependency>
@@ -3511,6 +3481,8 @@ the Evolution Team.</Summary>
                 <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>glslang</Dependency>
                 <Dependency>glslang-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>valgrind</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/toolkit/gtk/cogl/pspec.xml</SourceURI>
         </Source>
@@ -3518,6 +3490,7 @@ the Evolution Team.</Summary>
             <Name>cogl</Name>
             <RuntimeDependencies>
                 <Dependency>pango</Dependency>
+                <Dependency>gnome-common</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>gtk2</Dependency>
                 <Dependency>mesa</Dependency>
@@ -3534,6 +3507,8 @@ the Evolution Team.</Summary>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>glslang</Dependency>
                 <Dependency>glslang-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>valgrind</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
