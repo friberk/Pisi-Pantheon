@@ -71,6 +71,7 @@
             <Path fileType="localedata">/usr/share/locale/*</Path>
             <Path fileType="info">/usr/share/metainfo/*</Path>
             <Path fileType="data">/usr/share/vala/*</Path>
+            <Path fileType="data">/etc/xdg/*</Path>
         </Files>
     </Package>
     <Package>
