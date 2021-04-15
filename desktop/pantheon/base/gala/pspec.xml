@@ -31,7 +31,7 @@
         </BuildDependencies>
         <Archive sha1sum="65c97a14cab444506bfab063cd8585adf3e9734d" type="targz">https://github.com/elementary/gala/archive/refs/tags/3.3.2.tar.gz</Archive>
         <Patches>
-            <Patch>0001-Bump-Mutter-to-3.30.patch</Patch>
+            <Patch>0001-BackgroundSource-use-map-values-not-map-entries-869.patch</Patch>
         </Patches>
     </Source>
     <Package>
