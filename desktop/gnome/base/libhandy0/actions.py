@@ -4,7 +4,7 @@
 # Licensed under the GNU General Public License, version 2
 # See the file http://www.gnu.org/copyleft/gpl.txt
 # TODO: glade catalog fails the build needs to be fixed
-# (it is probably about some missing dependencies on a fresh install)
+# (it is probably because of some missing dependencies on a fresh install ??gladeui??)
 
 from pisi.actionsapi import get
 from pisi.actionsapi import autotools
