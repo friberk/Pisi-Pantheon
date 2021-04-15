@@ -26,7 +26,7 @@ such as a user's address book or calendar events.</Description>
             <Dependency>boost-devel</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="be0ccfda5fceb300413572b14dafbdc4508584b7">http://ftp.acc.umu.se/pub/gnome/sources/evolution-data-server/3.38/evolution-data-server-3.38.0.tar.xz</Archive>
+        <Archive sha1sum="5b0656dd1d0f1eed4c9a390439a5e25b30e8c958" type="tarxz">https://download.gnome.org/sources/evolution-data-server/3.39/evolution-data-server-3.39.3.tar.xz</Archive>
     </Source>
     <Package>
         <Name>evolution-data-server</Name>
@@ -118,7 +118,7 @@ contacts, tasks, and calendar information.</Summary>
     <History>
         <Update release="1">
             <Date>2021-04-10</Date>
-            <Version>3.38.0</Version>
+            <Version>3.39.3</Version>
             <Comment>First release for Pisi Linux</Comment>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
