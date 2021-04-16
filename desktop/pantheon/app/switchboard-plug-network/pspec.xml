@@ -19,11 +19,6 @@
             <Dependency>vala</Dependency>
         </BuildDependencies>
         <Archive type="targz" sha1sum="b31bf10392c36fbbfcb1da97641c4be4f9c5fc4b">https://github.com/elementary/switchboard-plug-network/archive/refs/tags/2.3.3.tar.gz</Archive>
-        <Patches>
-            <Patch>2.2.0-fix_unplugged_cable.patch</Patch>
-            <Patch>2.3.0-fix_instance_button.patch</Patch>
-            <Patch>2.3.0-fix_unplugged_cable.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>switchboard-plug-network</Name>

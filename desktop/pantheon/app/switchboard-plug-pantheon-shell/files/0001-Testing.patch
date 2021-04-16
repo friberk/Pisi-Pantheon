@@ -1,0 +1,31 @@
+From 4c8fb1508834e2e69d21f71996413da448a30767 Mon Sep 17 00:00:00 2001
+From: WORLDofPEACE <worldofpeace@protonmail.ch>
+Date: Mon, 26 Oct 2020 13:31:31 -0400
+Subject: [PATCH] Testing
+
+---
+ src/Views/Wallpaper.vala |  9 +----
+ 3 files changed, 140 insertions(+), 7 deletions(-)
+
+diff --git a/src/Views/Wallpaper.vala b/src/Views/Wallpaper.vala
+index d467331..d1d68d2 100644
+--- a/src/Views/Wallpaper.vala
++++ b/src/Views/Wallpaper.vala
+@@ -417,13 +417,8 @@ public class PantheonShell.Wallpaper : Gtk.Grid {
+         // Add user background directory first
+         background_directories += get_local_bg_directory ();
+
+-        foreach (unowned string data_dir in Environment.get_system_data_dirs ()) {
+-            var system_background_dir = Path.build_filename (data_dir, "backgrounds") + "/";
+-            if (FileUtils.test (system_background_dir, FileTest.EXISTS)) {
+-                debug ("Found system background directory: %s", system_background_dir);
+-                background_directories += system_background_dir;
+-            }
+-        }
++        var system_background_dir = "@DIR@";
++        background_directories += system_background_dir;
+
+         if (background_directories.length == 0) {
+             warning ("No background directories found");
+--
+2.24.3 (Apple Git-128)
