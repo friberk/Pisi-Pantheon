@@ -38,6 +38,7 @@
             <Dependency>gtk3</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>libgexiv2</Dependency>
+            <Dependency>tumbler</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>plank</Dependency>
             <Dependency>switchboard</Dependency>

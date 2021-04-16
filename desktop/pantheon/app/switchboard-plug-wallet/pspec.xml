@@ -1,0 +1,47 @@
+<PISI>
+    <Source>
+        <Name>switchboard-plug-wallet</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-wallet</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Switchboard Wallet Plug</Summary>
+        <Description>Manage Payment Methods and related settings</Description>
+        <BuildDependencies>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="1f9d17ad87fcbc860607a9be46071bcb1122ecfb" type="zip">https://github.com/elementary/switchboard-plug-wallet/archive/refs/heads/master.zip</Archive>
+    </Source>
+    <Package>
+        <Name>switchboard-plug-wallet</Name>
+        <Summary>Switchboard Wallet Plug</Summary>
+        <RuntimeDependencies>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/icons/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-16</Date>
+            <Version>0.9.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

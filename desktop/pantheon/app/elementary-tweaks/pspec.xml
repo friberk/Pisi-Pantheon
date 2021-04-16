@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>elementary-tweaks</Name>
+        <Homepage>https://github.com/elementary-tweaks/elementary-tweaks</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>elementary tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop's appearance
+
+</Summary>
+        <Description>elementary tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop's appearance</Description>
+        <BuildDependencies>
+            <Dependency>gala-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="391d95f6d45fb096550c437df166de10746e591e" type="targz">https://github.com/elementary-tweaks/elementary-tweaks/archive/refs/tags/2.0.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>elementary-tweaks</Name>
+        <Summary>elementary tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop's appearance
+
+</Summary>
+        <RuntimeDependencies>
+            <Dependency>gala</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-16</Date>
+            <Version>2.0.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

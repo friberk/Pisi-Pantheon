@@ -1,0 +1,55 @@
+<PISI>
+    <Source>
+        <Name>switchboard-plug-wacom</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-wacom</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Manage drawing tablets and Wacom devices
+
+</Summary>
+        <Description>Manage drawing tablets and Wacom devices</Description>
+        <BuildDependencies>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive type="zip" sha1sum="0f2eb375064faec3c42bb9fbd33a5dba82fe86e9">https://github.com/elementary/switchboard-plug-wacom/archive/refs/heads/master.zip</Archive>
+    </Source>
+    <Package>
+        <Name>switchboard-plug-wacom</Name>
+        <Summary>Manage drawing tablets and Wacom devices
+
+</Summary>
+        <RuntimeDependencies>
+            <Dependency>granite</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-16</Date>
+            <Version>1.0.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
