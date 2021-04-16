@@ -19,7 +19,7 @@
             <Dependency>switchboard-devel</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
-        <Archive type="targz" sha1sum="fa998d52028d3e5acbab6f7566fe4ee64565b070">https://github.com/elementary/switchboard-plug-pantheon-shell/archive/refs/tags/2.8.4.tar.gz</Archive>
+        <Archive type="targz" sha1sum="c48bbd24ac06e7b9766517e2018b7743dd439d35">https://github.com/elementary/switchboard-plug-sound/archive/refs/tags/2.2.6.tar.gz</Archive>
     </Source>
     <Package>
         <Name>switchboard-plug-sound</Name>
@@ -31,7 +31,6 @@
             <Dependency>meson</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>vala</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>
@@ -45,7 +44,7 @@
     <History>
         <Update release="1">
             <Date>2021-04-06</Date>
-            <Version>2.8.4</Version>
+            <Version>2.2.6</Version>
             <Comment>First release for Pisi Linux</Comment>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
