@@ -21,6 +21,9 @@
             <Dependency>vala</Dependency>
         </BuildDependencies>
         <Archive type="targz" sha1sum="a17820734860b09c911f6ac730d763a729092b98">https://github.com/elementary/switchboard-plug-locale/archive/refs/tags/2.5.3.tar.gz</Archive>
+        <Patches>
+            <Patch>2.5.1-fix_ubuntu_langs.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>switchboard-plug-locale</Name>
