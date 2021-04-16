@@ -18,7 +18,7 @@
             <Dependency>switchboard-devel</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
-        <Archive type="zip" sha1sum="64db49ae8cab4f80d902d9bf6ed3f3c8608f812f">https://github.com/elementary/switchboard-plug-power/archive/refs/heads/master.zip</Archive>
+        <Archive sha1sum="a0d2a5f0c9e86fdee83b2456c872fc52235faa87">https://github.com/elementary/switchboard-plug-power/archive/2.4.2.tar.gz</Archive>
     </Source>
     <Package>
         <Name>switchboard-plug-power</Name>

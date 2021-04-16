@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Gala (X11 compositor)
-Exec=gala --x11 --display-server
+Exec=gala --x11
 NoDisplay=true
 # name of loadable control center module
 X-GNOME-WMSettingsModule=metacity
