@@ -27,6 +27,9 @@
             <Dependency>wingpanel-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="2f6c1dde94cd19ff6c4bb211d49842804a7f6241" type="targz">https://github.com/elementary/applications-menu/archive/refs/tags/2.7.1.tar.gz</Archive>
+        <Patches>
+            <Patch>0001-meson-clean-up-superfluous-unity-dep-and-make-zeitge.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>applications-menu</Name>
