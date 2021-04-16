@@ -78,6 +78,7 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile target="/usr/share/gnome-session/sessions/pantheon.session">pantheon.session</AdditionalFile>
+            <AdditionalFile target="/usr/share/applications/gala-x11.desktop">gala-x11.desktop</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

@@ -17,15 +17,16 @@
             <Dependency>gtk3-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
             <Dependency>libgexiv2-devel</Dependency>
+            <Dependency>tumbler-devel</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>plank-devel</Dependency>
             <Dependency>switchboard-devel</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
         <Archive sha1sum="fa998d52028d3e5acbab6f7566fe4ee64565b070" type="targz">https://github.com/elementary/switchboard-plug-pantheon-shell/archive/refs/tags/2.8.4.tar.gz</Archive>
-        <Patches>
+        <!-- <Patches>
             <Patch>0001-Testing.patch</Patch>
-        </Patches>
+        </Patches>  -->
     </Source>
     <Package>
         <Name>switchboard-plug-pantheon-shell</Name>
