@@ -17,9 +17,6 @@
             <Dependency>vala</Dependency>
         </BuildDependencies>
         <Archive type="targz" sha1sum="5b1870b55a7179912ec4bc85ca341e7314b5be1c">https://github.com/elementary/switchboard-plug-datetime/archive/refs/tags/2.1.9.tar.gz</Archive>
-        <Patches>
-            <Patch>0001-a.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>switchboard-plug-datetime</Name>
