@@ -34,7 +34,10 @@
             <Dependency>switchboard</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="all">/</Path>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/icons/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
         </Files>
     </Package>
     <History>

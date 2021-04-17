@@ -13,6 +13,7 @@
         <BuildDependencies>
             <Dependency>libXcursor-devel</Dependency>
             <Dependency>librsvg-devel</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
         </BuildDependencies>
         <Archive sha1sum="87a2528311979071b0162e8f2fe17876fa051956" type="targz">https://github.com/elementary/icons/archive/refs/tags/5.3.1.tar.gz</Archive>
     </Source>
@@ -22,6 +23,7 @@
         <RuntimeDependencies>
             <Dependency>libXcursor</Dependency>
             <Dependency>librsvg</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/.VolumeIcon.icns</Path>
