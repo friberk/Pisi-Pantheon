@@ -17,18 +17,14 @@
             <Dependency>vala</Dependency>
         </BuildDependencies>
         <Archive type="targz" sha1sum="5b1870b55a7179912ec4bc85ca341e7314b5be1c">https://github.com/elementary/switchboard-plug-datetime/archive/refs/tags/2.1.9.tar.gz</Archive>
-        <Patches>
-            <Patch>0001-a.patch</Patch>
-        </Patches>
     </Source>
     <Package>
         <Name>switchboard-plug-datetime</Name>
         <Summary>Switchboard Date &amp; Time Plug</Summary>
         <RuntimeDependencies>
+            <Dependency>pisi-timedate</Dependency>
             <Dependency>granite</Dependency>
-            <Dependency>meson</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>vala</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/*</Path>

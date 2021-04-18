@@ -15,6 +15,10 @@
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="8b82fc2ec1ecdeb3cbd6f6f9e6a67cbbe02fb3ac" type="targz">https://gitlab.com/accounts-sso/libsignon-glib/-/archive/master/libsignon-glib-master.tar.gz</Archive>
+        <Patches>
+            <Patch>0001-Interface-fix.patch</Patch>
+            <Patch>0001-Interface-fix2.patch</Patch>
+        </Patches>
     </Source>
     <Package>
         <Name>libsignon-glib</Name>
