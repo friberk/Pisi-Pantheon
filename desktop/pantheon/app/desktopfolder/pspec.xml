@@ -18,6 +18,7 @@
             <Dependency>json-glib-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
             <Dependency>libwnck3-devel</Dependency>
+            <Dependency>xdg-utils</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>vala</Dependency>
         </BuildDependencies>
@@ -34,7 +35,7 @@
             <Dependency>json-glib</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>libwnck3</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>xdg-utils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/*</Path>

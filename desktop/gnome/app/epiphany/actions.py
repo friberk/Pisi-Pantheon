@@ -9,14 +9,11 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 
 def setup():
-    shelltools.system("cp libsignon-glib/*.xml libsignon-glib/interfaces")
-    mesontools.configure("-Dintrospection=true")
+    mesontools.configure()
 
 def build():
     mesontools.build()
 
 def install():
     mesontools.install()
-
-    pisitools.dodoc("COPYING", "AUTHORS", "NEWS")
 

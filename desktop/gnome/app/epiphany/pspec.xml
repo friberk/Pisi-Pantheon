@@ -1,0 +1,92 @@
+<PISI>
+    <Source>
+        <Name>epiphany</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/epiphany</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Epiphany is a GNOME web browser based on the WebKit rendering engine.</Summary>
+        <Description>Epiphany is a GNOME web browser based on the WebKit rendering engine.</Description>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>gcr-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>glib-networking</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libdazzle-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>nettle-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+        </BuildDependencies>
+        <Icon>epiphany</Icon>
+        <Archive sha1sum="b762934b8add9f6b215b8423a54ef1452f3a9dd5" type="targz">https://gitlab.gnome.org/GNOME/epiphany/-/archive/3.38.2/epiphany-3.38.2.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>epiphany</Name>
+        <Summary>Epiphany is a GNOME web browser based on the WebKit rendering engine.</Summary>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gcr</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib-networking</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libdazzle</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>nettle</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/epiphany</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/gnome-shell</Path>
+            <Path fileType="doc">/usr/share/help</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/python-gtk</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-18</Date>
+            <Version>3.38.2</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

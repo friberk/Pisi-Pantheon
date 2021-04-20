@@ -14,11 +14,7 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="8b82fc2ec1ecdeb3cbd6f6f9e6a67cbbe02fb3ac" type="targz">https://gitlab.com/accounts-sso/libsignon-glib/-/archive/master/libsignon-glib-master.tar.gz</Archive>
-        <Patches>
-            <Patch>0001-Interface-fix.patch</Patch>
-            <Patch>0001-Interface-fix2.patch</Patch>
-        </Patches>
+        <Archive sha1sum="91bf21e8b14fc8dc30cfd7e971cf20982112c875" type="targz">https://gitlab.com/accounts-sso/libsignon-glib/-/archive/VERSION_2.1/libsignon-glib-VERSION_2.1.tar.gz</Archive>
     </Source>
     <Package>
         <Name>libsignon-glib</Name>
