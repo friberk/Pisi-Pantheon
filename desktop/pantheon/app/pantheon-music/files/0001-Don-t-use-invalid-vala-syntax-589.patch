@@ -1,0 +1,25 @@
+From 9ed3bbb3a0d68e289a772b4603f58e52a4973316 Mon Sep 17 00:00:00 2001
+From: Rico Tzschichholz <ricotz@ubuntu.com>
+Date: Wed, 22 Jul 2020 09:16:21 +0200
+Subject: [PATCH] Don't use invalid vala syntax (#589)
+
+---
+ core/GStreamer/Equalizer.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/GStreamer/Equalizer.vala b/core/GStreamer/Equalizer.vala
+index c77c9528..e12a0281 100644
+--- a/core/GStreamer/Equalizer.vala
++++ b/core/GStreamer/Equalizer.vala
+@@ -31,7 +31,7 @@ public class Music.Equalizer : GLib.Object {
+     construct {
+         element = Gst.ElementFactory.make ("equalizer-10bands", "equalizer");
+ 
+-        int[10] freqs = {60, 170, 310, 600, 1000, 3000, 6000, 12000, 14000, 16000};
++        int[] freqs = {60, 170, 310, 600, 1000, 3000, 6000, 12000, 14000, 16000};
+ 
+         float last_freq = 0;
+         for (int index = 0; index < 10; index++) {
+-- 
+2.24.3 (Apple Git-128)
+

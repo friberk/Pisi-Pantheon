@@ -1,0 +1,57 @@
+<PISI>
+    <Source>
+        <Name>wingpanel-indicator-session</Name>
+        <Homepage>https://github.com/elementary/wingpanel-indicator-session</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Wingpanel Session Indicator</Summary>
+        <Description>Wingpanel Session Indicator</Description>
+        <BuildDependencies>
+            <Dependency>accountsservice-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libhandy-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="targz" sha1sum="b4a7e50706d75c466b0935bc406fc6d149e3090b">https://github.com/elementary/wingpanel-indicator-session/archive/2.2.8.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">0001-UserManager-Fix-build.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>wingpanel-indicator-session</Name>
+        <Summary>Wingpanel Session Indicator</Summary>
+        <RuntimeDependencies>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-21</Date>
+            <Version>2.2.8</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
