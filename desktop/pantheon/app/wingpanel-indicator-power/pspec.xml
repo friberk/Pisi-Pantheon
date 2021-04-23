@@ -1,0 +1,50 @@
+<PISI>
+    <Source>
+        <Name>wingpanel-indicator-power</Name>
+        <Homepage>https://github.com/elementary/wingpanel-indicator-power</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Wingpanel Power Indicator</Summary>
+        <Description>Wingpanel Power Indicator</Description>
+        <BuildDependencies>
+            <Dependency>bamf-devel</Dependency>
+            <Dependency>eudev-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libgtop-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="targz" sha1sum="803f7778213a993e7dbb5721299a5dae8f4eaf62">https://github.com/elementary/wingpanel-indicator-power/archive/refs/tags/2.2.0.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>wingpanel-indicator-power</Name>
+        <Summary>Wingpanel Power Indicator</Summary>
+        <RuntimeDependencies>
+            <Dependency>bamf</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/glib-2.0/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-21</Date>
+            <Version>2.2.0</Version>
+            <Comment>First release</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

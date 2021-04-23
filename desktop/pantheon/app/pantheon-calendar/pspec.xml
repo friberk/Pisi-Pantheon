@@ -1,0 +1,79 @@
+<PISI>
+    <Source>
+        <Name>pantheon-calendar</Name>
+        <Homepage>https://github.com/elementary/calendar</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Desktop calendar app designed for Pantheon DE</Summary>
+        <Description>Desktop calendar app designed for Pantheon DE</Description>
+        <BuildDependencies>
+            <Dependency>clutter-devel</Dependency>
+            <Dependency>evolution-data-server-devel</Dependency>
+            <Dependency>folks-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>geoclue-devel</Dependency>
+            <Dependency>geocode-glib-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libchamplain-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>libical-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+        </BuildDependencies>
+        <Archive type="targz" sha1sum="3f106029b05794a77af87f12828c251ebb2c46af">https://github.com/elementary/calendar/archive/refs/tags/5.1.1.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>pantheon-calendar</Name>
+        <Summary>Desktop calendar app designed for Pantheon DE</Summary>
+        <RuntimeDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>folks</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>geoclue</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libchamplain</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libical</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="all">/usr/lib</Path>
+            <Path fileType="library">/usr/libexec/*</Path>
+            <Path fileType="data">/usr/share/applications/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/glib-2.0/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+            <Path fileType="data">/usr/share/vala/*</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>pantheon-calendar-devel</Name>
+        <Summary>Desktop calendar app designed for Pantheon DE</Summary>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-23</Date>
+            <Version>5.1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

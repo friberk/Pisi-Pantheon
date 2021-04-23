@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>wingpanel-indicator-bluetooth</Name>
+        <Homepage>https://github.com/elementary/wingpanel-indicator-bluetooth</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <Summary>Wingpanel Bluetooth Indicator</Summary>
+        <Description>Wingpanel Bluetooth Indicator</Description>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>wingpanel-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="targz" sha1sum="dc77a3edd27af98eb7f53c54138b8fd0bb2df213">https://github.com/elementary/wingpanel-indicator-bluetooth/archive/refs/tags/2.1.6.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>wingpanel-indicator-bluetooth</Name>
+        <Summary>Wingpanel Bluetooth Indicator</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/*</Path>
+            <Path fileType="doc">/usr/share/doc/*</Path>
+            <Path fileType="data">/usr/share/glib-2.0/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="info">/usr/share/metainfo/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-21</Date>
+            <Version>2.1.6</Version>
+            <Comment>First release</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
