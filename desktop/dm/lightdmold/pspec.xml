@@ -1,0 +1,73 @@
+<PISI>
+    <Source>
+        <Name>lightdm</Name>
+        <Homepage>https://github.com/canonical/lightdm</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>desktop</PartOf>
+        <Summary>LightDM is a cross-desktop display manager.</Summary>
+        <Description>LightDM is a cross-desktop display manager.</Description>
+        <BuildDependencies>
+            <Dependency>accountsservice-devel</Dependency>
+            <Dependency>exo-devel</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libxklavier-devel</Dependency>
+            <Dependency>pam-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="tarxz" sha1sum="d91966f79f173825ac8bb51973842f9fb6c9ef1b">https://github.com/CanonicalLtd/lightdm/releases/download/1.30.0/lightdm-1.30.0.tar.xz</Archive>
+        <Patches>
+            <Patch>lightdm-default-config.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>lightdm</Name>
+        <Summary>LightDM is a cross-desktop display manager.</Summary>
+        <Files>
+            <Path fileType="config">/etc/*</Path>
+            <Path fileType="executable">/usr/bin/*</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/*</Path>
+            <Path fileType="library">/usr/lib/liblightdm-gobject-1.so</Path>
+            <Path fileType="library">/usr/lib/liblightdm-gobject-1.so.0</Path>
+            <Path fileType="library">/usr/lib/liblightdm-gobject-1.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib/liblightdm-qt5-3.so</Path>
+            <Path fileType="library">/usr/lib/liblightdm-qt5-3.so.0</Path>
+            <Path fileType="library">/usr/lib/liblightdm-qt5-3.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib/lightdm/*</Path>
+            <Path fileType="data">/usr/share/accountsservice/*</Path>
+            <Path fileType="data">/usr/share/bash-completion/*</Path>
+            <Path fileType="data">/usr/share/dbus-1/*</Path>
+            <Path fileType="data">/usr/share/gir-1.0/*</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/*</Path>
+            <Path fileType="man">/usr/share/help/*</Path>
+            <Path fileType="localedata">/usr/share/locale/*</Path>
+            <Path fileType="man">/usr/share/man/*</Path>
+            <Path fileType="data">/usr/share/polkit-1/*</Path>
+            <Path fileType="data">/usr/share/vala/*</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/lightdm/Xsession">Xsession</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <Package>
+        <Name>lightdm-devel</Name>
+        <Summary>LightDM is a cross-desktop display manager.</Summary>
+        <Files>
+            <Path fileType="header">/usr/include/*</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/*</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>1.30.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
