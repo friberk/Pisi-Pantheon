@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wingpanel-indicator-a11y</Name>
+        <Homepage>https://github.com/elementary/wingpanel-indicator-a11y</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>Wingpanel Universal Access Indicator</Summary>
+        <Description>Wingpanel Universal Access Indicator</Description>
+        <BuildDependencies>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>wingpanel-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="2e09813848e8d3cbb35b7e2941bd8f14ae283d64" type="targz">https://github.com/elementary/wingpanel-indicator-a11y/archive/refs/tags/1.0.0.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>wingpanel-indicator-a11y</Name>
+        <Summary>Wingpanel Universal Access Indicator</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2021-07-16</Date>
+            <Version>1.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

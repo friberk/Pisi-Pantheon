@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>pantheon-session</Name>
@@ -7,95 +9,53 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv2</License>
-        <Summary>Files for starting a Pantheon DE session</Summary>
-        <Description>Files for starting a Pantheon DE sessio</Description>
-        <Archive sha1sum="8630167893814d119e7b745dc3e664153d68f1dd">https://github.com/elementary/session-settings/archive/39bd694428603c42cb7e84da8addfc7fa6d57466.zip</Archive>
+        <Summary>Session settings for Pantheon</Summary>
+        <Description>Files for starting a Pantheon DE session</Description>
+        <Archive sha1sum="fe9f9a128b14674f828cceb533cd9028a5c5c311">https://github.com/elementary/session-settings/archive/refs/tags/6.0.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gconf-devel</Dependency>
-            <Dependency>startup-notification-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libXcursor-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libXdamage-devel</Dependency>
-            <Dependency>atk-devel</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>gnome-settings-daemon-devel</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>onboard</Dependency>
+            <Dependency>orca</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>pantheon-session</Name>
-         <RuntimeDependencies>
-            <Dependency>gconf</Dependency>
-            <Dependency>startup-notification</Dependency>
-            <!--<Dependency>zenity</Dependency>-->
-            <Dependency>libXcomposite</Dependency>
-            <Dependency>libXrandr</Dependency>
-            <Dependency>libXinerama</Dependency>
-            <Dependency>libXcursor</Dependency>
-            <Dependency>libXext</Dependency>
-            <Dependency>libSM</Dependency>
-            <Dependency>libXft</Dependency>
-            <Dependency>libXfixes</Dependency>
-            <Dependency>libXdamage</Dependency>
-            <Dependency>atk</Dependency>
-            <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libICE</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libXrender</Dependency>
-            <Dependency>libcanberra</Dependency>
-            <Dependency>libcanberra-gtk</Dependency>
+        <RuntimeDependencies>
+            <Dependency>dconf</Dependency>
+            <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>gnome-session</Dependency>
+            <Dependency>onboard</Dependency>
+            <Dependency>orca</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>xdg-user-dirs-gtk</Dependency>
+            <Dependency>applications-menu</Dependency>
+            <Dependency>dpms</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/etc/</Path>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="executable">/usr/libexec</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/themes</Path>
-            <Path fileType="data">/usr/share/pantheon-session</Path>
+            <Path fileType="data">/etc</Path>
             <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/vala</Path>
             <Path fileType="data">/usr/share/xsessions</Path>
             <Path fileType="data">/usr/share/gnome-session</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/metainfo</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
-            <Path fileType="data">/usr/share/glib-2.0</Path>
         </Files>
-        <AdditionalFiles>
+        <!--AdditionalFiles>
             <AdditionalFile target="/usr/share/gnome-session/sessions/pantheon.session">pantheon.session</AdditionalFile>
             <AdditionalFile target="/usr/share/applications/gala-x11.desktop">gala-x11.desktop</AdditionalFile>
-        </AdditionalFiles>
-    </Package>
-
-    <Package>
-        <Name>pantheon-session-devel</Name>
-        <Summary>Development files for pantheon-session</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">pantheon-session</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
-        </Files>
+        </AdditionalFiles-->
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2021-07-15</Date>
+            <Version>6.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-04-10</Date>
             <Version>5.0.3</Version>

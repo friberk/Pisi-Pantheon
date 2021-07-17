@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pantheon-default-settings</Name>
+        <Homepage>https://github.com/elementary/default-settings</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Default settings and configuration files for Pantheon DE.</Summary>
+        <Description>Default settings and configuration files for Pantheon DE.</Description>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>accountsservice-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="1b91c816a81b82619f512cbe1420f6e52aa16704" type="targz">https://github.com/elementary/default-settings/archive/refs/tags/6.0.0.tar.gz</Archive>
+    </Source>
+    
+    <Package>
+        <Name>pantheon-default-settings</Name>
+        <Summary>Default settings and configuration files for Pantheon DE.</Summary>
+        <Files>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="data">/usr/share/accountsservice</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/cups</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/default-settings</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+        </Files>
+        <!--AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/default-settings/settings.ini" group="root">etc/gtk-3.0/settings.ini</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/default-settings/default-settings.gschema.override" group="root">usr/share/glib-2.0/schemas/default-settings.gschema.override</AdditionalFile>
+        </AdditionalFiles-->
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>2021-07-16</Date>
+            <Version>6.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2021-04-06</Date>
+            <Version>5.1.2</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

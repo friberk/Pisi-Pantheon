@@ -6,6 +6,8 @@
 
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
+from pisi.actionsapi import get
 
 def setup():
     mesontools.configure()
@@ -16,5 +18,5 @@ def build():
 def install():
     mesontools.install()
 
-    pisitools.dodoc("README.md")
-
+    pisitools.dosym("/usr/share/backgrounds/odin.jpg", "/usr/share/backgrounds/elementaryos-default")
+    pisitools.dodoc("README.md", "LICENSE.md")

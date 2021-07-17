@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>dpms</Name>
@@ -7,29 +9,11 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv2</License>
-        <IsA>app:gui</IsA>
-        <Summary>Sets DPMS settings found in io.elementary.dpms.</Summary>
+        <Summary>Sets DPMS settings found in io.elementary.dpms</Summary>
         <Description>This program is designed to be called by PisiLinux Pantheon DE directly when GNOME Settings Daemon is not managing the related settings. It is probably not useful for users.</Description>
         <Archive sha1sum="277c94bb495ef884444dff0ddb7b9fe0a58a3263">https://github.com/elementary/dpms-helper/archive/1.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>gconf-devel</Dependency>
-            <Dependency>startup-notification-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
-            <Dependency>libXinerama-devel</Dependency>
-            <Dependency>libXcursor-devel</Dependency>
-            <Dependency>libXext-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
-            <Dependency>libXdamage-devel</Dependency>
-            <Dependency>atk-devel</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>libXrender-devel</Dependency>
-            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>meson</Dependency>
             <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
     </Source>
@@ -37,58 +21,13 @@
     <Package>
         <Name>dpms</Name>
          <RuntimeDependencies>
-            <Dependency>gconf</Dependency>
-            <Dependency>startup-notification</Dependency>
-            <!--<Dependency>zenity</Dependency>-->
-            <Dependency>libXcomposite</Dependency>
-            <Dependency>libXrandr</Dependency>
-            <Dependency>libXinerama</Dependency>
-            <Dependency>libXcursor</Dependency>
-            <Dependency>libXext</Dependency>
-            <Dependency>libSM</Dependency>
-            <Dependency>libXft</Dependency>
-            <Dependency>libXfixes</Dependency>
-            <Dependency>libXdamage</Dependency>
-            <Dependency>atk</Dependency>
-            <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>libICE</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libXrender</Dependency>
-            <Dependency>libcanberra</Dependency>
-            <Dependency>libcanberra-gtk</Dependency>
             <Dependency>desktop-file-utils</Dependency>
+            <Dependency>dconf</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="executable">/usr/libexec</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/themes</Path>
-            <Path fileType="data">/usr/share/dpms</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/vala</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/metainfo</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/share/glib-2.0</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>dpms-devel</Name>
-        <Summary>Development files for dpms</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">dpms</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
 

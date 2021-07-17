@@ -5,8 +5,6 @@
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
 from pisi.actionsapi import mesontools
-from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
 
 def setup():
     mesontools.configure()

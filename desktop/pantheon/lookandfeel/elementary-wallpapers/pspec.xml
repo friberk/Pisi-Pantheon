@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>elementary-wallpapers</Name>
@@ -6,22 +8,36 @@
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
         </Packager>
-        <License>GPLv3</License>
-        <PartOf>desktop.lookandfeel</PartOf>
+        <License>CC-BY-SA 4.0</License>
+        <License>CC0</License>
+        <License>Unsplash</License>
+        <PartOf>desktop.pantheon.lookandfeel</PartOf>
         <Summary>Collection of wallpapers for Pantheon DE</Summary>
         <Description>Collection of wallpapers for Pantheon DE</Description>
-        <Archive type="targz" sha1sum="2f29d8e89c68275330a155cc612b3b76940314f8">https://github.com/elementary/wallpapers/archive/refs/tags/5.5.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+        </BuildDependencies>
+        <Archive type="targz" sha1sum="5471dcb7b8d694a33d1d5cbdf3d0d8c344de636a">https://github.com/elementary/wallpapers/archive/refs/tags/6.0.0.tar.gz</Archive>
     </Source>
+    
     <Package>
         <Name>elementary-wallpapers</Name>
         <Summary>Collection of wallpapers for Pantheon DE</Summary>
         <Files>
-            <Path fileType="data">/usr/share/backgrounds/*</Path>
-            <Path fileType="doc">/usr/share/doc/*</Path>
-            <Path fileType="info">/usr/share/metainfo/*</Path>
+            <Path fileType="data">/usr/share/backgrounds</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
         </Files>
     </Package>
+    
     <History>
+        <Update release="2">
+            <Date>2021-07-16</Date>
+            <Version>6.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-04-06</Date>
             <Version>5.5.0</Version>

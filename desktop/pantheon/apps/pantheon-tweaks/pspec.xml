@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pantheon-tweaks</Name>
+        <Homepage>https://github.com/pantheon-tweaks/pantheon-tweaks</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance</Summary>
+        <Description>pantheon-tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop's appearance</Description>
+        <BuildDependencies>
+            <Dependency>gala-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>switchboard-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="520f6516445ef2bd12b5fb38a6f9c74d7277897d" type="zip">https://github.com/pantheon-tweaks/pantheon-tweaks/archive/6c5243f1dadc68227b1e5d662000b6d2d3f28d66.zip</Archive>
+    </Source>
+    
+    <Package>
+        <Name>pantheon-tweaks</Name>
+        <Summary>A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop's appearance</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>2021-07-16</Date>
+            <Version>20210624</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2021-04-16</Date>
+            <Version>2.0.0</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

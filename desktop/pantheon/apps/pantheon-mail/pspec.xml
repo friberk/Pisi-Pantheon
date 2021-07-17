@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pantheon-mail</Name>
+        <Homepage>https://github.com/elementary/mail</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Mail app designed for Pantheon DE</Summary>
+        <Description>Mail app designed for Pantheon DE</Description>
+        <BuildDependencies>
+            <Dependency>evolution-data-server-devel</Dependency>
+            <Dependency>evolution-devel</Dependency>
+            <Dependency>folks-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>libhandy-devel</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="zip" sha1sum="84473021bab04aa30bf2d50a94257d5c8a9f7c5c">https://github.com/elementary/mail/archive/refs/tags/6.0.0.zip</Archive>
+    </Source>
+    
+    <Package>
+        <Name>pantheon-mail</Name>
+        <Summary>Mail app designed for Pantheon DE</Summary>
+        <RuntimeDependencies>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>folks</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libsoup</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="2">
+            <Date>2021-07-15</Date>
+            <Version>6.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2021-04-23</Date>
+            <Version>1.0.8</Version>
+            <Comment>First release</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
