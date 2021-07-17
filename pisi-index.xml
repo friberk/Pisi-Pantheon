@@ -1,0 +1,2653 @@
+<PISI>
+    <Package>
+        <Name>desktopfolder</Name>
+        <Summary xml:lang="en">Bring your Pantheon desktop back to life.</Summary>
+        <Description xml:lang="en">Organize your Pantheon desktop with panels that hold your things.</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gtksourceview3</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>xdg-utils</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>1.1.3</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1161691</InstalledSize>
+        <PackageSize>529607</PackageSize>
+        <PackageHash>265d4beb1f03d59bc0ab122bcce679f4c2f5803a</PackageHash>
+        <InstallTarHash>66d180066d41d4cf12bfba16c27cd72f709506e8</InstallTarHash>
+        <PackageURI>d/desktopfolder/desktopfolder-1.1.3-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>desktopfolder</Name>
+            <Homepage>https://github.com/spheras/desktopfolder</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>dpms</Name>
+        <Summary xml:lang="en">Sets DPMS settings found in io.elementary.dpms</Summary>
+        <Description xml:lang="en">This program is designed to be called by PisiLinux Pantheon DE directly when GNOME Settings Daemon is not managing the related settings. It is probably not useful for users.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>dconf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>2033</InstalledSize>
+        <PackageSize>2388</PackageSize>
+        <PackageHash>32863f55faeec55f9a81bad80fdae09b3ca822f5</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>d/dpms/dpms-1.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>dpms</Name>
+            <Homepage>https://github.com/elementary/dpms-helper</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>elementary-wallpapers</Name>
+        <Summary xml:lang="en">Collection of wallpapers for Pantheon DE</Summary>
+        <Description xml:lang="en">Collection of wallpapers for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.lookandfeel</PartOf>
+        <License>CC-BY-SA 4.0</License>
+        <License>CC0</License>
+        <License>Unsplash</License>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>5.5.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>51044939</InstalledSize>
+        <PackageSize>50427255</PackageSize>
+        <PackageHash>82240ebcc6b50c92004bad6478af9aa3b57c2dad</PackageHash>
+        <InstallTarHash>a24a7b23e5d76015eb472a901406ad851c0368ae</InstallTarHash>
+        <PackageURI>e/elementary-wallpapers/elementary-wallpapers-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>elementary-wallpapers</Name>
+            <Homepage>https://github.com/elementary/wallpapers</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>elementary-icon-theme</Name>
+        <Summary xml:lang="en">Named, vector icons for elementary OS</Summary>
+        <Description xml:lang="en">Named, vector icons for elementary OS</Description>
+        <PartOf>desktop.pantheon.lookandfeel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>xorg-app</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>5.3.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>40264328</InstalledSize>
+        <PackageSize>2561967</PackageSize>
+        <PackageHash>1b175e8ee08b5713c13d3377423e77e41701fc3f</PackageHash>
+        <InstallTarHash>003d121d60b951f29146e9a907fcd7178f1aa817</InstallTarHash>
+        <PackageURI>e/elementary-icon-theme/elementary-icon-theme-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>elementary-icon-theme</Name>
+            <Homepage>https://github.com/elementary/icons</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>elementary-sound-theme</Name>
+        <Summary xml:lang="en">A bespoke sound for your theme</Summary>
+        <Description xml:lang="en">A set of system sounds for elementary OS. Designed to be light, natural/physical, and pleasant.</Description>
+        <PartOf>desktop.pantheon.lookandfeel</PartOf>
+        <License>Unlicense</License>
+        <History>
+            <Update release="1">
+                <Date>2021-07-16</Date>
+                <Version>1.1.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>108242</InstalledSize>
+        <PackageSize>59358</PackageSize>
+        <PackageHash>b04bc172fb112254612433f0a823e77e6daa6922</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>e/elementary-sound-theme/elementary-sound-theme-1.1.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>elementary-sound-theme</Name>
+            <Homepage>https://github.com/elementary/sound-theme</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gtk-theme-elementary</Name>
+        <Summary xml:lang="en">The GTK Stylesheet for Pantheon DE</Summary>
+        <Description xml:lang="en">The GTK Stylesheet for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.lookandfeel</PartOf>
+        <License>GPLv3</License>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>5.4.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>3512373</InstalledSize>
+        <PackageSize>71929</PackageSize>
+        <PackageHash>b1a6ed11c070cd1e4211c46cefae0efeeef0dcc6</PackageHash>
+        <InstallTarHash>351add41280c29d9a39bc055d941534fefdf50f9</InstallTarHash>
+        <PackageURI>g/gtk-theme-elementary/gtk-theme-elementary-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gtk-theme-elementary</Name>
+            <Homepage>https://github.com/elementary/stylesheet</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gala</Name>
+        <Summary xml:lang="en">The Pantheon Window Manager</Summary>
+        <Description xml:lang="en">A window compositing manager based on libmutter and designed by elementary for use with Pantheon</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>mutter6</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>graphene</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libgexiv2</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>3.3.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1233261</InstalledSize>
+        <PackageSize>317619</PackageSize>
+        <PackageHash>5a6e7255dc4c2cffad64f699f33b0a26c384478e</PackageHash>
+        <InstallTarHash>3abd8e707cdb32081039a8eb64d59d5b5d631ae4</InstallTarHash>
+        <PackageURI>g/gala/gala-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gala</Name>
+            <Homepage>https://github.com/elementary/gala</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>granite</Name>
+        <Summary xml:lang="en">Granite is a companion library for GTK and GLib.</Summary>
+        <Description xml:lang="en">Granite is a companion library for GTK and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.</Description>
+        <PartOf>desktop</PartOf>
+        <License>LGPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>cairo</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.1.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>6.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1025864</InstalledSize>
+        <PackageSize>245609</PackageSize>
+        <PackageHash>b25449af675fbe72ea4cb1cd6c0979c88d6c31e7</PackageHash>
+        <InstallTarHash>5264b9e6e0a0b2f21b168234210060c2634bd22e</InstallTarHash>
+        <PackageURI>g/granite/granite-6.1.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>granite</Name>
+            <Homepage>https://github.com/elementary/granite</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>gala-devel</Name>
+        <Summary xml:lang="en">Development files for gala</Summary>
+        <Description xml:lang="en">A window compositing manager based on libmutter and designed by elementary for use with Pantheon</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">gala</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>mutter6-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>3.3.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>28241</InstalledSize>
+        <PackageSize>6352</PackageSize>
+        <PackageHash>e70db11f77b40c08218baa84e38d13e04d79e040</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>g/gala/gala-devel-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>gala</Name>
+            <Homepage>https://github.com/elementary/gala</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>granite-devel</Name>
+        <Summary xml:lang="en">Development files for granite</Summary>
+        <Description xml:lang="en">Granite is a companion library for GTK and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>LGPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">granite</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.1.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>6.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>518577</InstalledSize>
+        <PackageSize>36857</PackageSize>
+        <PackageHash>848d7b394b5e8fa4045c9270beb559fc45f767f3</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>g/granite/granite-devel-6.1.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>granite</Name>
+            <Homepage>https://github.com/elementary/granite</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>lightdm-pantheon-greeter</Name>
+        <Summary xml:lang="en">Pantheon greeter for LightDM</Summary>
+        <Description xml:lang="en">Login and Lock Screen greeter for Pantheon, using LightDM</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>lightdm</Dependency>
+            <Dependency>mutter6</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>accountsservice</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>5.0.4</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>448997</InstalledSize>
+        <PackageSize>118013</PackageSize>
+        <PackageHash>e5a2bde054c070f68e08f03b0eab4127702f4e6d</PackageHash>
+        <InstallTarHash>c6185817eccc6f8d5d79ead333008797eadd8855</InstallTarHash>
+        <PackageURI>l/lightdm-pantheon-greeter/lightdm-pantheon-greeter-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>lightdm-pantheon-greeter</Name>
+            <Homepage>https://github.com/elementary/greeter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mutter6</Name>
+        <Summary xml:lang="en">A window manager for GNOME 3.36</Summary>
+        <Description xml:lang="en">Mutter6 is a Wayland display server and X11 window manager and compositor library for GNOME 3.36</Description>
+        <PartOf>desktop.gnome.base</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>elogind</Dependency>
+            <Dependency>fribidi</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>graphene</Dependency>
+            <Dependency>libglvnd</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>pipewire</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="3">
+                <Date>2021-07-15</Date>
+                <Version>3.36.8</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2021-04-24</Date>
+                <Version>3.36.8</Version>
+                <Comment>Add missing dependencies</Comment>
+                <Name>Berkan Şahin</Name>
+                <Email>cicektaksi@tutanota.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>3.36.8</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>9650711</InstalledSize>
+        <PackageSize>1710662</PackageSize>
+        <PackageHash>89be34bab99c1c86ca7b80ed7f97667865e5fe7e</PackageHash>
+        <InstallTarHash>44e2e01c56f4b42816e6727bfd713847db1d29fb</InstallTarHash>
+        <PackageURI>m/mutter6/mutter6-3.36.8-3-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mutter6</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mutter6-devel</Name>
+        <Summary xml:lang="en">Development files for mutter6</Summary>
+        <Description xml:lang="en">Mutter6 is a Wayland display server and X11 window manager and compositor library for GNOME 3.36</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency release="3">mutter6</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>graphene-devel</Dependency>
+            <Dependency>libglvnd-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="3">
+                <Date>2021-07-15</Date>
+                <Version>3.36.8</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2021-04-24</Date>
+                <Version>3.36.8</Version>
+                <Comment>Add missing dependencies</Comment>
+                <Name>Berkan Şahin</Name>
+                <Email>cicektaksi@tutanota.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>3.36.8</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1637217</InstalledSize>
+        <PackageSize>201237</PackageSize>
+        <PackageHash>1918d6117c7f7aced709b26c2799154018d2a7f5</PackageHash>
+        <InstallTarHash>77e5b5bb0ebc057937689468e36a6058865bcae4</InstallTarHash>
+        <PackageURI>m/mutter6/mutter6-devel-3.36.8-3-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mutter6</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-code-devel</Name>
+        <Summary xml:lang="en">Development files for pantheon-code</Summary>
+        <Description xml:lang="en">Code editor designed for Pantheon DE</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">pantheon-code</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libhandy-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>libgit2-glib-devel</Dependency>
+            <Dependency>gtksourceview4-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-07</Date>
+                <Version>3.4.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>122086</InstalledSize>
+        <PackageSize>15478</PackageSize>
+        <PackageHash>496bf2b0c9dd2b4d0195be603922a9c2597d2559</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-code/pantheon-code-devel-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-code</Name>
+            <Homepage>https://github.com/elementary/code</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>python3-isodate</Name>
+        <Summary xml:lang="en">An ISO 8601 date/time/duration parser and formater</Summary>
+        <Summary xml:lang="tr">Bir ISO 8601 tarih/zaman/süre derleyicisi ve formatçısı</Summary>
+        <Description xml:lang="en">An ISO 8601 date/time/duration parser and formater</Description>
+        <Description xml:lang="tr">An ISO 8601 date/time/duration parser and formater</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-six</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-04-18</Date>
+                <Version>0.6.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-05-21</Date>
+                <Version>0.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>131347</InstalledSize>
+        <PackageSize>22875</PackageSize>
+        <PackageHash>133d6761b8ca683c62810ec0ff4b2bab9865f9d5</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/python3-isodate/python3-isodate-0.6.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python3-isodate</Name>
+            <Homepage>http://pypi.python.org/pypi/isodate</Homepage>
+            <Packager>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-calculator</Name>
+        <Summary xml:lang="en">Calculator app for Pantheon DE</Summary>
+        <Description xml:lang="en">Calculator app designed for Pantheon DE</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>1.6.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-17</Date>
+                <Version>1.6.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>305217</InstalledSize>
+        <PackageSize>75655</PackageSize>
+        <PackageHash>347a06dafd9c050bb40ac0ab061203b536523678</PackageHash>
+        <InstallTarHash>0c2ec30f86de9264e6a1efef9630e50556525a01</InstallTarHash>
+        <PackageURI>p/pantheon-calculator/pantheon-calculator-1.6.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-calculator</Name>
+            <Homepage>https://github.com/elementary/calculator</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-screenshot</Name>
+        <Summary xml:lang="en">Screenshot app for Pantheon DE</Summary>
+        <Description xml:lang="en">Screenshot app for Pantheon DE</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcanberra</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-05-17</Date>
+                <Version>1.7.1</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-17</Date>
+                <Version>1.7.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>402150</InstalledSize>
+        <PackageSize>75834</PackageSize>
+        <PackageHash>8e6564765c1b0cd50305c896353d35d83b5b0114</PackageHash>
+        <InstallTarHash>96677270a6518bdeb6cbc5e44fbaa0f840973f07</InstallTarHash>
+        <PackageURI>p/pantheon-screenshot/pantheon-screenshot-1.7.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-screenshot</Name>
+            <Homepage>https://github.com/elementary/screenshot</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-calendar-devel</Name>
+        <Summary xml:lang="en">Development files for pantheon-calendar</Summary>
+        <Description xml:lang="en">Desktop calendar app designed for Pantheon DE</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">pantheon-calendar</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libical-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>evolution-data-server-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>5.1.1</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-23</Date>
+                <Version>5.1.1</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>27070</InstalledSize>
+        <PackageSize>5644</PackageSize>
+        <PackageHash>aabcea84fbafc5ab345aa7920f6799e24a5230a0</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-calendar/pantheon-calendar-devel-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-calendar</Name>
+            <Homepage>https://github.com/elementary/calendar</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-terminal</Name>
+        <Summary xml:lang="en">The Pantheon Terminal Emulator</Summary>
+        <Description xml:lang="en">A super lightweight, beautiful, and simple terminal. Comes with sane defaults, browser-class tabs, sudo paste protection, smart copy/paste, and little to no configuration.</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>LGPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>pango</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>vte</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>5.5.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>427238</InstalledSize>
+        <PackageSize>104095</PackageSize>
+        <PackageHash>cecef7e93cb8e48181b745cde1d76486a32ca8c3</PackageHash>
+        <InstallTarHash>db85800088af822c39e11d7d2023777db77e4307</InstallTarHash>
+        <PackageURI>p/pantheon-terminal/pantheon-terminal-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-terminal</Name>
+            <Homepage>https://github.com/elementary/terminal</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-calendar</Name>
+        <Summary xml:lang="en">Desktop calendar app designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Desktop calendar app designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>clutter</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>folks</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>geoclue</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libchamplain</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>5.1.1</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-23</Date>
+                <Version>5.1.1</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1277104</InstalledSize>
+        <PackageSize>278864</PackageSize>
+        <PackageHash>813d422b24403e68fdb5c62a89d65a880fe619e0</PackageHash>
+        <InstallTarHash>379490e324c29b3efa09dcd5ed78d7682d96bd0b</InstallTarHash>
+        <PackageURI>p/pantheon-calendar/pantheon-calendar-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-calendar</Name>
+            <Homepage>https://github.com/elementary/calendar</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-session</Name>
+        <Summary xml:lang="en">Session settings for Pantheon</Summary>
+        <Description xml:lang="en">Files for starting a Pantheon DE session</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>dconf</Dependency>
+            <Dependency>gnome-settings-daemon</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>gnome-session</Dependency>
+            <Dependency>onboard</Dependency>
+            <Dependency>orca</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>xdg-user-dirs-gtk</Dependency>
+            <Dependency>applications-menu</Dependency>
+            <Dependency>dpms</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>5.0.3</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>43210</InstalledSize>
+        <PackageSize>12868</PackageSize>
+        <PackageHash>5b4f7098ac4a8187d70a9ff5e87faaa47f1002bd</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-session/pantheon-session-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-session</Name>
+            <Homepage>https://github.com/elementary/session-settings</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-music</Name>
+        <Summary xml:lang="en">Music player and library designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Music player and library designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libgda</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libgpod</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>zeitgeist</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>5.1.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>5.0.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>3640510</InstalledSize>
+        <PackageSize>699708</PackageSize>
+        <PackageHash>ec8814f1b02464c17f16fe773e2c882c65dcd945</PackageHash>
+        <InstallTarHash>9ef2c3c331455637d67788b8061370e5c94c1587</InstallTarHash>
+        <PackageURI>p/pantheon-music/pantheon-music-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-music</Name>
+            <Homepage>https://github.com/elementary/music</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-mail</Name>
+        <Summary xml:lang="en">Mail app designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Mail app designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>folks</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libsoup</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-23</Date>
+                <Version>1.0.8</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1019136</InstalledSize>
+        <PackageSize>213217</PackageSize>
+        <PackageHash>7c2a0ac671b41803dfc779708bf79b46046ffabc</PackageHash>
+        <InstallTarHash>8afe4ea29686c0ff7313fa94b6f8f7cb05b74f22</InstallTarHash>
+        <PackageURI>p/pantheon-mail/pantheon-mail-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-mail</Name>
+            <Homepage>https://github.com/elementary/mail</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-photos</Name>
+        <Summary xml:lang="en">Photo viewer and organizer designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Photo viewer and organizer designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libgexiv2</Dependency>
+            <Dependency>libgphoto2</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libraw</Dependency>
+            <Dependency>librest</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>webp</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>2.7.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.7.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>8983725</InstalledSize>
+        <PackageSize>1781653</PackageSize>
+        <PackageHash>5a0392eac8ee7dc2255f217ad69dc345310284dc</PackageHash>
+        <InstallTarHash>ba72b8dd1b9d669ce6ec8a36ec9f389315387b94</InstallTarHash>
+        <PackageURI>p/pantheon-photos/pantheon-photos-2.7.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-photos</Name>
+            <Homepage>https://github.com/elementary/photos</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-applications-menu</Name>
+        <Summary xml:lang="en">Lightweight and stylish app launcher</Summary>
+        <Description xml:lang="en">Applications Menu for the Pantheon desktop environment</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gnome-menus</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>2.8.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>2.7.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>930729</InstalledSize>
+        <PackageSize>213539</PackageSize>
+        <PackageHash>d0bb705da832f0ae463ca6631774c80a66bfd31f</PackageHash>
+        <InstallTarHash>6ae68c262553e1877db229c867e746f9d7229138</InstallTarHash>
+        <PackageURI>p/pantheon-applications-menu/pantheon-applications-menu-2.8.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-applications-menu</Name>
+            <Homepage>https://github.com/elementary/applications-menu</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-polkit</Name>
+        <Summary xml:lang="en">Policy Kit for Pantheon Desktop</Summary>
+        <Description xml:lang="en">Policy Kit for Pantheon Desktop</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>granite</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>1.0.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>1.0.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>176101</InstalledSize>
+        <PackageSize>32848</PackageSize>
+        <PackageHash>7a70436f1aa25d443818a73e8fefaf98a0ce3e75</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-polkit/pantheon-polkit-1.0.4-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-polkit</Name>
+            <Homepage>https://github.com/elementary/pantheon-agent-polkit</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-music-devel</Name>
+        <Summary xml:lang="en">Development files for pantheon-music</Summary>
+        <Description xml:lang="en">Music player and library designed for Pantheon DE</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">pantheon-music</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>5.1.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>5.0.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>97503</InstalledSize>
+        <PackageSize>13454</PackageSize>
+        <PackageHash>931d3b3b6b0d3ab298e8ab861c38f995c67f3f0a</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-music/pantheon-music-devel-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-music</Name>
+            <Homepage>https://github.com/elementary/music</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>python3-rdflib</Name>
+        <Summary xml:lang="en">RDF library for Python</Summary>
+        <Description xml:lang="en">python-rdflib is a Python library for working with RDF, a simple yet powerful language for representing information. The library contains parsers and serializers for RDF/XML, N3, NTriples, Turtle, TriX and RDFa.</Description>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3-isodate</Dependency>
+            <Dependency>python3-pyparsing</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>5.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1039979</InstalledSize>
+        <PackageSize>181162</PackageSize>
+        <PackageHash>92007052e7e4cf3207053c375e825da99f220409</PackageHash>
+        <InstallTarHash>f88e15a5995c6fb311ece6fd57200cb7ca211746</InstallTarHash>
+        <PackageURI>p/python3-rdflib/python3-rdflib-5.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python3-rdflib</Name>
+            <Homepage>http://www.rdflib.net</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-default-settings</Name>
+        <Summary xml:lang="en">Default settings and configuration files for Pantheon DE.</Summary>
+        <Description xml:lang="en">Default settings and configuration files for Pantheon DE.</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>5.1.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>135276</InstalledSize>
+        <PackageSize>108942</PackageSize>
+        <PackageHash>14409c556ba841ba5207aeb4b7335d1c73ed3b9c</PackageHash>
+        <InstallTarHash>3150238048e756bb9da369de6f31360e21d903ec</InstallTarHash>
+        <PackageURI>p/pantheon-default-settings/pantheon-default-settings-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-default-settings</Name>
+            <Homepage>https://github.com/elementary/default-settings</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-files</Name>
+        <Summary xml:lang="en">File browser designed for Pantheon DE</Summary>
+        <Description xml:lang="en">File browser designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcloudproviders</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libgit2-glib</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>plank</Dependency>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>4.5.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>3838917</InstalledSize>
+        <PackageSize>824639</PackageSize>
+        <PackageHash>dafd9248dd1b25d16ffd886608c912e9d1880af9</PackageHash>
+        <InstallTarHash>f7cf496290f37fd1bad2bd2d7275a69133e05c76</InstallTarHash>
+        <PackageURI>p/pantheon-files/pantheon-files-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-files</Name>
+            <Homepage>https://github.com/elementary/files</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-files-devel</Name>
+        <Summary xml:lang="en">File browser designed for Pantheon DE</Summary>
+        <Description xml:lang="en">File browser designed for Pantheon DE</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">pantheon-files</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>granite-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>4.5.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>210843</InstalledSize>
+        <PackageSize>27189</PackageSize>
+        <PackageHash>01fc94816e193ac0d3925f06c0836b8eb1965284</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-files/pantheon-files-devel-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-files</Name>
+            <Homepage>https://github.com/elementary/files</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-code</Name>
+        <Summary xml:lang="en">Code editor designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Code editor designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>vte</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>gtkspell3</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libgit2-glib</Dependency>
+            <Dependency>gtksourceview4</Dependency>
+            <Dependency>editorconfig-core-c</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-07</Date>
+                <Version>3.4.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>2418644</InstalledSize>
+        <PackageSize>493856</PackageSize>
+        <PackageHash>00fad473755a6595f24d2ee3f01b1c36c05b0de2</PackageHash>
+        <InstallTarHash>341be09b69337d66c849b645d06f40a209a045bf</InstallTarHash>
+        <PackageURI>p/pantheon-code/pantheon-code-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-code</Name>
+            <Homepage>https://github.com/elementary/code</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-tweaks</Name>
+        <Summary xml:lang="en">A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop&apos;s appearance</Summary>
+        <Description xml:lang="en">pantheon-tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop&apos;s appearance</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>20210624</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>2.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>372134</InstalledSize>
+        <PackageSize>85858</PackageSize>
+        <PackageHash>c43344ef99f17c73e7cb08e8ea8afd1923ed0231</PackageHash>
+        <InstallTarHash>bd4b530e20e30d458469980988617a64c7fe7870</InstallTarHash>
+        <PackageURI>p/pantheon-tweaks/pantheon-tweaks-20210624-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-tweaks</Name>
+            <Homepage>https://github.com/pantheon-tweaks/pantheon-tweaks</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-videos</Name>
+        <Summary xml:lang="en">Video player and library app designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Video player and library app designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>clutter</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>clutter-gst</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-05-17</Date>
+                <Version>2.7.3</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.7.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>542516</InstalledSize>
+        <PackageSize>139145</PackageSize>
+        <PackageHash>500b48eeb96872598bc9114b5302b08081eb935d</PackageHash>
+        <InstallTarHash>462bdb858c119c031b78ac85acd536feecc82670</InstallTarHash>
+        <PackageURI>p/pantheon-videos/pantheon-videos-2.7.3-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-videos</Name>
+            <Homepage>https://github.com/elementary/videos</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>switchboard-devel</Name>
+        <Summary xml:lang="en">Development files for switchboard</Summary>
+        <Description xml:lang="en">Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>programming.devel</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency release="2">switchboard</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>2.4.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>6654</InstalledSize>
+        <PackageSize>3254</PackageSize>
+        <PackageHash>be652e127590631eaddb6130371d6ac0c0ea1c18</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>s/switchboard/switchboard-devel-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>switchboard</Name>
+            <Homepage>https://github.com/elementary/switchboard</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>switchboard</Name>
+        <Summary xml:lang="en">Extensible System Settings app designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>2.4.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>304139</InstalledSize>
+        <PackageSize>66250</PackageSize>
+        <PackageHash>72864bfb12fd96544004132b8a7b39c28e4f6179</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>s/switchboard/switchboard-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>switchboard</Name>
+            <Homepage>https://github.com/elementary/switchboard</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-power</Name>
+        <Summary xml:lang="en">Wingpanel Power Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Power Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>bamf</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libgtop</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>464597</InstalledSize>
+        <PackageSize>99444</PackageSize>
+        <PackageHash>8b935b8a81ee84db396c51520983fd497b7ca1e8</PackageHash>
+        <InstallTarHash>0e7a07b6fcd7ed678869ff8dd88073427e07c18d</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-power/wingpanel-indicator-power-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-power</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-power</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-bluetooth</Name>
+        <Summary xml:lang="en">Wingpanel Bluetooth Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Bluetooth Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>bluez</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.1.7</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.1.6</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>268717</InstalledSize>
+        <PackageSize>60040</PackageSize>
+        <PackageHash>5cd5a66260a09c21a6201889fbd25765a845e952</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-bluetooth/wingpanel-indicator-bluetooth-2.1.7-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-bluetooth</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-bluetooth</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-nightlight</Name>
+        <Summary xml:lang="en">A Wingpanel indicator for Night Light</Summary>
+        <Description xml:lang="en">A Wingpanel indicator for Night Light</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-04-21</Date>
+                <Version>2.1.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.0.4</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>181327</InstalledSize>
+        <PackageSize>56627</PackageSize>
+        <PackageHash>246ce8a1b36b68af0c3caddce5c25b7773d9ead9</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-nightlight/wingpanel-indicator-nightlight-2.1.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-nightlight</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-nightlight</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-network</Name>
+        <Summary xml:lang="en">Wingpanel Network Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Network Indicator</Description>
+        <PartOf>desktop</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>libnma</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>NetworkManager</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>2.3.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>2.2.4</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>314400</InstalledSize>
+        <PackageSize>76214</PackageSize>
+        <PackageHash>bf502210fd08922007d273c7b92e53988edcafac</PackageHash>
+        <InstallTarHash>8924fb282049b2b8a5495bff316949e454abf598</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-network/wingpanel-indicator-network-2.3.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-network</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-network</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-devel</Name>
+        <Summary xml:lang="en">The extensible top panel for Pantheon.</Summary>
+        <Description xml:lang="en">The extensible top panel for Pantheon. Wingpanel is an empty container that accepts indicators as extensions, including the applications menu.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">wingpanel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-08</Date>
+                <Version>2.3.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>18327</InstalledSize>
+        <PackageSize>4376</PackageSize>
+        <PackageHash>39716621026ee1c40987b5081a190433334f0acb</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>w/wingpanel/wingpanel-devel-3.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel</Name>
+            <Homepage>https://github.com/elementary/wingpanel</Homepage>
+            <Packager>
+                <Name>Berk Cakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-session</Name>
+        <Summary xml:lang="en">Wingpanel Session Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Session Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>accountsservice</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>2.3.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.2.8</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>287523</InstalledSize>
+        <PackageSize>66249</PackageSize>
+        <PackageHash>87144f887607ba73f2bdc5597546220a92835adb</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-session/wingpanel-indicator-session-2.3.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-session</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-session</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-sound</Name>
+        <Summary xml:lang="en">Wingpanel Sound Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Sound Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.1.8</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>469579</InstalledSize>
+        <PackageSize>121666</PackageSize>
+        <PackageHash>1d0e7973c1ec9c98e5d9cef5f7a97e70b0331a33</PackageHash>
+        <InstallTarHash>f0c4f68eb844b6ed14de5ade28a5c83dcb534246</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-sound/wingpanel-indicator-sound-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-sound</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-sound</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-keyboard</Name>
+        <Summary xml:lang="en">Wingpanel Keyboard Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Keyboard Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>ibus</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>xkeyboard-config</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>2.4.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>173681</InstalledSize>
+        <PackageSize>43195</PackageSize>
+        <PackageHash>09e3894fd98ccbb5f4f4db851fa46e9574b7d01d</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-keyboard/wingpanel-indicator-keyboard-2.4.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-keyboard</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-keyboard</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-notifications</Name>
+        <Summary xml:lang="en">Wingpanel Notifications Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Notifications Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>wingpanel</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-21</Date>
+                <Version>2.1.4</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>287294</InstalledSize>
+        <PackageSize>86191</PackageSize>
+        <PackageHash>029d9c2cf029421c218f8a30b51c873529fbcebe</PackageHash>
+        <InstallTarHash>23cdf0655d55fbf2193d6a860ba4c00695d3d918</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-notifications/wingpanel-indicator-notifications-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-notifications</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-notifications</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-a11y</Name>
+        <Summary xml:lang="en">Wingpanel Universal Access Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Universal Access Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-16</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>143242</InstalledSize>
+        <PackageSize>31964</PackageSize>
+        <PackageHash>1b676ef175ac25c8ddbe5ca81a3857c99d9f1273</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-a11y/wingpanel-indicator-a11y-1.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-a11y</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-a11y</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel</Name>
+        <Summary xml:lang="en">The extensible top panel for Pantheon.</Summary>
+        <Description xml:lang="en">The extensible top panel for Pantheon. Wingpanel is an empty container that accepts indicators as extensions, including the applications menu.</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gala</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>mutter6</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-08</Date>
+                <Version>2.3.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>351129</InstalledSize>
+        <PackageSize>87711</PackageSize>
+        <PackageHash>24e01329076c83ca543d4434efb7a8bf1ac8f301</PackageHash>
+        <InstallTarHash>55152980bfd209e6e498436ee606ddd582c9953a</InstallTarHash>
+        <PackageURI>w/wingpanel/wingpanel-3.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel</Name>
+            <Homepage>https://github.com/elementary/wingpanel</Homepage>
+            <Packager>
+                <Name>Berk Cakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>wingpanel-indicator-datetime</Name>
+        <Summary xml:lang="en">Wingpanel Date Time Indicator</Summary>
+        <Description xml:lang="en">Wingpanel Date Time Indicator</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>wingpanel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>2.3.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>2.2.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>274299</InstalledSize>
+        <PackageSize>72046</PackageSize>
+        <PackageHash>eb925c4a2d37a945ea681b11bb175857c33bb7c8</PackageHash>
+        <InstallTarHash>33747cd51d3d5d79425825b9ab13d284b926f5ce</InstallTarHash>
+        <PackageURI>w/wingpanel-indicator-datetime/wingpanel-indicator-datetime-2.3.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>wingpanel-indicator-datetime</Name>
+            <Homepage>https://github.com/elementary/wingpanel-indicator-datetime</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>zeitgeist-devel</Name>
+        <Summary xml:lang="en">Development files for zeitgeist</Summary>
+        <Description xml:lang="en">Zeitgeist is a service which logs the users’ activities and events, anywhere from files opened to websites visited and conversations had. It makes this information readily available for other applications to use.</Description>
+        <Description xml:lang="tr">zeitgeist, kullanıcıların dosya açma, web sitesine girme ve çevrimiçi görüşmeler yapma gibi aktivitelerini ve olaylarını takip edip, günlük tutar. Gerektiğinde bu verileri diğer uygulamaların kullanımına sunar.</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency release="11">zeitgeist</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="11">
+                <Date>2021-04-21</Date>
+                <Version>1.0.3</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2014-09-03</Date>
+                <Version>0.9.15</Version>
+                <Comment>rebuild for xapian-core</Comment>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Update>
+            <Update release="9">
+                <Date>2014-05-25</Date>
+                <Version>0.9.15</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="8">
+                <Date>2013-11-11</Date>
+                <Version>0.9.14</Version>
+                <Comment>Remove *-devel packages from runtime dependencies.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="7">
+                <Date>2013-10-14</Date>
+                <Version>0.9.14</Version>
+                <Comment>rebuild for icu4c.</Comment>
+                <Name>Aydın Demirel</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2013-10-10</Date>
+                <Version>0.9.14</Version>
+                <Comment>Fix build.</Comment>
+                <Name>Aydın Demirel</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2013-08-20</Date>
+                <Version>0.9.14</Version>
+                <Comment>Fix deps, increase release no.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-07-09</Date>
+                <Version>0.9.14</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-07-09</Date>
+                <Version>0.9.5</Version>
+                <Comment>Dep Fixed</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-06-22</Date>
+                <Version>0.9.5</Version>
+                <Comment>Remove dir /usr/doc</Comment>
+                <Name>Fatih Turgel</Name>
+                <Email>turgelfatih@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-12-27</Date>
+                <Version>0.9.5</Version>
+                <Comment>First release</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>383140</InstalledSize>
+        <PackageSize>25021</PackageSize>
+        <PackageHash>4a603688c490821b4ccf4e89c027b92cdf07f6cf</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>z/zeitgeist/zeitgeist-devel-1.0.3-11-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>zeitgeist</Name>
+            <Homepage>https://launchpad.net/zeitgeist/</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>zeitgeist</Name>
+        <Summary xml:lang="en">Service which logs user activities and presents them to other applications</Summary>
+        <Description xml:lang="en">Zeitgeist is a service which logs the users’ activities and events, anywhere from files opened to websites visited and conversations had. It makes this information readily available for other applications to use.</Description>
+        <Description xml:lang="tr">zeitgeist, kullanıcıların dosya açma, web sitesine girme ve çevrimiçi görüşmeler yapma gibi aktivitelerini ve olaylarını takip edip, günlük tutar. Gerektiğinde bu verileri diğer uygulamaların kullanımına sunar.</Description>
+        <PartOf>desktop.misc</PartOf>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>python3-rdflib</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>xapian-core</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>json-glib</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="11">
+                <Date>2021-04-21</Date>
+                <Version>1.0.3</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2014-09-03</Date>
+                <Version>0.9.15</Version>
+                <Comment>rebuild for xapian-core</Comment>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Update>
+            <Update release="9">
+                <Date>2014-05-25</Date>
+                <Version>0.9.15</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="8">
+                <Date>2013-11-11</Date>
+                <Version>0.9.14</Version>
+                <Comment>Remove *-devel packages from runtime dependencies.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="7">
+                <Date>2013-10-14</Date>
+                <Version>0.9.14</Version>
+                <Comment>rebuild for icu4c.</Comment>
+                <Name>Aydın Demirel</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2013-10-10</Date>
+                <Version>0.9.14</Version>
+                <Comment>Fix build.</Comment>
+                <Name>Aydın Demirel</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2013-08-20</Date>
+                <Version>0.9.14</Version>
+                <Comment>Fix deps, increase release no.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-07-09</Date>
+                <Version>0.9.14</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-07-09</Date>
+                <Version>0.9.5</Version>
+                <Comment>Dep Fixed</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-06-22</Date>
+                <Version>0.9.5</Version>
+                <Comment>Remove dir /usr/doc</Comment>
+                <Name>Fatih Turgel</Name>
+                <Email>turgelfatih@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-12-27</Date>
+                <Version>0.9.5</Version>
+                <Comment>First release</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1682134</InstalledSize>
+        <PackageSize>346584</PackageSize>
+        <PackageHash>ee60618e98a213518959df750c9f3e847dbdba71</PackageHash>
+        <InstallTarHash>64a7521b20e01a833b0b7960820e43edca80dd0f</InstallTarHash>
+        <PackageURI>z/zeitgeist/zeitgeist-1.0.3-11-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>zeitgeist</Name>
+            <Homepage>https://launchpad.net/zeitgeist/</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+</PISI>
