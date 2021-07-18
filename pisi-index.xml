@@ -260,7 +260,8 @@
             <Dependency>glib2</Dependency>
             <Dependency>plank</Dependency>
             <Dependency>libgee</Dependency>
-            <Dependency>mutter6</Dependency>
+            <Dependency>mutter7</Dependency>
+            <Dependency>mutter</Dependency>
             <Dependency>granite</Dependency>
             <Dependency>graphene</Dependency>
             <Dependency>libXfixes</Dependency>
@@ -270,6 +271,13 @@
             <Dependency>gnome-desktop</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild with mutter7</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -289,11 +297,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>1233261</InstalledSize>
-        <PackageSize>317619</PackageSize>
-        <PackageHash>5a6e7255dc4c2cffad64f699f33b0a26c384478e</PackageHash>
-        <InstallTarHash>3abd8e707cdb32081039a8eb64d59d5b5d631ae4</InstallTarHash>
-        <PackageURI>g/gala/gala-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>1233229</InstalledSize>
+        <PackageSize>317546</PackageSize>
+        <PackageHash>f1fe3bd077e97cfba60f1c99431d4b39689a649d</PackageHash>
+        <InstallTarHash>6dda9cf698d8493523caa780560cabc4c29d8171</InstallTarHash>
+        <PackageURI>g/gala/gala-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>gala</Name>
@@ -360,11 +368,18 @@
         <PartOf>programming.devel</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency release="2">gala</Dependency>
+            <Dependency release="3">gala</Dependency>
             <Dependency>glib2-devel</Dependency>
-            <Dependency>mutter6-devel</Dependency>
+            <Dependency>mutter7-devel</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild with mutter7</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -384,11 +399,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>28241</InstalledSize>
-        <PackageSize>6352</PackageSize>
-        <PackageHash>e70db11f77b40c08218baa84e38d13e04d79e040</PackageHash>
+        <InstalledSize>28239</InstalledSize>
+        <PackageSize>6373</PackageSize>
+        <PackageHash>4851007aa20f748a73aba714665b36856d577f9e</PackageHash>
         <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>g/gala/gala-devel-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageURI>g/gala/gala-devel-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>gala</Name>
@@ -459,12 +474,19 @@
             <Dependency>libgee</Dependency>
             <Dependency>granite</Dependency>
             <Dependency>lightdm</Dependency>
-            <Dependency>mutter6</Dependency>
+            <Dependency>mutter7</Dependency>
             <Dependency>libhandy</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>accountsservice</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-16</Date>
                 <Version>6.0.0</Version>
@@ -484,15 +506,65 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>448997</InstalledSize>
-        <PackageSize>118013</PackageSize>
-        <PackageHash>e5a2bde054c070f68e08f03b0eab4127702f4e6d</PackageHash>
-        <InstallTarHash>c6185817eccc6f8d5d79ead333008797eadd8855</InstallTarHash>
-        <PackageURI>l/lightdm-pantheon-greeter/lightdm-pantheon-greeter-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>449029</InstalledSize>
+        <PackageSize>117921</PackageSize>
+        <PackageHash>a854258d669f02a168a5c54ea47743ea6ef0689d</PackageHash>
+        <InstallTarHash>c902d36251d353628949ac1b19d9ab87d15ac062</InstallTarHash>
+        <PackageURI>l/lightdm-pantheon-greeter/lightdm-pantheon-greeter-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>lightdm-pantheon-greeter</Name>
             <Homepage>https://github.com/elementary/greeter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mutter7-devel</Name>
+        <Summary xml:lang="en">Development files for mutter7</Summary>
+        <Description xml:lang="en">Mutter7 is a Wayland display server and X11 window manager and compositor library for GNOME 3.38</Description>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency release="1">mutter7</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>graphene-devel</Dependency>
+            <Dependency>libglvnd-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-16</Date>
+                <Version>3.38.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1562407</InstalledSize>
+        <PackageSize>194549</PackageSize>
+        <PackageHash>3634a963ca8dff50f9032d0f715393d412608c01</PackageHash>
+        <InstallTarHash>423561f0e4a4e595bddc52731f770585b187d9e0</InstallTarHash>
+        <PackageURI>m/mutter7/mutter7-devel-3.38.5-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mutter7</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -581,6 +653,81 @@
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>mutter6</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>mutter7</Name>
+        <Summary xml:lang="en">A window manager for GNOME 3.38</Summary>
+        <Description xml:lang="en">Mutter7 is a Wayland display server and X11 window manager and compositor library for GNOME 3.38</Description>
+        <PartOf>desktop.gnome.base</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>elogind</Dependency>
+            <Dependency>fribidi</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>graphene</Dependency>
+            <Dependency>libglvnd</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>pipewire</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-16</Date>
+                <Version>3.38.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>9226968</InstalledSize>
+        <PackageSize>1653301</PackageSize>
+        <PackageHash>e1e644f97cea483795a64811ab18795bb76f2aac</PackageHash>
+        <InstallTarHash>46a7f721bba832c88346839e36b887c0478c6883</InstallTarHash>
+        <PackageURI>m/mutter7/mutter7-3.38.5-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>mutter7</Name>
             <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
@@ -795,56 +942,6 @@
         <Source>
             <Name>pantheon-calculator</Name>
             <Homepage>https://github.com/elementary/calculator</Homepage>
-            <Packager>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>pantheon-screenshot</Name>
-        <Summary xml:lang="en">Screenshot app for Pantheon DE</Summary>
-        <Description xml:lang="en">Screenshot app for Pantheon DE</Description>
-        <IsA>app:gui</IsA>
-        <PartOf>desktop.pantheon.app</PartOf>
-        <License>GPLv3</License>
-        <RuntimeDependencies>
-            <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>granite</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libcanberra</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2021-05-17</Date>
-                <Version>1.7.1</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2021-04-17</Date>
-                <Version>1.7.1</Version>
-                <Comment>First release for Pisi Linux</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>402150</InstalledSize>
-        <PackageSize>75834</PackageSize>
-        <PackageHash>8e6564765c1b0cd50305c896353d35d83b5b0114</PackageHash>
-        <InstallTarHash>96677270a6518bdeb6cbc5e44fbaa0f840973f07</InstallTarHash>
-        <PackageURI>p/pantheon-screenshot/pantheon-screenshot-1.7.1-2-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>pantheon-screenshot</Name>
-            <Homepage>https://github.com/elementary/screenshot</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -1121,6 +1218,48 @@
         </Source>
     </Package>
     <Package>
+        <Name>python3-rdflib</Name>
+        <Summary xml:lang="en">RDF library for Python</Summary>
+        <Description xml:lang="en">python-rdflib is a Python library for working with RDF, a simple yet powerful language for representing information. The library contains parsers and serializers for RDF/XML, N3, NTriples, Turtle, TriX and RDFa.</Description>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3-isodate</Dependency>
+            <Dependency>python3-pyparsing</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>5.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1039979</InstalledSize>
+        <PackageSize>181162</PackageSize>
+        <PackageHash>92007052e7e4cf3207053c375e825da99f220409</PackageHash>
+        <InstallTarHash>f88e15a5995c6fb311ece6fd57200cb7ca211746</InstallTarHash>
+        <PackageURI>p/python3-rdflib/python3-rdflib-5.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python3-rdflib</Name>
+            <Homepage>http://www.rdflib.net</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>pantheon-mail</Name>
         <Summary xml:lang="en">Mail app designed for Pantheon DE</Summary>
         <Description xml:lang="en">Mail app designed for Pantheon DE</Description>
@@ -1390,24 +1529,32 @@
         </Source>
     </Package>
     <Package>
-        <Name>python3-rdflib</Name>
-        <Summary xml:lang="en">RDF library for Python</Summary>
-        <Description xml:lang="en">python-rdflib is a Python library for working with RDF, a simple yet powerful language for representing information. The library contains parsers and serializers for RDF/XML, N3, NTriples, Turtle, TriX and RDFa.</Description>
-        <IsA>library</IsA>
-        <IsA>app:console</IsA>
-        <PartOf>programming.language.python3</PartOf>
-        <License>BSD</License>
+        <Name>pantheon-screenshot</Name>
+        <Summary xml:lang="en">Screenshot app for Pantheon DE</Summary>
+        <Description xml:lang="en">Screenshot app for Pantheon DE</Description>
+        <IsA>app:gui</IsA>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-            <Dependency>python3-six</Dependency>
-            <Dependency>python3-isodate</Dependency>
-            <Dependency>python3-pyparsing</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcanberra</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="2">
+                <Date>2021-05-17</Date>
+                <Version>1.7.1</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
-                <Date>2021-04-16</Date>
-                <Version>5.0.0</Version>
-                <Comment>First release</Comment>
+                <Date>2021-04-17</Date>
+                <Version>1.7.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Update>
@@ -1416,18 +1563,18 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>1039979</InstalledSize>
-        <PackageSize>181162</PackageSize>
-        <PackageHash>92007052e7e4cf3207053c375e825da99f220409</PackageHash>
-        <InstallTarHash>f88e15a5995c6fb311ece6fd57200cb7ca211746</InstallTarHash>
-        <PackageURI>p/python3-rdflib/python3-rdflib-5.0.0-1-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>402150</InstalledSize>
+        <PackageSize>75834</PackageSize>
+        <PackageHash>8e6564765c1b0cd50305c896353d35d83b5b0114</PackageHash>
+        <InstallTarHash>96677270a6518bdeb6cbc5e44fbaa0f840973f07</InstallTarHash>
+        <PackageURI>p/pantheon-screenshot/pantheon-screenshot-1.7.1-2-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
-            <Name>python3-rdflib</Name>
-            <Homepage>http://www.rdflib.net</Homepage>
+            <Name>pantheon-screenshot</Name>
+            <Homepage>https://github.com/elementary/screenshot</Homepage>
             <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
             </Packager>
         </Source>
     </Package>
@@ -1648,6 +1795,13 @@
             <Dependency>switchboard</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-16</Date>
+                <Version>20210624</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-16</Date>
                 <Version>20210624</Version>
@@ -1668,10 +1822,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>372134</InstalledSize>
-        <PackageSize>85858</PackageSize>
-        <PackageHash>c43344ef99f17c73e7cb08e8ea8afd1923ed0231</PackageHash>
-        <InstallTarHash>bd4b530e20e30d458469980988617a64c7fe7870</InstallTarHash>
-        <PackageURI>p/pantheon-tweaks/pantheon-tweaks-20210624-2-p2-x86_64.pisi</PackageURI>
+        <PackageSize>85933</PackageSize>
+        <PackageHash>9cbed9fcd745396e16af20c4012b7d0fc34c66e7</PackageHash>
+        <InstallTarHash>7c3a14392a8d0b2290fedf1f447cbb39abdc4698</InstallTarHash>
+        <PackageURI>p/pantheon-tweaks/pantheon-tweaks-20210624-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-tweaks</Name>
@@ -2038,12 +2192,19 @@
         <PartOf>programming.devel</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency release="2">wingpanel</Dependency>
+            <Dependency release="3">wingpanel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>3.0.0</Version>
@@ -2064,10 +2225,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>18327</InstalledSize>
-        <PackageSize>4376</PackageSize>
-        <PackageHash>39716621026ee1c40987b5081a190433334f0acb</PackageHash>
+        <PackageSize>4392</PackageSize>
+        <PackageHash>f348981a76c1d2288a5fc0b284d5b4d5b07dae69</PackageHash>
         <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>w/wingpanel/wingpanel-devel-3.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageURI>w/wingpanel/wingpanel-devel-3.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>wingpanel</Name>
@@ -2336,9 +2497,16 @@
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>granite</Dependency>
-            <Dependency>mutter6</Dependency>
+            <Dependency>mutter7</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>3.0.0</Version>
@@ -2359,10 +2527,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>351129</InstalledSize>
-        <PackageSize>87711</PackageSize>
-        <PackageHash>24e01329076c83ca543d4434efb7a8bf1ac8f301</PackageHash>
-        <InstallTarHash>55152980bfd209e6e498436ee606ddd582c9953a</InstallTarHash>
-        <PackageURI>w/wingpanel/wingpanel-3.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageSize>87641</PackageSize>
+        <PackageHash>1e630310c17eb0283e12488434842b7a22755beb</PackageHash>
+        <InstallTarHash>6301c59e8dbb282f0a099f8ffe2f608ca0fa585d</InstallTarHash>
+        <PackageURI>w/wingpanel/wingpanel-3.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>wingpanel</Name>
