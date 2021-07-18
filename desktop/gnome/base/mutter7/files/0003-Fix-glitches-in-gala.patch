@@ -1,0 +1,29 @@
+From 045bb522d21cc16725a37473005fddc5f1421a28 Mon Sep 17 00:00:00 2001
+From: worldofpeace <worldofpeace@protonmail.ch>
+Date: Sun, 5 Apr 2020 23:06:03 -0400
+Subject: [PATCH 3/3] Fix glitches in gala
+
+This fixes issues for users of mutter like in gala[0].
+
+Upstream report: https://gitlab.gnome.org/GNOME/mutter/issues/536
+[0]: https://github.com/elementary/gala/issues/605
+---
+ clutter/clutter/clutter-actor.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/clutter/clutter/clutter-actor.c b/clutter/clutter/clutter-actor.c
+index febfb31..17bd071 100644
+--- a/clutter/clutter/clutter-actor.c
++++ b/clutter/clutter/clutter-actor.c
+@@ -15926,7 +15926,7 @@ _clutter_actor_get_paint_volume_mutable (ClutterActor *self)
+   if (_clutter_actor_get_paint_volume_real (self, &priv->paint_volume))
+     {
+       priv->paint_volume_valid = TRUE;
+-      priv->needs_paint_volume_update = FALSE;
++      //priv->needs_paint_volume_update = FALSE;
+       return &priv->paint_volume;
+     }
+   else
+-- 
+2.30.2
+

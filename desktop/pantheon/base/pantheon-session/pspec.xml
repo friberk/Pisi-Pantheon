@@ -33,7 +33,7 @@
             <Dependency>orca</Dependency>
             <Dependency>plank</Dependency>
             <Dependency>xdg-user-dirs-gtk</Dependency>
-            <Dependency>applications-menu</Dependency>
+            <Dependency>pantheon-applications-menu</Dependency>
             <Dependency>dpms</Dependency>
         </RuntimeDependencies>
         <Files>

@@ -1,0 +1,26 @@
+From 43add233d62a48250d800e8fce483a4330f0ef98 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jonas=20=C3=85dahl?= <jadahl@gmail.com>
+Date: Tue, 17 Nov 2020 14:00:02 +0100
+Subject: [PATCH 0/3] Revert "build: Do not provide built sources as
+ libmutter_dep sources"
+
+This reverts commit 4e9a2e479969973bf3063c740ceff149036b3af4.
+---
+ src/meson.build | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/meson.build b/src/meson.build
+index e7c99ca..8fe484e 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -955,6 +955,7 @@ libmutter = shared_library(libmutter_name,
+ libmutter_dep = declare_dependency(
+   link_with: libmutter,
+   include_directories: mutter_includes,
++  sources: mutter_built_sources,
+   dependencies: [
+     libmutter_cogl_dep,
+     libmutter_clutter_dep,
+-- 
+2.30.2
+

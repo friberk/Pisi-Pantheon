@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mutter7</Name>
+        <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Summary>A window manager for GNOME 3.38</Summary>
+        <Description>Mutter7 is a Wayland display server and X11 window manager and compositor library for GNOME 3.38</Description>
+        <BuildDependencies>
+            <Dependency>meson</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>graphene-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            <Dependency>gnome-settings-daemon-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>libxkbfile-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>libgudev-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>libinput-devel</Dependency>
+            <Dependency>elogind-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libwacom-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+            <Dependency>pipewire-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>egl-wayland-devel</Dependency>
+            <Dependency>xorg-xwayland</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">0000-Revert-build-Do-not-provide-built-sources-as-libmutt.patch</Patch>
+            <Patch level="1">0001-window-actor-Special-case-shaped-Java-windows.patch</Patch>
+            <Patch level="1">0002-Adapt-to-settings-moving-to-gsettings-desktop-schema.patch</Patch>
+            <Patch level="1">0003-Fix-glitches-in-gala.patch</Patch>
+        </Patches>
+        <Archive sha1sum="5db30e3162257060c85cbbdc09d5bfcc5306c0e6" type="tarxz">https://download.gnome.org/sources/mutter/3.38/mutter-3.38.5.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>mutter7</Name>
+        <Summary>A window manager for GNOME 3.38</Summary>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>eudev</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXau</Dependency>
+            <Dependency>libdrm</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>elogind</Dependency>
+            <Dependency>fribidi</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>graphene</Dependency>
+            <Dependency>libglvnd</Dependency>
+            <Dependency>libgudev</Dependency>
+            <Dependency>libinput</Dependency>
+            <Dependency>libwacom</Dependency>
+            <Dependency>pipewire</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXcursor</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libxkbfile</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>wayland-server</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/libmutter-7*.so*</Path>
+            <Path fileType="library">/usr/lib/mutter-7</Path>
+            <Path fileType="library">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/gnome-control-center</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/mutter-7</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mutter7-devel</Name>
+        <Summary>Development files for mutter7</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mutter7</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>wayland-devel</Dependency>
+            <Dependency>graphene-devel</Dependency>
+            <Dependency>libglvnd-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-07-16</Date>
+            <Version>3.38.5</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>

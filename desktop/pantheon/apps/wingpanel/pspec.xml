@@ -18,7 +18,7 @@
             <Dependency>gtk3-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
             <Dependency>meson</Dependency>
-            <Dependency>mutter6-devel</Dependency>
+            <Dependency>mutter7-devel</Dependency>
             <Dependency>vala-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
         </BuildDependencies>
@@ -34,7 +34,7 @@
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>granite</Dependency>
-            <Dependency>mutter6</Dependency>
+            <Dependency>mutter7</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/etc</Path>
@@ -66,6 +66,13 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2021-07-17</Date>
+            <Version>3.0.0</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2021-07-17</Date>
             <Version>3.0.0</Version>

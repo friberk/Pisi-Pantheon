@@ -21,7 +21,7 @@
             <Dependency>libhandy-devel</Dependency>
             <Dependency>lightdm-devel</Dependency>
             <Dependency>meson</Dependency>
-            <Dependency>mutter6-devel</Dependency>
+            <Dependency>mutter7-devel</Dependency>
             <Dependency>vala-devel</Dependency>
             <Dependency>wingpanel-devel</Dependency>
             <Dependency>desktop-file-utils</Dependency>
@@ -40,13 +40,13 @@
             <Dependency>libgee</Dependency>
             <Dependency>granite</Dependency>
             <Dependency>lightdm</Dependency>
-            <Dependency>mutter6</Dependency>
+            <Dependency>mutter7</Dependency>
             <Dependency>libhandy</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>accountsservice</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -57,6 +57,13 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2021-07-17</Date>
+            <Version>6.0.0</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2021-07-16</Date>
             <Version>6.0.0</Version>
