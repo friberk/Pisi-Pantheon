@@ -2,42 +2,33 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>switchboard-plug-about</Name>
-        <Homepage>https://github.com/elementary/switchboard-plug-about</Homepage>
+        <Name>switchboard-plug-display</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-display</Homepage>
         <Packager>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv3</License>
-        <Summary>Switchboard About Plug</Summary>
-        <Description>Switchboard About Plug</Description>
+        <Summary>Switchboard Displays Plug</Summary>
+        <Description>Switchboard Displays Plug</Description>
         <BuildDependencies>
-            <Dependency>appstream-devel</Dependency>
-            <Dependency>fwupd-devel</Dependency>
             <Dependency>granite-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>libgtop-devel</Dependency>
-            <Dependency>libhandy-devel</Dependency>
-            <Dependency>meson</Dependency>
             <Dependency>switchboard-devel</Dependency>
             <Dependency>vala-devel</Dependency>
+            <Dependency>meson</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="845731afee405dabbdac39eaddf0425e26fcc5df" type="targz">https://github.com/elementary/switchboard-plug-about/archive/refs/tags/6.0.0.tar.gz</Archive>
+        <Archive sha1sum="63ccfe8cd30e3e7521b4bc4a0ec7b6d7b49e1579" type="targz">https://github.com/elementary/switchboard-plug-display/archive/refs/tags/2.3.0.tar.gz</Archive>
     </Source>
     
     <Package>
-        <Name>switchboard-plug-about</Name>
-        <Summary>Switchboard About Plug</Summary>
+        <Name>switchboard-plug-display</Name>
+        <Summary>Switchboard Displays Plug</Summary>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
-            <Dependency>fwupd</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
-            <Dependency>libgtop</Dependency>
             <Dependency>granite</Dependency>
-            <Dependency>libhandy</Dependency>
-            <Dependency>appstream</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
             <Dependency>switchboard</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -49,16 +40,9 @@
     </Package>
     
     <History>
-        <Update release="2">
-            <Date>2021-07-17</Date>
-            <Version>6.0.0</Version>
-            <Comment>Version bump</Comment>
-            <Name>Berk Çakar</Name>
-            <Email>berk2238@hotmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2021-04-06</Date>
-            <Version>2.6.3</Version>
+            <Date>2021-07-17</Date>
+            <Version>2.3.0</Version>
             <Comment>First release for Pisi Linux</Comment>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>

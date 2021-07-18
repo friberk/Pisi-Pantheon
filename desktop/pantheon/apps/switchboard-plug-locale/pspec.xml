@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>switchboard-plug-locale</Name>
@@ -6,8 +8,7 @@
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
         </Packager>
-        <License>GPLv3</License>
-        <PartOf>desktop</PartOf>
+        <License>LGPLv3</License>
         <Summary>Switchboard Locale Plug</Summary>
         <Description>Switchboard Locale Plug</Description>
         <BuildDependencies>
@@ -18,38 +19,44 @@
             <Dependency>meson</Dependency>
             <Dependency>polkit-devel</Dependency>
             <Dependency>switchboard-devel</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>vala-devel</Dependency>
         </BuildDependencies>
-        <Archive type="targz" sha1sum="a17820734860b09c911f6ac730d763a729092b98">https://github.com/elementary/switchboard-plug-locale/archive/refs/tags/2.5.3.tar.gz</Archive>
+        <Archive type="targz" sha1sum="fb4464b87ea023f7e54f244f8f21a31786ea59ec">https://github.com/elementary/switchboard-plug-locale/archive/refs/tags/2.5.4.tar.gz</Archive>
         <Patches>
             <Patch>2.5.1-fix_ubuntu_langs.patch</Patch>
         </Patches>
     </Source>
+    
     <Package>
         <Name>switchboard-plug-locale</Name>
         <Summary>Switchboard Locale Plug</Summary>
         <RuntimeDependencies>
-            <Dependency>accountsservice</Dependency>
-            <Dependency>gnome-desktop</Dependency>
-            <Dependency>granite</Dependency>
-            <Dependency>ibus</Dependency>
-            <Dependency>meson</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
             <Dependency>polkit</Dependency>
+            <Dependency>granite</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>gnome-desktop</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/*</Path>
-            <Path fileType="library">/usr/libexec/*</Path>
-            <Path fileType="data">/usr/share/contractor/*</Path>
-            <Path fileType="doc">/usr/share/doc/*</Path>
-            <Path fileType="data">/usr/share/glib-2.0/*</Path>
-            <Path fileType="localedata">/usr/share/locale/*</Path>
-            <Path fileType="info">/usr/share/metainfo/*</Path>
-            <Path fileType="data">/usr/share/polkit-1/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
         </Files>
     </Package>
+   
     <History>
+        <Update release="2">
+            <Date>2021-07-17</Date>
+            <Version>2.5.4</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-04-07</Date>
             <Version>2.5.3</Version>

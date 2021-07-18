@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>switchboard-plug-onlineaccounts</Name>
@@ -7,58 +9,50 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv3</License>
-        <PartOf>desktop</PartOf>
         <Summary>Switchboard Online Accounts Plug</Summary>
         <Description>Switchboard Online Accounts Plug</Description>
         <BuildDependencies>
+            <Dependency>evolution-data-server-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>granite-devel</Dependency>
+            <Dependency>libhandy-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>json-glib-devel</Dependency>
-            <Dependency>libaccounts-glib-devel</Dependency>
-            <Dependency>libgee-devel</Dependency>
-            <Dependency>librest-devel</Dependency>
-            <Dependency>meson</Dependency>
-            <Dependency>signon-devel</Dependency>
             <Dependency>switchboard-devel</Dependency>
-            <Dependency>vala</Dependency>
-            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>meson</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="59065fdb95f0e7e1561365406dfbb9a1a98fc761" type="zip">https://github.com/elementary/switchboard-plug-onlineaccounts/archive/refs/heads/master.zip</Archive>
+        <Archive sha1sum="961428b69cd10427d91b29e22eb5f79f23598752" type="targz">https://github.com/elementary/switchboard-plug-onlineaccounts/archive/refs/tags/6.0.0.tar.gz</Archive>
     </Source>
+    
     <Package>
         <Name>switchboard-plug-onlineaccounts</Name>
-        <Summary>Switchboard Online Accounts Plug
-</Summary>
+        <Summary>Switchboard Online Accounts Plug</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>granite</Dependency>
             <Dependency>gtk3</Dependency>
-            <Dependency>json-glib</Dependency>
-            <Dependency>libaccounts-glib</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
-            <Dependency>librest</Dependency>
-            <Dependency>meson</Dependency>
-            <Dependency>signon</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libhandy</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>vala</Dependency>
-            <Dependency>webkit2gtk</Dependency>
+            <Dependency>evolution-data-server</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/*</Path>
-            <Path fileType="library">/usr/libexec/*</Path>
-            <Path fileType="data">/usr/share/accounts/*</Path>
-            <Path fileType="data">/usr/share/contractor/*</Path>
-            <Path fileType="data">/usr/share/dbus-1/*</Path>
-            <Path fileType="doc">/usr/share/doc/*</Path>
-            <Path fileType="data">/usr/share/glib-2.0/*</Path>
-            <Path fileType="data">/usr/share/icons/*</Path>
-            <Path fileType="localedata">/usr/share/locale/*</Path>
-            <Path fileType="info">/usr/share/metainfo/*</Path>
-            <Path fileType="data">/usr/share/polkit-1/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
         </Files>
     </Package>
+    
     <History>
+        <Update release="2">
+            <Date>2021-07-17</Date>
+            <Version>6.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-04-07</Date>
             <Version>2.0.1</Version>

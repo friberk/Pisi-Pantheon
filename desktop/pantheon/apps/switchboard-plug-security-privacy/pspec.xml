@@ -2,59 +2,52 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>switchboard-plug-sound</Name>
-        <Homepage>https://github.com/elementary/switchboard-plug-sound</Homepage>
+        <Name>switchboard-plug-security-privacy</Name>
+        <Homepage>https://github.com/elementary/switchboard-plug-security-privacy</Homepage>
         <Packager>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>
         </Packager>
-        <License>LGPLv2.1</License>
-        <Summary>Switchboard Sound Plug</Summary>
-        <Description>Switchboard Sound Plug</Description>
+        <License>GPLv3</License>
+        <Summary>Switchboard Security Privacy Plug</Summary>
+        <Description>Switchboard Security Privacy Plug</Description>
         <BuildDependencies>
+            <Dependency>zeitgeist-devel</Dependency>
             <Dependency>granite-devel</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency>libcanberra-gtk3-devel</Dependency>
-            <Dependency>meson</Dependency>
-            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
             <Dependency>switchboard-devel</Dependency>
             <Dependency>vala-devel</Dependency>
+            <Dependency>meson</Dependency>
         </BuildDependencies>
-        <Archive type="targz" sha1sum="2f54695f143ae6b03672b926c8647ea305f32867">https://github.com/elementary/switchboard-plug-sound/archive/refs/tags/2.2.7.tar.gz</Archive>
+        <Archive sha1sum="567af5227af9c114ca3d1fbd01458ab3a33a37f4" type="targz">https://github.com/elementary/switchboard-plug-security-privacy/archive/refs/tags/2.2.5.tar.gz</Archive>
     </Source>
     
     <Package>
-        <Name>switchboard-plug-sound</Name>
-        <Summary>Switchboard Sound Plug</Summary>
+        <Name>switchboard-plug-security-privacy</Name>
+        <Summary>Switchboard Security Privacy Plug</Summary>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
+            <Dependency>polkit</Dependency>
             <Dependency>granite</Dependency>
-            <Dependency>libcanberra</Dependency>
+            <Dependency>zeitgeist</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>pulseaudio-libs</Dependency>
-            <Dependency>libcanberra-gtk3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="info">/usr/share/metainfo</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
         </Files>
     </Package>
     
     <History>
-        <Update release="2">
-            <Date>2021-07-17</Date>
-            <Version>2.2.7</Version>
-            <Comment>Version bump</Comment>
-            <Name>Berk Çakar</Name>
-            <Email>berk2238@hotmail.com</Email>
-        </Update>
         <Update release="1">
-            <Date>2021-04-06</Date>
-            <Version>2.2.6</Version>
+            <Date>2021-07-17</Date>
+            <Version>2.2.5</Version>
             <Comment>First release for Pisi Linux</Comment>
             <Name>Berk Çakar</Name>
             <Email>berk2238@hotmail.com</Email>

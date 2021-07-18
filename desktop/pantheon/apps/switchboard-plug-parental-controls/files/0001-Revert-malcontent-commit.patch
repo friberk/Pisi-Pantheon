@@ -1,0 +1,1074 @@
+From fe83e9811b731d3b7b744c228473c6509513d2ad Mon Sep 17 00:00:00 2001
+From: Berk Çakar <berk2238@hotmail.com>
+Date: Sun, 18 Jul 2021 20:30:21 +0300
+Subject: [PATCH] Revert malcontent commit
+
+---
+ data/screentime-limits.policy.in.in |   2 -
+ meson.build                         |   2 -
+ src/plug/Views/AppsView.vala        |  73 +---
+ src/plug/Widgets/AppRow.vala        |  64 +---
+ src/plug/Widgets/ControlPage.vala   |   6 +-
+ src/plug/meson.build                |   2 -
+ vapi/Malcontent-0.metadata          |   1 -
+ vapi/flatpak.vapi                   | 551 ----------------------------
+ vapi/malcontent-0.vapi              | 210 -----------
+ 9 files changed, 9 insertions(+), 902 deletions(-)
+ delete mode 100644 vapi/Malcontent-0.metadata
+ delete mode 100644 vapi/flatpak.vapi
+ delete mode 100644 vapi/malcontent-0.vapi
+
+diff --git a/data/screentime-limits.policy.in.in b/data/screentime-limits.policy.in.in
+index e4ba107..9d228fd 100644
+--- a/data/screentime-limits.policy.in.in
++++ b/data/screentime-limits.policy.in.in
+@@ -17,8 +17,6 @@
+     </defaults>
+     <annotate key="org.freedesktop.policykit.exec.path">@CLIENT_PATH@</annotate>
+     <annotate key="org.freedesktop.policykit.imply">org.freedesktop.parental-controls.user-administration</annotate>
+-    <annotate key="org.freedesktop.policykit.imply">com.endlessm.ParentalControls.AppFilter.ChangeOwn</annotate>
+-    <annotate key="org.freedesktop.policykit.imply">com.endlessm.ParentalControls.AppFilter.ChangeAny</annotate>
+   </action>
+ 
+ </policyconfig>
+diff --git a/meson.build b/meson.build
+index 4ae54f1..ab3c1f2 100644
+--- a/meson.build
++++ b/meson.build
+@@ -40,8 +40,6 @@ gobject_dep = dependency('gobject-2.0')
+ granite_dep = dependency('granite')
+ gtk_dep = dependency('gtk+-3.0')
+ gee_dep = dependency('gee-0.8')
+-flatpak_dep = dependency('flatpak')
+-malcontent_dep = dependency('malcontent-0')
+ hdy_dep = dependency('libhandy-1', version: '>= 0.90.0')
+ accountsservice_dep = dependency('accountsservice')
+ systemd_dep = dependency('systemd')
+diff --git a/src/plug/Views/AppsView.vala b/src/plug/Views/AppsView.vala
+index 0b2eb9c..0b3d571 100644
+--- a/src/plug/Views/AppsView.vala
++++ b/src/plug/Views/AppsView.vala
+@@ -31,8 +31,6 @@ namespace PC.Widgets {
+         private Gtk.Button remove_button;
+         private Gtk.Button clear_button;
+ 
+-        private Mct.Manager malcontent;
+-
+         public AppsBox (Act.User user) {
+             Object (user: user);
+         }
+@@ -168,26 +166,8 @@ namespace PC.Widgets {
+             }
+ 
+             string[] targets = {};
+-
+-            var app_filter_builder = new Mct.AppFilterBuilder ();
+-
+             foreach (var entry in entries) {
+-                if (entry.is_flatpak) {
+-                    var flatpak_ref = entry.flatpak_ref;
+-                    if (flatpak_ref != null) {
+-                        app_filter_builder.blocklist_flatpak_ref (flatpak_ref);
+-                    }
+-                } else {
+-                    targets += Utils.info_to_exec_path (entry.app_info, null);
+-                }
+-            }
+-
+-            if (malcontent != null) {
+-                try {
+-                    malcontent.set_app_filter (user.uid, app_filter_builder.end (), Mct.ManagerSetValueFlags.NONE);
+-                } catch (Error e) {
+-                    warning ("Failed to set malcontent app filter: %s", e.message);
+-                }
++                targets += Utils.info_to_exec_path (entry.app_info, null);
+             }
+ 
+             Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets);
+@@ -198,60 +178,19 @@ namespace PC.Widgets {
+             clear_button.sensitive = (entries.length () > 0);
+         }
+ 
+-        public void set_restrictions_active (bool active) {
+-            if (malcontent == null) {
+-                return;
+-            }
+-
+-            // Clear the restrictions list if restrictions are disabled for this user
+-            if (!active) {
+-                var app_filter_builder = new Mct.AppFilterBuilder ();
+-                try {
+-                    malcontent.set_app_filter (user.uid, app_filter_builder.end (), Mct.ManagerSetValueFlags.NONE);
+-                } catch (Error e) {
+-                    warning ("Failed to set malcontent app filter: %s", e.message);
+-                }
+-            } else {
+-                update_targets ();
+-            }
+-        }
+-
+         private async void load_existing () {
+-            try {
+-                malcontent = new Mct.Manager (yield GLib.Bus.@get (GLib.BusType.SYSTEM));
+-            } catch (Error e) {
+-                warning ("Unable to init malcontent support: %s", e.message);
+-            }
+-
+-            Mct.AppFilter? app_filter = null;
+-
+-            if (malcontent != null) {
+-                try {
+-                    app_filter = yield malcontent.get_app_filter_async (user.uid, Mct.ManagerGetValueFlags.NONE, null);
+-                } catch (Error e) {
+-                    warning ("Unable to get malcontent app filter: %s", e.message);
+-                }
+-            }
+-
+             try {
+                 string[] targets = yield Utils.get_api ().get_user_daemon_targets (user.get_user_name ());
+                 bool admin = yield Utils.get_api ().get_user_daemon_admin (user.get_user_name ());
+                 admin_switch_btn.set_active (admin);
+ 
+                 List<AppInfo> infos = AppInfo.get_all ();
+-                foreach (unowned GLib.AppInfo info in infos) {
+-                    unowned DesktopAppInfo desktop_app = (DesktopAppInfo)info;
+-                    if (desktop_app.has_key ("X-Flatpak")) {
+-                        // Show the flatpak in the app list if it's been blocked for this user
+-                        if (app_filter != null && !app_filter.is_appinfo_allowed (desktop_app)) {
++                foreach (string target in targets) {
++                    foreach (unowned GLib.AppInfo info in infos) {
++                        if (info.should_show () && Utils.info_to_exec_path (info, null) == target) {
+                             load_info (info);
++                            break;
+                         }
+-
+-                        continue;
+-                    }
+-
+-                    if (info.should_show () && Utils.info_to_exec_path (info, null) in targets) {
+-                        load_info (info);
+                     }
+                 }
+             } catch (Error e) {
+@@ -259,4 +198,4 @@ namespace PC.Widgets {
+             }
+         }
+     }
+-}
++}
+\ No newline at end of file
+diff --git a/src/plug/Widgets/AppRow.vala b/src/plug/Widgets/AppRow.vala
+index 696c116..07b12f3 100644
+--- a/src/plug/Widgets/AppRow.vala
++++ b/src/plug/Widgets/AppRow.vala
+@@ -22,30 +22,10 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
+ 
+     public AppInfo app_info { get; construct; }
+ 
+-    private static Flatpak.Installation system_installation;
+-    private static Flatpak.Installation user_installation;
+-
+     public AppRow (AppInfo app_info) {
+         Object (app_info: app_info);
+     }
+ 
+-    public bool is_flatpak {
+-        get {
+-            return ((DesktopAppInfo)app_info).has_key ("X-Flatpak");
+-        }
+-    }
+-
+-    public string? flatpak_ref {
+-        owned get {
+-            if (!is_flatpak) {
+-                return null;
+-            }
+-
+-            string id = ((DesktopAppInfo)app_info).get_string ("X-Flatpak");
+-            return get_flatpak_ref_for_id (id);
+-        }
+-    }
+-
+     construct {
+         var image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
+         image.pixel_size = 32;
+@@ -69,46 +49,4 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
+ 
+         add (main_grid);
+     }
+-
+-    public static string? get_flatpak_ref_for_id (string id) {
+-        string? ref = null;
+-
+-        try {
+-            if (system_installation == null) {
+-                system_installation = new Flatpak.Installation.system ();
+-            }
+-
+-            var refs = system_installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
+-            for (int i = 0; i < refs.length; i++) {
+-                unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
+-                if (installed_ref.get_name () == id) {
+-                    ref = installed_ref.format_ref ();
+-                }
+-            }
+-        } catch (Error e) {
+-            // pass
+-        }
+-
+-        try {
+-            if (user_installation == null) {
+-                user_installation = new Flatpak.Installation.user ();
+-            }
+-
+-            var refs = user_installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
+-            for (int i = 0; i < refs.length; i++) {
+-                unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
+-                if (installed_ref.get_name () == id) {
+-                    ref = installed_ref.format_ref ();
+-                }
+-            }
+-        } catch (Error e) {
+-            // pass
+-        }
+-
+-        if (ref != null) {
+-            return ref;
+-        }
+-
+-        return null;
+-    }
+-}
++}
+\ No newline at end of file
+diff --git a/src/plug/Widgets/ControlPage.vala b/src/plug/Widgets/ControlPage.vala
+index 12870e7..27fd52a 100644
+--- a/src/plug/Widgets/ControlPage.vala
++++ b/src/plug/Widgets/ControlPage.vala
+@@ -25,7 +25,6 @@ namespace PC.Widgets {
+         public weak Act.User user { get; construct; }
+         public Gtk.Stack stack;
+         private TimeLimitView time_limit_view;
+-        private AppsBox apps_box;
+ 
+         public ControlPage (Act.User user) {
+             Object (user: user);
+@@ -45,7 +44,7 @@ namespace PC.Widgets {
+             var internet_box = new InternetBox (user);
+             internet_box.expand = true;
+ 
+-            apps_box = new AppsBox (user);
++            var apps_box = new AppsBox (user);
+             apps_box.expand = true;
+ 
+             stack = new Gtk.Stack ();
+@@ -72,7 +71,6 @@ namespace PC.Widgets {
+             unowned Polkit.Permission permission = Utils.get_permission ();
+             if (permission.allowed) {
+                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
+-                apps_box.set_restrictions_active (active);
+                 time_limit_view.update_pam (active);
+             }
+         }
+@@ -87,4 +85,4 @@ namespace PC.Widgets {
+             return false;
+         }
+     }
+-}
++}
+\ No newline at end of file
+diff --git a/src/plug/meson.build b/src/plug/meson.build
+index 78fa84a..e2e54e9 100644
+--- a/src/plug/meson.build
++++ b/src/plug/meson.build
+@@ -26,8 +26,6 @@ shared_module(
+         granite_dep,
+         gtk_dep,
+         hdy_dep,
+-        flatpak_dep,
+-        malcontent_dep,
+         polkit_dep,
+         switchboard_dep,
+         posix_dep
+diff --git a/vapi/Malcontent-0.metadata b/vapi/Malcontent-0.metadata
+deleted file mode 100644
+index 30a03c6..0000000
+--- a/vapi/Malcontent-0.metadata
++++ /dev/null
+@@ -1 +0,0 @@
+-* cheader_filename="libmalcontent/malcontent.h"
+diff --git a/vapi/flatpak.vapi b/vapi/flatpak.vapi
+deleted file mode 100644
+index 4f767d5..0000000
+--- a/vapi/flatpak.vapi
++++ /dev/null
+@@ -1,551 +0,0 @@
+-/* flatpak.vapi generated by vapigen, do not modify. */
+-
+-[CCode (cprefix = "Flatpak", gir_namespace = "Flatpak", gir_version = "1.0", lower_case_cprefix = "flatpak_")]
+-namespace Flatpak {
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_bundle_ref_get_type ()")]
+-	public class BundleRef : Flatpak.Ref {
+-		[CCode (has_construct_function = false)]
+-		public BundleRef (GLib.File file) throws GLib.Error;
+-		public GLib.Bytes get_appstream ();
+-		public GLib.File get_file ();
+-		public GLib.Bytes get_icon (int size);
+-		public uint64 get_installed_size ();
+-		public GLib.Bytes get_metadata ();
+-		public string get_origin ();
+-		[Version (since = "0.8.0")]
+-		public string get_runtime_repo_url ();
+-		public GLib.File file { owned get; construct; }
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_installation_get_type ()")]
+-	public class Installation : GLib.Object {
+-		[CCode (has_construct_function = false)]
+-		protected Installation ();
+-		[Version (since = "1.3.4")]
+-		public bool add_remote (Flatpak.Remote remote, bool if_needed, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.10.0")]
+-		public bool cleanup_local_refs_sync (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.FileMonitor create_monitor (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool drop_caches (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.Bytes fetch_remote_metadata_sync (string remote_name, Flatpak.Ref @ref, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public Flatpak.RemoteRef fetch_remote_ref_sync (string remote_name, Flatpak.RefKind kind, string name, string? arch, string? branch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "1.3.3")]
+-		public Flatpak.RemoteRef fetch_remote_ref_sync_full (string remote_name, Flatpak.RefKind kind, string name, string? arch, string? branch, Flatpak.QueryFlags flags, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool fetch_remote_size_sync (string remote_name, Flatpak.Ref @ref, out uint64 download_size, out uint64 installed_size, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (has_construct_function = false)]
+-		public Installation.for_path (GLib.File path, bool user, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public string get_config (string key, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public Flatpak.InstalledRef get_current_installed_app (string name, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (array_length = false, array_null_terminated = true)]
+-		[Version (since = "1.5.0")]
+-		public string[] get_default_languages () throws GLib.Error;
+-		[CCode (array_length = false, array_null_terminated = true)]
+-		[Version (since = "1.5.1")]
+-		public string[] get_default_locales () throws GLib.Error;
+-		[Version (since = "0.8")]
+-		public unowned string get_display_name ();
+-		[Version (since = "0.8")]
+-		public unowned string get_id ();
+-		public Flatpak.InstalledRef get_installed_ref (Flatpak.RefKind kind, string name, string? arch, string? branch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool get_is_user ();
+-		[Version (since = "1.1")]
+-		public bool get_min_free_space_bytes (out uint64 out_bytes) throws GLib.Error;
+-		[Version (since = "1.1.1")]
+-		public bool get_no_interaction ();
+-		public GLib.File get_path ();
+-		[Version (since = "0.8")]
+-		public int get_priority ();
+-		public Flatpak.Remote get_remote_by_name (string name, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.8")]
+-		public Flatpak.StorageType get_storage_type ();
+-		[Version (deprecated = true, deprecated_since = "1.7.0")]
+-		public Flatpak.InstalledRef install (string remote_name, Flatpak.RefKind kind, string name, string? arch, string? branch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0")]
+-		public Flatpak.InstalledRef install_bundle (GLib.File file, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0")]
+-		public Flatpak.InstalledRef install_full (Flatpak.InstallFlags flags, string remote_name, Flatpak.RefKind kind, string name, string? arch, string? branch, [CCode (array_length = false, array_null_terminated = true)] string[]? subpaths, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0", since = "0.6.10")]
+-		public Flatpak.RemoteRef install_ref_file (GLib.Bytes ref_file_data, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool launch (string name, string? arch, string? branch, string? commit, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "1.1")]
+-		public bool launch_full (Flatpak.LaunchFlags flags, string name, string? arch, string? branch, string? commit, Flatpak.Instance? instance_out, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.GenericArray<weak Flatpak.InstalledRef> list_installed_refs (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.GenericArray<weak Flatpak.InstalledRef> list_installed_refs_by_kind (Flatpak.RefKind kind, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.GenericArray<weak Flatpak.InstalledRef> list_installed_refs_for_update (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.6.7")]
+-		public GLib.GenericArray<weak Flatpak.RelatedRef> list_installed_related_refs_sync (string remote_name, string @ref, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.GenericArray<weak Flatpak.RemoteRef> list_remote_refs_sync (string remote_or_uri, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "1.3.3")]
+-		public GLib.GenericArray<weak Flatpak.RemoteRef> list_remote_refs_sync_full (string remote_or_uri, Flatpak.QueryFlags flags, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.6.7")]
+-		public GLib.GenericArray<weak Flatpak.RelatedRef> list_remote_related_refs_sync (string remote_name, string @ref, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.GenericArray<weak Flatpak.Remote> list_remotes (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.GenericArray<weak Flatpak.Remote> list_remotes_by_type ([CCode (array_length_cname = "num_types", array_length_pos = 1.5, array_length_type = "gsize")] Flatpak.RemoteType[] types, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "1.1.2")]
+-		public GLib.GenericArray<weak Flatpak.InstalledRef> list_unused_refs (string? arch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public string load_app_overrides (string app_id, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool modify_remote (Flatpak.Remote remote, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.10.0")]
+-		public bool prune_local_repo (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.10.0")]
+-		public bool remove_local_ref_sync (string remote_name, string @ref, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool remove_remote (string name, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "1.0.3")]
+-		public bool run_triggers (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool set_config_sync (string key, string value, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "1.1.1")]
+-		public void set_no_interaction (bool no_interaction);
+-		[CCode (has_construct_function = false)]
+-		public Installation.system (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (has_construct_function = false)]
+-		[Version (since = "0.8")]
+-		public Installation.system_with_id (string? id, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0")]
+-		public bool uninstall (Flatpak.RefKind kind, string name, string? arch, string? branch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0", since = "0.11.8")]
+-		public bool uninstall_full (Flatpak.UninstallFlags flags, Flatpak.RefKind kind, string name, string? arch, string? branch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0")]
+-		public Flatpak.InstalledRef update (Flatpak.UpdateFlags flags, Flatpak.RefKind kind, string name, string? arch, string? branch, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool update_appstream_full_sync (string remote_name, string? arch, bool? out_changed, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public bool update_appstream_sync (string remote_name, string? arch, bool? out_changed, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (deprecated = true, deprecated_since = "1.7.0")]
+-		public Flatpak.InstalledRef update_full (Flatpak.UpdateFlags flags, Flatpak.RefKind kind, string name, string? arch, string? branch, [CCode (array_length = false, array_null_terminated = true)] string[]? subpaths, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[Version (since = "0.6.13")]
+-		public bool update_remote_sync (string name, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (has_construct_function = false)]
+-		public Installation.user (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_installed_ref_get_type ()")]
+-	public class InstalledRef : Flatpak.Ref {
+-		[CCode (has_construct_function = false)]
+-		protected InstalledRef ();
+-		[Version (since = "1.4.2")]
+-		public unowned GLib.HashTable<void*,void*>? get_appdata_content_rating ();
+-		[Version (since = "1.4.2")]
+-		public unowned string? get_appdata_content_rating_type ();
+-		[Version (since = "1.1.2")]
+-		public unowned string get_appdata_license ();
+-		[Version (since = "1.1.2")]
+-		public unowned string get_appdata_name ();
+-		[Version (since = "1.1.2")]
+-		public unowned string get_appdata_summary ();
+-		[Version (since = "1.1.2")]
+-		public unowned string get_appdata_version ();
+-		public unowned string get_deploy_dir ();
+-		public unowned string get_eol ();
+-		public unowned string get_eol_rebase ();
+-		public uint64 get_installed_size ();
+-		public bool get_is_current ();
+-		public unowned string? get_latest_commit ();
+-		public unowned string get_origin ();
+-		[CCode (array_length = false, array_null_terminated = true)]
+-		public unowned string[] get_subpaths ();
+-		[Version (since = "1.1.2")]
+-		public GLib.Bytes load_appdata (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.Bytes load_metadata (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public GLib.HashTable<void*,void*> appdata_content_rating { get; construct; }
+-		public string appdata_content_rating_type { get; construct; }
+-		public string appdata_license { get; construct; }
+-		public string appdata_name { get; construct; }
+-		public string appdata_summary { get; construct; }
+-		public string appdata_version { get; construct; }
+-		[NoAccessorMethod]
+-		public string deploy_dir { owned get; set; }
+-		[NoAccessorMethod]
+-		public string end_of_life { owned get; construct; }
+-		[NoAccessorMethod]
+-		public string end_of_life_rebase { owned get; construct; }
+-		[NoAccessorMethod]
+-		public uint64 installed_size { get; set; }
+-		[NoAccessorMethod]
+-		public bool is_current { get; set; }
+-		[NoAccessorMethod]
+-		public string latest_commit { owned get; set; }
+-		[NoAccessorMethod]
+-		public string origin { owned get; set; }
+-		[CCode (array_length = false, array_null_terminated = true)]
+-		[NoAccessorMethod]
+-		public string[] subpaths { owned get; set; }
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_instance_get_type ()")]
+-	public class Instance : GLib.Object {
+-		[CCode (has_construct_function = false)]
+-		protected Instance ();
+-		[Version (since = "1.1")]
+-		public static GLib.GenericArray<Flatpak.Instance> get_all ();
+-		[Version (since = "1.1")]
+-		public unowned string get_app ();
+-		[Version (since = "1.1")]
+-		public unowned string get_arch ();
+-		[Version (since = "1.1")]
+-		public unowned string get_branch ();
+-		[Version (since = "1.1")]
+-		public int get_child_pid ();
+-		[Version (since = "1.1")]
+-		public unowned string get_commit ();
+-		[Version (since = "1.1")]
+-		public unowned string get_id ();
+-		[Version (since = "1.1")]
+-		public GLib.KeyFile get_info ();
+-		[Version (since = "1.1")]
+-		public int get_pid ();
+-		[Version (since = "1.1")]
+-		public unowned string get_runtime ();
+-		[Version (since = "1.1")]
+-		public unowned string get_runtime_commit ();
+-		public bool is_running ();
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_ref_get_type ()")]
+-	public class Ref : GLib.Object {
+-		[CCode (has_construct_function = false)]
+-		protected Ref ();
+-		public string format_ref ();
+-		public unowned string get_arch ();
+-		public unowned string get_branch ();
+-		public unowned string get_collection_id ();
+-		public unowned string get_commit ();
+-		public Flatpak.RefKind get_kind ();
+-		public unowned string get_name ();
+-		public static Flatpak.Ref parse (string @ref) throws GLib.Error;
+-		public string arch { get; construct; }
+-		public string branch { get; construct; }
+-		public string collection_id { get; construct; }
+-		public string commit { get; construct; }
+-		public Flatpak.RefKind kind { get; construct; }
+-		public string name { get; construct; }
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_related_ref_get_type ()")]
+-	public class RelatedRef : Flatpak.Ref {
+-		[CCode (has_construct_function = false)]
+-		protected RelatedRef ();
+-		[CCode (array_length = false, array_null_terminated = true)]
+-		[Version (since = "0.6.7")]
+-		public unowned string[] get_subpaths ();
+-		[NoAccessorMethod]
+-		public bool should_autoprune { get; construct; }
+-		[NoAccessorMethod]
+-		public bool should_delete { get; construct; }
+-		[NoAccessorMethod]
+-		public bool should_download { get; construct; }
+-		[CCode (array_length = false, array_null_terminated = true)]
+-		public string[] subpaths { get; construct; }
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_remote_get_type ()")]
+-	public class Remote : GLib.Object {
+-		[CCode (has_construct_function = false)]
+-		public Remote (string name);
+-		[CCode (has_construct_function = false)]
+-		[Version (since = "1.3.4")]
+-		public Remote.from_file (string name, GLib.Bytes data) throws GLib.Error;
+-		public GLib.File get_appstream_dir (string? arch);
+-		public GLib.File get_appstream_timestamp (string? arch);
+-		public string? get_collection_id ();
+-		[Version (since = "1.4")]
+-		public string get_comment ();
+-		[Version (since = "0.6.12")]
+-		public string get_default_branch ();
+-		[Version (since = "1.4")]
+-		public string get_description ();
+-		public bool get_disabled ();
+-		[Version (since = "1.4")]
+-		public string get_filter ();
+-		public bool get_gpg_verify ();
+-		[Version (since = "1.4")]
+-		public string get_homepage ();
+-		[Version (since = "1.4")]
+-		public string get_icon ();
+-		[Version (since = "1.1.1")]
+-		public string get_main_ref ();
+-		public unowned string get_name ();
+-		public bool get_nodeps ();
+-		public bool get_noenumerate ();
+-		public int get_prio ();
+-		[Version (since = "0.9.8")]
+-		public Flatpak.RemoteType get_remote_type ();
+-		public string get_title ();
+-		public string get_url ();
+-		public void set_collection_id (string? collection_id);
+-		[Version (since = "1.4")]
+-		public void set_comment (string comment);
+-		[Version (since = "0.6.12")]
+-		public void set_default_branch (string default_branch);
+-		[Version (since = "1.4")]
+-		public void set_description (string description);
+-		public void set_disabled (bool disabled);
+-		[Version (since = "1.4")]
+-		public void set_filter (string filter_path);
+-		public void set_gpg_key (GLib.Bytes gpg_key);
+-		public void set_gpg_verify (bool gpg_verify);
+-		[Version (since = "1.4")]
+-		public void set_homepage (string homepage);
+-		[Version (since = "1.4")]
+-		public void set_icon (string icon);
+-		[Version (since = "1.1.1")]
+-		public void set_main_ref (string main_ref);
+-		public void set_nodeps (bool nodeps);
+-		public void set_noenumerate (bool noenumerate);
+-		public void set_prio (int prio);
+-		public void set_title (string title);
+-		public void set_url (string url);
+-		[NoAccessorMethod]
+-		public string name { owned get; set; }
+-		[NoAccessorMethod]
+-		[Version (since = "0.9.8")]
+-		public Flatpak.RemoteType type { get; construct; }
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_remote_ref_get_type ()")]
+-	public class RemoteRef : Flatpak.Ref {
+-		[CCode (has_construct_function = false)]
+-		protected RemoteRef ();
+-		public uint64 get_download_size ();
+-		public unowned string get_eol ();
+-		public unowned string get_eol_rebase ();
+-		public uint64 get_installed_size ();
+-		public unowned GLib.Bytes? get_metadata ();
+-		public unowned string get_remote_name ();
+-		public uint64 download_size { get; construct; }
+-		[NoAccessorMethod]
+-		public string end_of_life { owned get; construct; }
+-		[NoAccessorMethod]
+-		public string end_of_life_rebase { owned get; construct; }
+-		public uint64 installed_size { get; construct; }
+-		public GLib.Bytes metadata { get; construct; }
+-		public string remote_name { get; construct; }
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_transaction_get_type ()")]
+-	public class Transaction : GLib.Object, GLib.Initable {
+-		[CCode (has_construct_function = false)]
+-		protected Transaction ();
+-		[Version (since = "1.5.1")]
+-		public void abort_webflow (uint id);
+-		public void add_default_dependency_sources ();
+-		public void add_dependency_source (Flatpak.Installation installation);
+-		public bool add_install (string remote, string @ref, [CCode (array_length = false, array_null_terminated = true)] string[]? subpaths) throws GLib.Error;
+-		public bool add_install_bundle (GLib.File file, GLib.Bytes? gpg_data) throws GLib.Error;
+-		public bool add_install_flatpakref (GLib.Bytes flatpakref_data) throws GLib.Error;
+-		[Version (since = "1.3.3.")]
+-		public bool add_rebase (string remote, string @ref, string? subpaths, [CCode (array_length = false, array_null_terminated = true)] string[]? previous_ids) throws GLib.Error;
+-		[Version (since = "1.7.1")]
+-		public void add_sideload_repo (string path);
+-		public bool add_uninstall (string @ref) throws GLib.Error;
+-		public bool add_update (string @ref, [CCode (array_length = false, array_null_terminated = true)] string[]? subpaths, string? commit) throws GLib.Error;
+-		[Version (since = "1.5.2")]
+-		public void complete_basic_auth (uint id, string user, string password, GLib.Variant options);
+-		[CCode (has_construct_function = false)]
+-		public Transaction.for_installation (Flatpak.Installation installation, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public Flatpak.TransactionOperation get_current_operation ();
+-		public Flatpak.Installation get_installation ();
+-		[Version (since = "1.5.1")]
+-		public bool get_no_deploy ();
+-		[Version (since = "1.5.1")]
+-		public bool get_no_pull ();
+-		public GLib.List<Flatpak.TransactionOperation> get_operations ();
+-		[Version (since = "1.5.1")]
+-		public unowned string get_parent_window ();
+-		public bool is_empty ();
+-		public virtual bool run (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		public void set_default_arch (string arch);
+-		public void set_disable_dependencies (bool disable_dependencies);
+-		public void set_disable_prune (bool disable_prune);
+-		public void set_disable_related (bool disable_related);
+-		public void set_disable_static_deltas (bool disable_static_deltas);
+-		public void set_force_uninstall (bool force_uninstall);
+-		public void set_no_deploy (bool no_deploy);
+-		[Version (since = "1.7.3")]
+-		public void set_no_interaction (bool no_interaction);
+-		public void set_no_pull (bool no_pull);
+-		[Version (since = "1.5.1")]
+-		public void set_parent_window (string parent_window);
+-		public void set_reinstall (bool reinstall);
+-		public Flatpak.Installation installation { owned get; construct; }
+-		public virtual signal bool add_new_remote (Flatpak.TransactionRemoteReason reason, string from_id, string remote_name, string url);
+-		[Version (since = "1.5.2")]
+-		public virtual signal bool basic_auth_start (string remote, string realm, GLib.Variant options, int id);
+-		public virtual signal int choose_remote_for_ref (string for_ref, string runtime_ref, [CCode (array_length = false, array_null_terminated = true)] string[] remotes);
+-		public virtual signal void end_of_lifed (string @ref, string reason, string rebase);
+-		public virtual signal bool end_of_lifed_with_rebase (string remote, string @ref, string reason, string rebased_to_ref, [CCode (array_length = false, array_null_terminated = true)] string[] previous_ids);
+-		[Version (since = "1.7.4")]
+-		public virtual signal void install_authenticator (string remote, string authenticator_ref);
+-		public virtual signal void new_operation (Flatpak.TransactionOperation operation, Flatpak.TransactionProgress progress);
+-		public virtual signal void operation_done (Flatpak.TransactionOperation operation, string? commit, Flatpak.TransactionResult details);
+-		public virtual signal bool operation_error (Flatpak.TransactionOperation operation, GLib.Error error, Flatpak.TransactionErrorDetails detail);
+-		public virtual signal bool ready ();
+-		[Version (since = "1.5.1")]
+-		public virtual signal void webflow_done (GLib.Variant options, int id);
+-		[Version (since = "1.5.1")]
+-		public virtual signal bool webflow_start (string remote, string url, GLib.Variant options, int id);
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_transaction_operation_get_type ()")]
+-	public class TransactionOperation : GLib.Object {
+-		[CCode (has_construct_function = false)]
+-		protected TransactionOperation ();
+-		public unowned GLib.File get_bundle_path ();
+-		public unowned string get_commit ();
+-		[Version (since = "1.1.2")]
+-		public uint64 get_download_size ();
+-		[Version (since = "1.1.2")]
+-		public uint64 get_installed_size ();
+-		[Version (since = "1.7.3")]
+-		public bool get_is_skipped ();
+-		public unowned GLib.KeyFile get_metadata ();
+-		public unowned GLib.KeyFile get_old_metadata ();
+-		public Flatpak.TransactionOperationType get_operation_type ();
+-		public unowned string get_ref ();
+-		[Version (since = "1.7.3")]
+-		public unowned GLib.GenericArray<Flatpak.TransactionOperation>? get_related_to_ops ();
+-		public unowned string get_remote ();
+-	}
+-	[CCode (cheader_filename = "flatpak.h", type_id = "flatpak_transaction_progress_get_type ()")]
+-	public class TransactionProgress : GLib.Object {
+-		[CCode (has_construct_function = false)]
+-		protected TransactionProgress ();
+-		[Version (since = "1.1.2")]
+-		public uint64 get_bytes_transferred ();
+-		public bool get_is_estimating ();
+-		public int get_progress ();
+-		[Version (since = "1.1.2")]
+-		public uint64 get_start_time ();
+-		public string get_status ();
+-		public void set_update_frequency (uint update_interval);
+-		public signal void changed ();
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_INSTALL_FLAGS_", type_id = "flatpak_install_flags_get_type ()")]
+-	[Flags]
+-	public enum InstallFlags {
+-		NONE,
+-		NO_STATIC_DELTAS,
+-		NO_DEPLOY,
+-		NO_PULL,
+-		NO_TRIGGERS
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_LAUNCH_FLAGS_", type_id = "flatpak_launch_flags_get_type ()")]
+-	[Flags]
+-	public enum LaunchFlags {
+-		NONE,
+-		DO_NOT_REAP
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_QUERY_FLAGS_", type_id = "flatpak_query_flags_get_type ()")]
+-	[Flags]
+-	[Version (since = "1.3.3")]
+-	public enum QueryFlags {
+-		NONE,
+-		ONLY_CACHED,
+-		ONLY_SIDELOADED
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_REF_KIND_", type_id = "flatpak_ref_kind_get_type ()")]
+-	public enum RefKind {
+-		APP,
+-		RUNTIME
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_REMOTE_TYPE_", type_id = "flatpak_remote_type_get_type ()")]
+-	public enum RemoteType {
+-		STATIC,
+-		USB,
+-		LAN
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_STORAGE_TYPE_", type_id = "flatpak_storage_type_get_type ()")]
+-	[Version (since = "0.6.15")]
+-	public enum StorageType {
+-		DEFAULT,
+-		HARD_DISK,
+-		SDCARD,
+-		MMC,
+-		NETWORK
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_TRANSACTION_ERROR_DETAILS_", type_id = "flatpak_transaction_error_details_get_type ()")]
+-	[Flags]
+-	public enum TransactionErrorDetails {
+-		NON_FATAL
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_TRANSACTION_OPERATION_", type_id = "flatpak_transaction_operation_type_get_type ()")]
+-	public enum TransactionOperationType {
+-		INSTALL,
+-		UPDATE,
+-		INSTALL_BUNDLE,
+-		UNINSTALL,
+-		LAST_TYPE;
+-		public unowned string to_string ();
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_TRANSACTION_REMOTE_", type_id = "flatpak_transaction_remote_reason_get_type ()")]
+-	public enum TransactionRemoteReason {
+-		GENERIC_REPO,
+-		RUNTIME_DEPS
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_TRANSACTION_RESULT_NO_", type_id = "flatpak_transaction_result_get_type ()")]
+-	[Flags]
+-	public enum TransactionResult {
+-		CHANGE
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_UNINSTALL_FLAGS_", type_id = "flatpak_uninstall_flags_get_type ()")]
+-	[Flags]
+-	[Version (since = "0.11.8")]
+-	public enum UninstallFlags {
+-		NONE,
+-		NO_PRUNE,
+-		NO_TRIGGERS
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_UPDATE_FLAGS_", type_id = "flatpak_update_flags_get_type ()")]
+-	[Flags]
+-	public enum UpdateFlags {
+-		NONE,
+-		NO_DEPLOY,
+-		NO_PULL,
+-		NO_STATIC_DELTAS,
+-		NO_PRUNE,
+-		NO_TRIGGERS
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_ERROR_")]
+-	public errordomain Error {
+-		ALREADY_INSTALLED,
+-		NOT_INSTALLED,
+-		ONLY_PULLED,
+-		DIFFERENT_REMOTE,
+-		ABORTED,
+-		SKIPPED,
+-		NEED_NEW_FLATPAK,
+-		REMOTE_NOT_FOUND,
+-		RUNTIME_NOT_FOUND,
+-		DOWNGRADE,
+-		INVALID_REF,
+-		INVALID_DATA,
+-		UNTRUSTED,
+-		SETUP_FAILED,
+-		EXPORT_FAILED,
+-		REMOTE_USED,
+-		RUNTIME_USED,
+-		INVALID_NAME,
+-		OUT_OF_SPACE,
+-		WRONG_USER,
+-		NOT_CACHED,
+-		REF_NOT_FOUND,
+-		PERMISSION_DENIED,
+-		AUTHENTICATION_FAILED,
+-		NOT_AUTHORIZED;
+-		public static GLib.Quark quark ();
+-	}
+-	[CCode (cheader_filename = "flatpak.h", cprefix = "FLATPAK_PORTAL_ERROR_")]
+-	public errordomain PortalError {
+-		FAILED,
+-		INVALID_ARGUMENT,
+-		NOT_FOUND,
+-		EXISTS,
+-		NOT_ALLOWED,
+-		CANCELLED,
+-		WINDOW_DESTROYED;
+-		public static GLib.Quark quark ();
+-	}
+-	[CCode (cheader_filename = "flatpak.h", instance_pos = 3.9)]
+-	public delegate void ProgressCallback (string status, uint progress, bool estimating);
+-	[CCode (cheader_filename = "flatpak.h", cname = "FLATPAK_MAJOR_VERSION")]
+-	public const int MAJOR_VERSION;
+-	[CCode (cheader_filename = "flatpak.h", cname = "FLATPAK_MICRO_VERSION")]
+-	public const int MICRO_VERSION;
+-	[CCode (cheader_filename = "flatpak.h", cname = "FLATPAK_MINOR_VERSION")]
+-	public const int MINOR_VERSION;
+-	[CCode (cheader_filename = "flatpak.h")]
+-	public static unowned string get_default_arch ();
+-	[CCode (array_length = false, array_null_terminated = true, cheader_filename = "flatpak.h")]
+-	public static unowned string[] get_supported_arches ();
+-	[CCode (cheader_filename = "flatpak.h")]
+-	[Version (since = "0.8")]
+-	public static GLib.GenericArray<weak Flatpak.Installation> get_system_installations (GLib.Cancellable? cancellable = null) throws GLib.Error;
+-}
+diff --git a/vapi/malcontent-0.vapi b/vapi/malcontent-0.vapi
+deleted file mode 100644
+index 9798c32..0000000
+--- a/vapi/malcontent-0.vapi
++++ /dev/null
+@@ -1,210 +0,0 @@
+-/* malcontent-0.vapi generated by vapigen, do not modify. */
+-
+-[CCode (cprefix = "Mct", gir_namespace = "Malcontent", gir_version = "0", lower_case_cprefix = "mct__")]
+-namespace Mct {
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", ref_function = "mct_app_filter_ref", type_id = "mct_app_filter_get_type ()", unref_function = "mct_app_filter_unref")]
+-	[Compact]
+-	[Version (since = "0.2.0")]
+-	public class AppFilter {
+-		public bool allow_system_installation;
+-		public bool allow_user_installation;
+-		public weak string app_list;
+-		public Mct.AppFilterListType app_list_type;
+-		public weak GLib.Variant oars_ratings;
+-		public int ref_count;
+-		public uint user_id;
+-		[CCode (cname = "mct_app_filter_equal")]
+-		[Version (since = "0.10.0")]
+-		public bool equal (Mct.AppFilter b);
+-		[CCode (array_length = false, array_null_terminated = true, cname = "mct_app_filter_get_oars_sections")]
+-		public (unowned string)[] get_oars_sections ();
+-		[CCode (cname = "mct_app_filter_get_oars_value")]
+-		public Mct.AppFilterOarsValue get_oars_value (string oars_section);
+-		[CCode (cname = "mct_app_filter_get_user_id")]
+-		public uint get_user_id ();
+-		[CCode (cname = "mct_app_filter_is_appinfo_allowed")]
+-		public bool is_appinfo_allowed (GLib.AppInfo app_info);
+-		[CCode (cname = "mct_app_filter_is_content_type_allowed")]
+-		[Version (since = "0.4.0")]
+-		public bool is_content_type_allowed (string content_type);
+-		[CCode (cname = "mct_app_filter_is_enabled")]
+-		[Version (since = "0.7.0")]
+-		public bool is_enabled ();
+-		[CCode (cname = "mct_app_filter_is_flatpak_app_allowed")]
+-		public bool is_flatpak_app_allowed (string app_id);
+-		[CCode (cname = "mct_app_filter_is_flatpak_ref_allowed")]
+-		public bool is_flatpak_ref_allowed (string app_ref);
+-		[CCode (cname = "mct_app_filter_is_path_allowed")]
+-		public bool is_path_allowed (string path);
+-		[CCode (cname = "mct_app_filter_is_system_installation_allowed")]
+-		public bool is_system_installation_allowed ();
+-		[CCode (cname = "mct_app_filter_is_user_installation_allowed")]
+-		public bool is_user_installation_allowed ();
+-		[CCode (cname = "mct_app_filter_ref")]
+-		public Mct.AppFilter @ref ();
+-		[CCode (cname = "mct_app_filter_serialize")]
+-		[Version (since = "0.7.0")]
+-		public unowned GLib.Variant serialize ();
+-		[CCode (cname = "mct_app_filter_unref")]
+-		[DestroysInstance]
+-		public void unref ();
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", copy_function = "g_boxed_copy", free_function = "g_boxed_free", type_id = "mct_app_filter_builder_get_type ()")]
+-	[Compact]
+-	[Version (since = "0.2.0")]
+-	public class AppFilterBuilder {
+-		[CCode (cname = "mct_app_filter_builder_new", has_construct_function = false)]
+-		public AppFilterBuilder ();
+-		[CCode (cname = "mct_app_filter_builder_blocklist_content_type")]
+-		[Version (since = "0.4.0")]
+-		public void blocklist_content_type (string content_type);
+-		[CCode (cname = "mct_app_filter_builder_blocklist_flatpak_ref")]
+-		public void blocklist_flatpak_ref (string app_ref);
+-		[CCode (cname = "mct_app_filter_builder_blocklist_path")]
+-		public void blocklist_path (string path);
+-		[CCode (cname = "mct_app_filter_builder_clear")]
+-		public void clear ();
+-		[CCode (cname = "mct_app_filter_builder_copy")]
+-		public Mct.AppFilterBuilder copy ();
+-		[CCode (cname = "mct_app_filter_builder_end")]
+-		public Mct.AppFilter end ();
+-		[CCode (cname = "mct_app_filter_builder_free")]
+-		public void free ();
+-		[CCode (cname = "mct_app_filter_builder_init")]
+-		public void init ();
+-		[CCode (cname = "mct_app_filter_builder_set_allow_system_installation")]
+-		public void set_allow_system_installation (bool allow_system_installation);
+-		[CCode (cname = "mct_app_filter_builder_set_allow_user_installation")]
+-		public void set_allow_user_installation (bool allow_user_installation);
+-		[CCode (cname = "mct_app_filter_builder_set_oars_value")]
+-		public void set_oars_value (string oars_section, Mct.AppFilterOarsValue value);
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", type_id = "mct_manager_get_type ()")]
+-	[Version (since = "0.3.0")]
+-	public class Manager : GLib.Object {
+-		[CCode (cname = "mct_manager_new", has_construct_function = false)]
+-		public Manager (GLib.DBusConnection connection);
+-		[CCode (cname = "mct_manager_get_app_filter")]
+-		public Mct.AppFilter get_app_filter (uint user_id, Mct.ManagerGetValueFlags flags, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (cname = "mct_manager_get_app_filter_async")]
+-		public async Mct.AppFilter get_app_filter_async (uint user_id, Mct.ManagerGetValueFlags flags, GLib.Cancellable? cancellable) throws GLib.Error;
+-		[CCode (cname = "mct_manager_get_session_limits")]
+-		[Version (since = "0.5.0")]
+-		public Mct.SessionLimits get_session_limits (uint user_id, Mct.ManagerGetValueFlags flags, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (cname = "mct_manager_get_session_limits_async")]
+-		[Version (since = "0.5.0")]
+-		public async Mct.SessionLimits get_session_limits_async (uint user_id, Mct.ManagerGetValueFlags flags, GLib.Cancellable? cancellable) throws GLib.Error;
+-		[CCode (cname = "mct_manager_set_app_filter")]
+-		public bool set_app_filter (uint user_id, Mct.AppFilter app_filter, Mct.ManagerSetValueFlags flags, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (cname = "mct_manager_set_app_filter_async")]
+-		public async bool set_app_filter_async (uint user_id, Mct.AppFilter app_filter, Mct.ManagerSetValueFlags flags, GLib.Cancellable? cancellable) throws GLib.Error;
+-		[CCode (cname = "mct_manager_set_session_limits")]
+-		[Version (since = "0.5.0")]
+-		public bool set_session_limits (uint user_id, Mct.SessionLimits session_limits, Mct.ManagerSetValueFlags flags, GLib.Cancellable? cancellable = null) throws GLib.Error;
+-		[CCode (cname = "mct_manager_set_session_limits_async")]
+-		[Version (since = "0.5.0")]
+-		public async bool set_session_limits_async (uint user_id, Mct.SessionLimits session_limits, Mct.ManagerSetValueFlags flags, GLib.Cancellable? cancellable) throws GLib.Error;
+-		[NoAccessorMethod]
+-		public GLib.DBusConnection connection { owned get; construct; }
+-		public signal void app_filter_changed (uint64 user_id);
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", ref_function = "mct_session_limits_ref", type_id = "mct_session_limits_get_type ()", unref_function = "mct_session_limits_unref")]
+-	[Compact]
+-	[Version (since = "0.5.0")]
+-	public class SessionLimits {
+-		public uint daily_end_time;
+-		public uint daily_start_time;
+-		public Mct.SessionLimitsType limit_type;
+-		public int ref_count;
+-		public uint user_id;
+-		[CCode (cname = "mct_session_limits_check_time_remaining")]
+-		public bool check_time_remaining (uint64 now_usecs, out uint64 time_remaining_secs_out, out bool time_limit_enabled_out);
+-		[CCode (cname = "mct_session_limits_get_user_id")]
+-		public uint get_user_id ();
+-		[CCode (cname = "mct_session_limits_is_enabled")]
+-		[Version (since = "0.7.0")]
+-		public bool is_enabled ();
+-		[CCode (cname = "mct_session_limits_ref")]
+-		public Mct.SessionLimits @ref ();
+-		[CCode (cname = "mct_session_limits_serialize")]
+-		[Version (since = "0.7.0")]
+-		public unowned GLib.Variant serialize ();
+-		[CCode (cname = "mct_session_limits_unref")]
+-		[DestroysInstance]
+-		public void unref ();
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", copy_function = "g_boxed_copy", free_function = "g_boxed_free", type_id = "mct_session_limits_builder_get_type ()")]
+-	[Compact]
+-	[Version (since = "0.5.0")]
+-	public class SessionLimitsBuilder {
+-		[CCode (cname = "mct_session_limits_builder_new", has_construct_function = false)]
+-		public SessionLimitsBuilder ();
+-		[CCode (cname = "mct_session_limits_builder_clear")]
+-		public void clear ();
+-		[CCode (cname = "mct_session_limits_builder_copy")]
+-		public Mct.SessionLimitsBuilder copy ();
+-		[CCode (cname = "mct_session_limits_builder_end")]
+-		public Mct.SessionLimits end ();
+-		[CCode (cname = "mct_session_limits_builder_free")]
+-		public void free ();
+-		[CCode (cname = "mct_session_limits_builder_init")]
+-		public void init ();
+-		[CCode (cname = "mct_session_limits_builder_set_daily_schedule")]
+-		public void set_daily_schedule (uint start_time_secs, uint end_time_secs);
+-		[CCode (cname = "mct_session_limits_builder_set_none")]
+-		public void set_none ();
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cprefix = "MCT_APP_FILTER_LIST_", has_type_id = false)]
+-	[Version (since = "0.2.0")]
+-	public enum AppFilterListType {
+-		BLOCKLIST,
+-		ALLOWLIST
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cprefix = "MCT_APP_FILTER_OARS_VALUE_", type_id = "mct_app_filter_oars_value_get_type ()")]
+-	[Version (since = "0.2.0")]
+-	public enum AppFilterOarsValue {
+-		UNKNOWN,
+-		NONE,
+-		MILD,
+-		MODERATE,
+-		INTENSE
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cprefix = "MCT_MANAGER_GET_VALUE_FLAGS_", type_id = "mct_manager_get_value_flags_get_type ()")]
+-	[Flags]
+-	[Version (since = "0.5.0")]
+-	public enum ManagerGetValueFlags {
+-		NONE,
+-		INTERACTIVE
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cprefix = "MCT_MANAGER_SET_VALUE_FLAGS_", type_id = "mct_manager_set_value_flags_get_type ()")]
+-	[Flags]
+-	[Version (since = "0.5.0")]
+-	public enum ManagerSetValueFlags {
+-		NONE,
+-		INTERACTIVE
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cprefix = "MCT_SESSION_LIMITS_TYPE_", has_type_id = false)]
+-	[Version (since = "0.5.0")]
+-	public enum SessionLimitsType {
+-		NONE,
+-		DAILY_SCHEDULE
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cprefix = "MCT_MANAGER_ERROR_")]
+-	[Version (since = "0.5.0")]
+-	public errordomain ManagerError {
+-		INVALID_USER,
+-		PERMISSION_DENIED,
+-		INVALID_DATA,
+-		DISABLED
+-	}
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cname = "mct_app_filter_deserialize")]
+-	[Version (since = "0.7.0")]
+-	public static Mct.AppFilter app_filter_deserialize (GLib.Variant variant, uint user_id) throws GLib.Error;
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cname = "mct_app_filter_error_quark")]
+-	public static GLib.Quark app_filter_error_quark ();
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cname = "mct_manager_error_quark")]
+-	public static GLib.Quark manager_error_quark ();
+-	[CCode (cheader_filename = "libmalcontent/malcontent.h", cname = "mct_session_limits_deserialize")]
+-	[Version (since = "0.7.0")]
+-	public static Mct.SessionLimits session_limits_deserialize (GLib.Variant variant, uint user_id) throws GLib.Error;
+-}
+-- 
+2.24.3 (Apple Git-128)

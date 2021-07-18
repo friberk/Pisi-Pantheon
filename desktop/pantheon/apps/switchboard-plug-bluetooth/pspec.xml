@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>switchboard-plug-bluetooth</Name>
@@ -7,7 +9,6 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv3</License>
-        <PartOf>desktop</PartOf>
         <Summary>Switchboard Bluetooth Plug</Summary>
         <Description>Switchboard Bluetooth Plug</Description>
         <BuildDependencies>
@@ -15,30 +16,37 @@
             <Dependency>gtk3-devel</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>switchboard-devel</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>vala-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="0092dda723b06c51f8eaa433833684530e5bd5e7" type="targz">https://github.com/elementary/switchboard-plug-bluetooth/archive/refs/tags/2.3.5.tar.gz</Archive>
+        <Archive sha1sum="97ed2fb044209a47763e8a2edc75ab14d1629511" type="targz">https://github.com/elementary/switchboard-plug-bluetooth/archive/refs/tags/2.3.6.tar.gz</Archive>
     </Source>
+    
     <Package>
         <Name>switchboard-plug-bluetooth</Name>
         <Summary>Switchboard Bluetooth Plug</Summary>
         <RuntimeDependencies>
-            <Dependency>granite</Dependency>
             <Dependency>gtk3</Dependency>
-            <Dependency>meson</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>vala</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/*</Path>
-            <Path fileType="library">/usr/libexec/*</Path>
-            <Path fileType="data">/usr/share/contractor/*</Path>
-            <Path fileType="doc">/usr/share/doc/*</Path>
-            <Path fileType="localedata">/usr/share/locale/*</Path>
-            <Path fileType="info">/usr/share/metainfo/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
         </Files>
     </Package>
+    
     <History>
+        <Update release="2">
+            <Date>2021-07-17</Date>
+            <Version>2.3.6</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-04-07</Date>
             <Version>2.3.5</Version>

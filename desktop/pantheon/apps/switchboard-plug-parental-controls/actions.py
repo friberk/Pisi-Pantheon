@@ -6,8 +6,11 @@
 
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 
 def setup():
+    shelltools.system("sed -i -e '/systemd_dep/d' meson.build data/meson.build")
+    
     mesontools.configure("-Dsystemdunitdir=no")
 
 def build():
@@ -15,6 +18,6 @@ def build():
 
 def install():
     mesontools.install()
-
+    
+    pisitools.removeDir("/usr/no")
     pisitools.dodoc("COPYING", "README.md")
-

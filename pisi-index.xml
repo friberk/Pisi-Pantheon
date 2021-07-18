@@ -2027,16 +2027,16 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
-            <Summary xml:lang="en">Switchboard Applications Plug</Summary>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Switchboard Universal Access Plug</Summary>
             <Description xml:lang="en">Switchboard Universal Access Plug</Description>
-            <Archive type="targz" sha1sum="27d4d5a4383ded4ae05fb9f6e8f6b2ccdc5fc2ba" name="2.2.0.tar.gz">https://github.com/elementary/switchboard-plug-a11y/archive/refs/tags/2.2.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="f2c5394af2fcb66ad6193f003c0683ff9b7843d9" name="2.3.0.tar.gz">https://github.com/elementary/switchboard-plug-a11y/archive/refs/tags/2.3.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-a11y/pspec.xml</SourceURI>
         </Source>
@@ -2044,20 +2044,27 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-a11y</Name>
             <Summary xml:lang="en">Switchboard Universal Access Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.3.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-10</Date>
                 <Version>2.2.0</Version>
@@ -2076,10 +2083,10 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard About Plug</Summary>
             <Description xml:lang="en">Switchboard About Plug</Description>
-            <Archive type="targz" sha1sum="38ce7730590b8fed032c40bf8679fe94c9483d82" name="2.6.3.tar.gz">https://github.com/elementary/switchboard-plug-about/archive/refs/tags/2.6.3.tar.gz</Archive>
+            <Archive type="targz" sha1sum="845731afee405dabbdac39eaddf0425e26fcc5df" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-about/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>appstream-devel</Dependency>
                 <Dependency>fwupd-devel</Dependency>
@@ -2089,7 +2096,7 @@ behalf of its clients.</Summary>
                 <Dependency>libhandy-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-about/pspec.xml</SourceURI>
         </Source>
@@ -2097,24 +2104,32 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-about</Name>
             <Summary xml:lang="en">Switchboard About Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>appstream</Dependency>
-                <Dependency>fwupd</Dependency>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>fwupd</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>libgtop</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>libhandy</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>appstream</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-06</Date>
                 <Version>2.6.3</Version>
@@ -2133,17 +2148,17 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Applications Plug</Summary>
             <Description xml:lang="en">Switchboard Applications Plug</Description>
-            <Archive type="targz" sha1sum="d3c5b21e9c02b6818768ad3f75d7d262ccfc075f" name="2.1.7.tar.gz">https://github.com/elementary/switchboard-plug-applications/archive/refs/tags/2.1.7.tar.gz</Archive>
+            <Archive type="targz" sha1sum="6f74d22d40d589dc92875e1619859c6547b44f1b" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-applications/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>flatpak-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-applications/pspec.xml</SourceURI>
         </Source>
@@ -2151,21 +2166,29 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-applications</Name>
             <Summary xml:lang="en">Switchboard Applications Plug</Summary>
             <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>flatpak</Dependency>
                 <Dependency>granite</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-06</Date>
                 <Version>2.1.7</Version>
@@ -2184,16 +2207,16 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Bluetooth Plug</Summary>
             <Description xml:lang="en">Switchboard Bluetooth Plug</Description>
-            <Archive type="targz" sha1sum="0092dda723b06c51f8eaa433833684530e5bd5e7" name="2.3.5.tar.gz">https://github.com/elementary/switchboard-plug-bluetooth/archive/refs/tags/2.3.5.tar.gz</Archive>
+            <Archive type="targz" sha1sum="97ed2fb044209a47763e8a2edc75ab14d1629511" name="2.3.6.tar.gz">https://github.com/elementary/switchboard-plug-bluetooth/archive/refs/tags/2.3.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-bluetooth/pspec.xml</SourceURI>
         </Source>
@@ -2201,22 +2224,27 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-bluetooth</Name>
             <Summary xml:lang="en">Switchboard Bluetooth Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.3.6</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-07</Date>
                 <Version>2.3.5</Version>
@@ -2235,37 +2263,96 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
-            <Summary xml:lang="en">Switchboard Date &amp; Time Plug</Summary>
-            <Description xml:lang="en">Switchboard Date &amp; Time Plug</Description>
-            <Archive type="targz" sha1sum="5b1870b55a7179912ec4bc85ca341e7314b5be1c" name="2.1.9.tar.gz">https://github.com/elementary/switchboard-plug-datetime/archive/refs/tags/2.1.9.tar.gz</Archive>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Switchboard Date Time Plug</Summary>
+            <Description xml:lang="en">Switchboard Date Time Plug</Description>
+            <Archive type="targz" sha1sum="8f0820692a38029c656fd5e8799bff5f0cbbc30d" name="2.2.0.tar.gz">https://github.com/elementary/switchboard-plug-datetime/archive/refs/tags/2.2.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-datetime/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>switchboard-plug-datetime</Name>
-            <Summary xml:lang="en">Switchboard Date &amp; Time Plug</Summary>
+            <Summary xml:lang="en">Switchboard Date Time Plug</Summary>
             <RuntimeDependencies>
                 <Dependency>pisi-timedate</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>granite</Dependency>
                 <Dependency>switchboard</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>2.1.9</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>switchboard-plug-display</Name>
+            <Homepage>https://github.com/elementary/switchboard-plug-display</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Switchboard Displays Plug</Summary>
+            <Description xml:lang="en">Switchboard Displays Plug</Description>
+            <Archive type="targz" sha1sum="63ccfe8cd30e3e7521b4bc4a0ec7b6d7b49e1579" name="2.3.0.tar.gz">https://github.com/elementary/switchboard-plug-display/archive/refs/tags/2.3.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>switchboard-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>meson</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/apps/switchboard-plug-display/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>switchboard-plug-display</Name>
+            <Summary xml:lang="en">Switchboard Displays Plug</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>switchboard</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-04-06</Date>
-                <Version>2.1.9</Version>
+                <Date>2021-07-17</Date>
+                <Version>2.3.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -2280,12 +2367,13 @@ behalf of its clients.</Summary>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
-            <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <License>GPLv2</License>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Keyboard Plug</Summary>
             <Description xml:lang="en">Switchboard Keyboard Plug</Description>
-            <Archive type="targz" sha1sum="6594426397ea474c609a99300f7bd1553a401c56" name="2.4.1.tar.gz">https://github.com/elementary/switchboard-plug-keyboard/archive/refs/tags/2.4.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="22f3c9e14a3eb88a8dd42045f9922d46c38b0b74" name="2.5.0.tar.gz">https://github.com/elementary/switchboard-plug-keyboard/archive/refs/tags/2.5.0.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>xkeyboard-config</Dependency>
                 <Dependency>libgnomekbd-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -2295,7 +2383,7 @@ behalf of its clients.</Summary>
                 <Dependency>libxml2-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-keyboard/pspec.xml</SourceURI>
         </Source>
@@ -2308,20 +2396,27 @@ behalf of its clients.</Summary>
                 <Dependency>gtk3</Dependency>
                 <Dependency>ibus</Dependency>
                 <Dependency>libhandy</Dependency>
-                <Dependency>libxklavier</Dependency>
+                <Dependency>pango</Dependency>
                 <Dependency>libxml2</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>glib2</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.5.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-06</Date>
                 <Version>2.4.1</Version>
@@ -2339,11 +2434,11 @@ behalf of its clients.</Summary>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
-            <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <License>LGPLv3</License>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Locale Plug</Summary>
             <Description xml:lang="en">Switchboard Locale Plug</Description>
-            <Archive type="targz" sha1sum="a17820734860b09c911f6ac730d763a729092b98" name="2.5.3.tar.gz">https://github.com/elementary/switchboard-plug-locale/archive/refs/tags/2.5.3.tar.gz</Archive>
+            <Archive type="targz" sha1sum="fb4464b87ea023f7e54f244f8f21a31786ea59ec" name="2.5.4.tar.gz">https://github.com/elementary/switchboard-plug-locale/archive/refs/tags/2.5.4.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>accountsservice-devel</Dependency>
                 <Dependency>gnome-desktop-devel</Dependency>
@@ -2352,7 +2447,7 @@ behalf of its clients.</Summary>
                 <Dependency>meson</Dependency>
                 <Dependency>polkit-devel</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <Patches>
                 <Patch>2.5.1-fix_ubuntu_langs.patch</Patch>
@@ -2363,27 +2458,31 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-locale</Name>
             <Summary xml:lang="en">Switchboard Locale Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>accountsservice</Dependency>
-                <Dependency>gnome-desktop</Dependency>
-                <Dependency>granite</Dependency>
-                <Dependency>ibus</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>polkit</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>gnome-desktop</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="data">/usr/share/glib-2.0/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
-                <Path fileType="data">/usr/share/polkit-1/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.5.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-07</Date>
                 <Version>2.5.3</Version>
@@ -2396,43 +2495,51 @@ behalf of its clients.</Summary>
     <SpecFile>
         <Source>
             <Name>switchboard-plug-mouse-touchpad</Name>
-            <Homepage>https://github.com/elementary/switchboard-plug-applications</Homepage>
+            <Homepage>https://github.com/elementary/switchboard-plug-mouse-touchpad</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
-            <Summary xml:lang="en">Switchboard Mouse &amp; Touchpad Plug</Summary>
-            <Description xml:lang="en">Switchboard Mouse &amp; Touchpad Plug</Description>
-            <Archive type="targz" sha1sum="19b5e14631768dc94cb3c6021e16d77d6dd0629a" name="2.4.2.tar.gz">https://github.com/elementary/switchboard-plug-mouse-touchpad/archive/refs/tags/2.4.2.tar.gz</Archive>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Switchboard Mouse Touchpad Plug</Summary>
+            <Description xml:lang="en">Switchboard Mouse Touchpad Plug</Description>
+            <Archive type="targz" sha1sum="7ed985964e7e7e8a207d32e10a57e6c864c00775" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-mouse-touchpad/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>libxml2-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-mouse-touchpad/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>switchboard-plug-mouse-touchpad</Name>
-            <Summary xml:lang="en">Switchboard Mouse &amp; Touchpad Plug</Summary>
+            <Summary xml:lang="en">Switchboard Mouse Touchpad Plug</Summary>
             <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>granite</Dependency>
                 <Dependency>libxml2</Dependency>
-                <Dependency>meson</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-06</Date>
                 <Version>2.4.2</Version>
@@ -2451,17 +2558,17 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Network Plug</Summary>
             <Description xml:lang="en">Switchboard Network Plug</Description>
-            <Archive type="targz" sha1sum="b31bf10392c36fbbfcb1da97641c4be4f9c5fc4b" name="2.3.3.tar.gz">https://github.com/elementary/switchboard-plug-network/archive/refs/tags/2.3.3.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a4510eca21ce8e58c74b2fbcc11eb12f1dcced52" name="2.4.0.tar.gz">https://github.com/elementary/switchboard-plug-network/archive/refs/tags/2.4.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>NetworkManager-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>libnma-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-network/pspec.xml</SourceURI>
         </Source>
@@ -2469,23 +2576,29 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-network</Name>
             <Summary xml:lang="en">Switchboard Network Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>NetworkManager</Dependency>
-                <Dependency>granite</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>libnma</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>NetworkManager</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.4.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-07</Date>
                 <Version>2.3.3</Version>
@@ -2503,16 +2616,16 @@ behalf of its clients.</Summary>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
-            <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <License>GPLv2</License>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Notifications Plug</Summary>
             <Description xml:lang="en">Switchboard Notifications Plug</Description>
-            <Archive type="targz" sha1sum="23dcb4271785c8927e2f22205449b57badaa3e3c" name="2.1.7.tar.gz">https://github.com/elementary/switchboard-plug-notifications/archive/refs/tags/2.1.7.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c9a76e39683b15ffff14677f85cabdfcf81cae51" name="2.2.0.tar.gz">https://github.com/elementary/switchboard-plug-notifications/archive/refs/tags/2.2.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-notifications/pspec.xml</SourceURI>
         </Source>
@@ -2520,21 +2633,27 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-notifications</Name>
             <Summary xml:lang="en">Switchboard Notifications Plug</Summary>
             <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>granite</Dependency>
-                <Dependency>meson</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-07</Date>
                 <Version>2.1.7</Version>
@@ -2553,23 +2672,19 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Online Accounts Plug</Summary>
             <Description xml:lang="en">Switchboard Online Accounts Plug</Description>
-            <Archive type="zip" sha1sum="59065fdb95f0e7e1561365406dfbb9a1a98fc761" name="master.zip">https://github.com/elementary/switchboard-plug-onlineaccounts/archive/refs/heads/master.zip</Archive>
+            <Archive type="targz" sha1sum="961428b69cd10427d91b29e22eb5f79f23598752" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-onlineaccounts/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>evolution-data-server-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>json-glib-devel</Dependency>
-                <Dependency>libaccounts-glib-devel</Dependency>
-                <Dependency>libgee-devel</Dependency>
-                <Dependency>librest-devel</Dependency>
-                <Dependency>meson</Dependency>
-                <Dependency>signon-devel</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
-                <Dependency>webkit2gtk-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>meson</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-onlineaccounts/pspec.xml</SourceURI>
         </Source>
@@ -2577,34 +2692,30 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-onlineaccounts</Name>
             <Summary xml:lang="en">Switchboard Online Accounts Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>glib2</Dependency>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
-                <Dependency>json-glib</Dependency>
-                <Dependency>libaccounts-glib</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>libgee</Dependency>
-                <Dependency>librest</Dependency>
-                <Dependency>meson</Dependency>
-                <Dependency>signon</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libhandy</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
-                <Dependency>webkit2gtk</Dependency>
+                <Dependency>evolution-data-server</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/accounts/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="data">/usr/share/dbus-1/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="data">/usr/share/glib-2.0/*</Path>
-                <Path fileType="data">/usr/share/icons/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
-                <Path fileType="data">/usr/share/polkit-1/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-07</Date>
                 <Version>2.0.1</Version>
@@ -2623,10 +2734,10 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Desktop Plug</Summary>
             <Description xml:lang="en">Switchboard Desktop Plug</Description>
-            <Archive type="targz" sha1sum="fa998d52028d3e5acbab6f7566fe4ee64565b070" name="2.8.4.tar.gz">https://github.com/elementary/switchboard-plug-pantheon-shell/archive/refs/tags/2.8.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c84b38552ffa85e1952229aeef435a84544d3836" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-pantheon-shell/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>gnome-desktop-devel</Dependency>
                 <Dependency>gnome-settings-daemon-devel</Dependency>
@@ -2634,11 +2745,10 @@ behalf of its clients.</Summary>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
                 <Dependency>libgexiv2-devel</Dependency>
-                <Dependency>tumbler-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>plank-devel</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-pantheon-shell/pspec.xml</SourceURI>
         </Source>
@@ -2646,28 +2756,33 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-pantheon-shell</Name>
             <Summary xml:lang="en">Switchboard Desktop Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>gnome-desktop</Dependency>
-                <Dependency>gnome-settings-daemon</Dependency>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
-                <Dependency>libgee</Dependency>
-                <Dependency>libgexiv2</Dependency>
-                <Dependency>tumbler</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>plank</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libgexiv2</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>gnome-desktop</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/contractor</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-06</Date>
                 <Version>2.8.4</Version>
@@ -2686,10 +2801,10 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Parental Controls Plug</Summary>
             <Description xml:lang="en">Switchboard Parental Controls Plug</Description>
-            <Archive type="targz" sha1sum="65a910b2838c26d13b044d54dd767ce7124a9896" name="3.0.1.tar.gz">https://github.com/elementary/switchboard-plug-parental-controls/archive/refs/tags/3.0.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c29364de7066d214004712ceb8b7f744e28af91a" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-parental-controls/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>accountsservice-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
@@ -2699,35 +2814,48 @@ behalf of its clients.</Summary>
                 <Dependency>meson</Dependency>
                 <Dependency>polkit-devel</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>elogind-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch level="1">0001-Revert-malcontent-commit.patch</Patch>
+            </Patches>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-parental-controls/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>switchboard-plug-parental-controls</Name>
             <Summary xml:lang="en">Switchboard Power Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>accountsservice</Dependency>
-                <Dependency>dbus</Dependency>
+                <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>polkit</Dependency>
                 <Dependency>granite</Dependency>
                 <Dependency>libhandy</Dependency>
-                <Dependency>meson</Dependency>
-                <Dependency>polkit</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>accountsservice</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/dbus-1/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
-                <Path fileType="data">/usr/share/polkit-1/*</Path>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-10</Date>
                 <Version>3.0.1</Version>
@@ -2745,18 +2873,19 @@ behalf of its clients.</Summary>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
-            <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <License>GPLv2</License>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Power Plug</Summary>
             <Description xml:lang="en">Switchboard Power Plug</Description>
-            <Archive sha1sum="a0d2a5f0c9e86fdee83b2456c872fc52235faa87" name="2.4.2.tar.gz">https://github.com/elementary/switchboard-plug-power/archive/2.4.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="eb2b598701bff787b67cc773e770dd3dbf355367" name="2.5.0.tar.gz">https://github.com/elementary/switchboard-plug-power/archive/2.5.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>polkit-devel</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>elogind-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-power/pspec.xml</SourceURI>
         </Source>
@@ -2764,24 +2893,29 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-power</Name>
             <Summary xml:lang="en">Switchboard Power Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>dbus</Dependency>
-                <Dependency>granite</Dependency>
-                <Dependency>meson</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
                 <Dependency>polkit</Dependency>
                 <Dependency>switchboard</Dependency>
-                <Dependency>vala</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/dbus-1/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
-                <Path fileType="data">/usr/share/polkit-1/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.5.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-10</Date>
                 <Version>2.4.2</Version>
@@ -2803,18 +2937,15 @@ behalf of its clients.</Summary>
             <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Printers Plug</Summary>
             <Description xml:lang="en">Switchboard Printers Plug</Description>
-            <Archive type="targz" sha1sum="d9c3e700c35f5cce6f0c0e0565efb55ae4266519" name="2.1.9.tar.gz">https://github.com/elementary/switchboard-plug-printers/archive/refs/tags/2.1.9.tar.gz</Archive>
+            <Archive type="zip" sha1sum="4063db33725be740ab555c7e851d44ab1a1301d0" name="5eced5ddda6f229d7265ea0a713f6c1cd181a526.zip">https://github.com/elementary/switchboard-plug-printers/archive/5eced5ddda6f229d7265ea0a713f6c1cd181a526.zip</Archive>
             <BuildDependencies>
                 <Dependency>cups-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">0001-CUPSNotifier.vala-explicit-cast-for-callback-141.patch</Patch>
-            </Patches>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-printers/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -2825,15 +2956,81 @@ behalf of its clients.</Summary>
                 <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>switchboard</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="all">/</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>20210217</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>2.1.9</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>switchboard-plug-security-privacy</Name>
+            <Homepage>https://github.com/elementary/switchboard-plug-security-privacy</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Switchboard Security Privacy Plug</Summary>
+            <Description xml:lang="en">Switchboard Security Privacy Plug</Description>
+            <Archive type="targz" sha1sum="567af5227af9c114ca3d1fbd01458ab3a33a37f4" name="2.2.5.tar.gz">https://github.com/elementary/switchboard-plug-security-privacy/archive/refs/tags/2.2.5.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zeitgeist-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>polkit-devel</Dependency>
+                <Dependency>switchboard-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>meson</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/apps/switchboard-plug-security-privacy/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>switchboard-plug-security-privacy</Name>
+            <Summary xml:lang="en">Switchboard Security Privacy Plug</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>zeitgeist</Dependency>
+                <Dependency>switchboard</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-04-16</Date>
-                <Version>2.1.9</Version>
+                <Date>2021-07-17</Date>
+                <Version>2.2.5</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -2852,13 +3049,13 @@ behalf of its clients.</Summary>
             <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Sharing Plug</Summary>
             <Description xml:lang="en">Switchboard Sharing Plug</Description>
-            <Archive type="targz" sha1sum="7b8119d70e2a204c8dbbe3296ad3bf4d54a99d88" name="2.1.4.tar.gz">https://github.com/elementary/switchboard-plug-sharing/archive/refs/tags/2.1.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="3821ca97bca5f42891a37aa0ee4f5bf5a8fc73f1" name="2.1.5.tar.gz">https://github.com/elementary/switchboard-plug-sharing/archive/refs/tags/2.1.5.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-sharing/pspec.xml</SourceURI>
         </Source>
@@ -2866,18 +3063,27 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-sharing</Name>
             <Summary xml:lang="en">Switchboard Sharing Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>switchboard</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.1.5</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-16</Date>
                 <Version>2.1.4</Version>
@@ -2895,19 +3101,19 @@ behalf of its clients.</Summary>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
-            <License>GPLv3</License>
-            <PartOf>desktop</PartOf>
+            <License>LGPLv2.1</License>
+            <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Sound Plug</Summary>
             <Description xml:lang="en">Switchboard Sound Plug</Description>
-            <Archive type="targz" sha1sum="c48bbd24ac06e7b9766517e2018b7743dd439d35" name="2.2.6.tar.gz">https://github.com/elementary/switchboard-plug-sound/archive/refs/tags/2.2.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="2f54695f143ae6b03672b926c8647ea305f32867" name="2.2.7.tar.gz">https://github.com/elementary/switchboard-plug-sound/archive/refs/tags/2.2.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>libcanberra-gtk3-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>pulseaudio-libs-devel</Dependency>
                 <Dependency>switchboard-devel</Dependency>
-                <Dependency>vala</Dependency>
+                <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/switchboard-plug-sound/pspec.xml</SourceURI>
         </Source>
@@ -2915,26 +3121,95 @@ behalf of its clients.</Summary>
             <Name>switchboard-plug-sound</Name>
             <Summary xml:lang="en">Switchboard Sound Plug</Summary>
             <RuntimeDependencies>
-                <Dependency>granite</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>libcanberra</Dependency>
-                <Dependency>meson</Dependency>
-                <Dependency>pulseaudio-libs</Dependency>
                 <Dependency>switchboard</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>libcanberra-gtk3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*</Path>
-                <Path fileType="library">/usr/libexec/*</Path>
-                <Path fileType="data">/usr/share/contractor/*</Path>
-                <Path fileType="doc">/usr/share/doc/*</Path>
-                <Path fileType="localedata">/usr/share/locale/*</Path>
-                <Path fileType="info">/usr/share/metainfo/*</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.2.7</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-06</Date>
+                <Version>2.2.6</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>switchboard-plug-useraccounts</Name>
+            <Homepage>https://github.com/elementary/switchboard-plug-useraccounts</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Switchboard User Accounts Plug</Summary>
+            <Description xml:lang="en">Switchboard User Accounts Plug</Description>
+            <Archive type="targz" sha1sum="33a9c3b10d5c673c7233ee5b8bc88a27378d19a3" name="2.4.0.tar.gz">https://github.com/elementary/switchboard-plug-useraccounts/archive/refs/tags/2.4.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>accountsservice-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>gnome-desktop-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
+                <Dependency>polkit-devel</Dependency>
+                <Dependency>libpwquality-devel</Dependency>
+                <Dependency>switchboard-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>meson</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/apps/switchboard-plug-useraccounts/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>switchboard-plug-useraccounts</Name>
+            <Summary xml:lang="en">Switchboard User Accounts Plug</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>polkit</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libhandy</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>switchboard</Dependency>
+                <Dependency>libpwquality</Dependency>
+                <Dependency>gnome-desktop</Dependency>
+                <Dependency>accountsservice</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-04-06</Date>
-                <Version>2.2.6</Version>
+                <Date>2021-07-17</Date>
+                <Version>2.4.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -3890,82 +4165,6 @@ behalf of its clients.</Summary>
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>granite</Name>
-            <Homepage>https://github.com/elementary/granite</Homepage>
-            <Packager>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Packager>
-            <License>LGPLv3</License>
-            <PartOf>desktop</PartOf>
-            <Summary xml:lang="en">Granite is a companion library for GTK and GLib.</Summary>
-            <Description xml:lang="en">Granite is a companion library for GTK and GLib. Among other things, it provides complex widgets and convenience functions designed for use in apps built for elementary OS.</Description>
-            <Archive type="zip" sha1sum="2c4e80cea983fae688f43921c0a0fc578c254691" name="6.1.0.zip">https://github.com/elementary/granite/archive/refs/tags/6.1.0.zip</Archive>
-            <BuildDependencies>
-                <Dependency>gobject-introspection-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>libgee-devel</Dependency>
-                <Dependency>vala-devel</Dependency>
-                <Dependency>meson</Dependency>
-            </BuildDependencies>
-            <SourceURI>desktop/pantheon/base/granite/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>granite</Name>
-            <RuntimeDependencies>
-                <Dependency>cairo</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libgee</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib/girepository-1.0</Path>
-                <Path fileType="library">/usr/lib/libgranite*.so*</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="info">/usr/share/metainfo</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>granite-devel</Name>
-            <Summary xml:lang="en">Development files for granite</Summary>
-            <RuntimeDependencies>
-                <Dependency release="2">granite</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>libgee-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-                <Path fileType="data">/usr/share/gir-1.0</Path>
-                <Path fileType="data">/usr/share/vala</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2021-07-15</Date>
-                <Version>6.1.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2021-04-06</Date>
-                <Version>6.0.0</Version>
-                <Comment>First release for Pisi Linux</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>lightdm-pantheon-greeter</Name>
             <Homepage>https://github.com/elementary/greeter</Homepage>
             <Packager>
@@ -4278,110 +4477,6 @@ behalf of its clients.</Summary>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>plank</Name>
-            <Homepage>https://launchpad.net/plank</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admin@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app</IsA>
-            <PartOf>desktop.pantheon.base</PartOf>
-            <Summary xml:lang="en">An elementary fork of Plank, the stupidly-simple dock.</Summary>
-            <Description xml:lang="en">Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more. It is, however, a library which can be extended to create other dock programs with more advanced features.</Description>
-            <Archive type="zip" sha1sum="fa01cf92ef8959eeb68f7d7b6c665cc65101ef3e" name="05fd6fccdf1a769f6737a0d7e57e092825348660.zip">https://github.com/elementary/dock/archive/05fd6fccdf1a769f6737a0d7e57e092825348660.zip</Archive>
-            <BuildDependencies>
-                <Dependency>intltool</Dependency>
-                <Dependency>gettext-devel</Dependency>
-                <Dependency>bamf-devel</Dependency>
-                <Dependency>vala-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>libXi-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>libgee-devel</Dependency>
-                <Dependency>libwnck3-devel</Dependency>
-                <Dependency>libXfixes-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>gnome-menus-devel</Dependency>
-                <Dependency>libdbusmenu-devel</Dependency>
-                <Dependency>libdbusmenu-gtk3</Dependency>
-                <Dependency>gobject-introspection-devel</Dependency>
-                <Dependency>meson</Dependency>
-                <Dependency>granite-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>desktop/pantheon/base/plank/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>plank</Name>
-            <RuntimeDependencies>
-                <Dependency>bamf</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libXi</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libgee</Dependency>
-                <Dependency>granite</Dependency>
-                <Dependency>libwnck3</Dependency>
-                <Dependency>libXfixes</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>gnome-menus</Dependency>
-                <Dependency>libdbusmenu-glib</Dependency>
-                <Dependency>libdbusmenu-gtk3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="library">/usr/lib/plank</Path>
-                <Path fileType="library">/usr/lib/libplank*.so*</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="info">/usr/share/metainfo</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>plank-devel</Name>
-            <Summary xml:lang="en">Development files for plank</Summary>
-            <RuntimeDependencies>
-                <Dependency release="2">plank</Dependency>
-                <Dependency>bamf-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>libgee-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2021-07-17</Date>
-                <Version>20210715</Version>
-                <Comment>Switched to eOS plank fork</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2021-03-28</Date>
-                <Version>0.11.89</Version>
-                <Comment>First release</Comment>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

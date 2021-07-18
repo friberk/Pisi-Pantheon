@@ -8,7 +8,7 @@ from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 
 def setup():
-    mesontools.configure("-Dregenerate_translation=true")
+    mesontools.configure()
 
 def build():
     mesontools.build()
@@ -16,5 +16,4 @@ def build():
 def install():
     mesontools.install()
 
-    pisitools.dodoc("COPYING", "README.md")
-
+    pisitools.dodoc("LICENSE", "README.md")

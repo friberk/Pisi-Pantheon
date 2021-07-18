@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>switchboard-plug-network</Name>
@@ -7,7 +9,6 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv3</License>
-        <PartOf>desktop</PartOf>
         <Summary>Switchboard Network Plug</Summary>
         <Description>Switchboard Network Plug</Description>
         <BuildDependencies>
@@ -16,31 +17,39 @@
             <Dependency>libnma-devel</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>switchboard-devel</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>vala-devel</Dependency>
         </BuildDependencies>
-        <Archive type="targz" sha1sum="b31bf10392c36fbbfcb1da97641c4be4f9c5fc4b">https://github.com/elementary/switchboard-plug-network/archive/refs/tags/2.3.3.tar.gz</Archive>
+        <Archive type="targz" sha1sum="a4510eca21ce8e58c74b2fbcc11eb12f1dcced52">https://github.com/elementary/switchboard-plug-network/archive/refs/tags/2.4.0.tar.gz</Archive>
     </Source>
+    
     <Package>
         <Name>switchboard-plug-network</Name>
         <Summary>Switchboard Network Plug</Summary>
         <RuntimeDependencies>
-            <Dependency>NetworkManager</Dependency>
-            <Dependency>granite</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
             <Dependency>libnma</Dependency>
-            <Dependency>meson</Dependency>
+            <Dependency>granite</Dependency>
             <Dependency>switchboard</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>NetworkManager</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/*</Path>
-            <Path fileType="library">/usr/libexec/*</Path>
-            <Path fileType="data">/usr/share/contractor/*</Path>
-            <Path fileType="doc">/usr/share/doc/*</Path>
-            <Path fileType="localedata">/usr/share/locale/*</Path>
-            <Path fileType="info">/usr/share/metainfo/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
         </Files>
     </Package>
+    
     <History>
+        <Update release="2">
+            <Date>2021-07-17</Date>
+            <Version>2.4.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-04-07</Date>
             <Version>2.3.3</Version>
