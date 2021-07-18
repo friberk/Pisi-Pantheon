@@ -1050,6 +1050,102 @@
         </Source>
     </Package>
     <Package>
+        <Name>pantheon-notifications</Name>
+        <Summary xml:lang="en">GTK Notifications Server</Summary>
+        <Description xml:lang="en">pantheon-notifications is a GTK notification server for Pantheon.</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-18</Date>
+                <Version>20210713</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>153577</InstalledSize>
+        <PackageSize>45270</PackageSize>
+        <PackageHash>cad64f446d499738b76e1391a07ea4c6ec92efe2</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-notifications/pantheon-notifications-20210713-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-notifications</Name>
+            <Homepage>https://github.com/elementary/notifications</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>plank-devel</Name>
+        <Summary xml:lang="en">Development files for plank</Summary>
+        <Description xml:lang="en">Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more. It is, however, a library which can be extended to create other dock programs with more advanced features.</Description>
+        <IsA>app</IsA>
+        <PartOf>programming.devel</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="2">plank</Dependency>
+            <Dependency>bamf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>20210715</Version>
+                <Comment>Switched to eOS plank fork</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-03-28</Date>
+                <Version>0.11.89</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>137290</InstalledSize>
+        <PackageSize>15667</PackageSize>
+        <PackageHash>ac47b58b5b6137496e4dd64fc7e4bfca5fe3ac14</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/plank/plank-devel-20210715-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>plank</Name>
+            <Homepage>https://launchpad.net/plank</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>pantheon-calendar</Name>
         <Summary xml:lang="en">Desktop calendar app designed for Pantheon DE</Summary>
         <Description xml:lang="en">Desktop calendar app designed for Pantheon DE</Description>
@@ -1475,6 +1571,65 @@
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>plank</Name>
+        <Summary xml:lang="en">An elementary fork of Plank, the stupidly-simple dock.</Summary>
+        <Description xml:lang="en">Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more. It is, however, a library which can be extended to create other dock programs with more advanced features.</Description>
+        <IsA>app</IsA>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>bamf</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libwnck3</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gnome-menus</Dependency>
+            <Dependency>libdbusmenu-glib</Dependency>
+            <Dependency>libdbusmenu-gtk3</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>20210715</Version>
+                <Comment>Switched to eOS plank fork</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-03-28</Date>
+                <Version>0.11.89</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>1609446</InstalledSize>
+        <PackageSize>408940</PackageSize>
+        <PackageHash>80624dced14a3b6c3ddc980e43e7ffbec1332e1a</PackageHash>
+        <InstallTarHash>1bb783210f1386cbb6541416d23bae6edf3f0396</InstallTarHash>
+        <PackageURI>p/plank/plank-20210715-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>plank</Name>
+            <Homepage>https://launchpad.net/plank</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
             </Packager>
         </Source>
     </Package>
@@ -2192,12 +2347,19 @@
         <PartOf>programming.devel</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency release="3">wingpanel</Dependency>
+            <Dependency release="4">wingpanel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="4">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Added pantheon-notifications dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2021-07-17</Date>
                 <Version>3.0.0</Version>
@@ -2225,10 +2387,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>18327</InstalledSize>
-        <PackageSize>4392</PackageSize>
-        <PackageHash>f348981a76c1d2288a5fc0b284d5b4d5b07dae69</PackageHash>
+        <PackageSize>4423</PackageSize>
+        <PackageHash>77f3a4d8d72112845319adba986ffc2dc6664384</PackageHash>
         <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>w/wingpanel/wingpanel-devel-3.0.0-3-p2-x86_64.pisi</PackageURI>
+        <PackageURI>w/wingpanel/wingpanel-devel-3.0.0-4-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>wingpanel</Name>
@@ -2498,8 +2660,16 @@
             <Dependency>libgee</Dependency>
             <Dependency>granite</Dependency>
             <Dependency>mutter7</Dependency>
+            <Dependency>pantheon-notifications</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="4">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Added pantheon-notifications dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2021-07-17</Date>
                 <Version>3.0.0</Version>
@@ -2527,10 +2697,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>351129</InstalledSize>
-        <PackageSize>87641</PackageSize>
-        <PackageHash>1e630310c17eb0283e12488434842b7a22755beb</PackageHash>
-        <InstallTarHash>6301c59e8dbb282f0a099f8ffe2f608ca0fa585d</InstallTarHash>
-        <PackageURI>w/wingpanel/wingpanel-3.0.0-3-p2-x86_64.pisi</PackageURI>
+        <PackageSize>87709</PackageSize>
+        <PackageHash>3eef5e789afec9c69770dada5a0d66f9390f1b01</PackageHash>
+        <InstallTarHash>9d23a97e04820df1174526d55d63a3ba2df8360b</InstallTarHash>
+        <PackageURI>w/wingpanel/wingpanel-3.0.0-4-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>wingpanel</Name>
