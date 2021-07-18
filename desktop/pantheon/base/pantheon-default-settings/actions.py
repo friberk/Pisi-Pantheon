@@ -3,6 +3,8 @@
 #
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
+#
+# TODO: Arrange plank dock items
 
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools

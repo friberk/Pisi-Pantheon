@@ -443,6 +443,145 @@ behalf of its clients.</Summary>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mutter7</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/mutter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <PartOf>desktop.gnome.base</PartOf>
+            <Summary xml:lang="en">A window manager for GNOME 3.38</Summary>
+            <Description xml:lang="en">Mutter7 is a Wayland display server and X11 window manager and compositor library for GNOME 3.38</Description>
+            <Archive type="tarxz" sha1sum="5db30e3162257060c85cbbdc09d5bfcc5306c0e6" name="mutter-3.38.5.tar.xz">https://download.gnome.org/sources/mutter/3.38/mutter-3.38.5.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>graphene-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+                <Dependency>gnome-settings-daemon-devel</Dependency>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>gnome-desktop-devel</Dependency>
+                <Dependency>libxkbfile-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>libgudev-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>libinput-devel</Dependency>
+                <Dependency>elogind-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libwacom-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>pipewire-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>egl-wayland-devel</Dependency>
+                <Dependency>xorg-xwayland</Dependency>
+                <Dependency>xorg-server-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">0000-Revert-build-Do-not-provide-built-sources-as-libmutt.patch</Patch>
+                <Patch level="1">0001-window-actor-Special-case-shaped-Java-windows.patch</Patch>
+                <Patch level="1">0002-Adapt-to-settings-moving-to-gsettings-desktop-schema.patch</Patch>
+                <Patch level="1">0003-Fix-glitches-in-gala.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/gnome/base/mutter7/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mutter7</Name>
+            <Summary xml:lang="en">A window manager for GNOME 3.38</Summary>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXau</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>libxcb</Dependency>
+                <Dependency>elogind</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>graphene</Dependency>
+                <Dependency>libglvnd</Dependency>
+                <Dependency>libgudev</Dependency>
+                <Dependency>libinput</Dependency>
+                <Dependency>libwacom</Dependency>
+                <Dependency>pipewire</Dependency>
+                <Dependency>json-glib</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libxkbfile</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>gnome-desktop</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>wayland-server</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/libmutter-7*.so*</Path>
+                <Path fileType="library">/usr/lib/mutter-7</Path>
+                <Path fileType="library">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/GConf</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/gnome-control-center</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/mutter-7</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>mutter7-devel</Name>
+            <Summary xml:lang="en">Development files for mutter7</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">mutter7</Dependency>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>graphene-devel</Dependency>
+                <Dependency>libglvnd-devel</Dependency>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-16</Date>
+                <Version>3.38.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>signon</Name>
             <Homepage>https://code.google.com/p/accounts-sso</Homepage>
             <Packager>
@@ -1711,6 +1850,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-16</Date>
+                <Version>20210624</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-16</Date>
                 <Version>20210624</Version>
@@ -2917,7 +3063,7 @@ behalf of its clients.</Summary>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
                 <Dependency>meson</Dependency>
-                <Dependency>mutter6-devel</Dependency>
+                <Dependency>mutter7-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
                 <Dependency>mesa-devel</Dependency>
             </BuildDependencies>
@@ -2932,7 +3078,8 @@ behalf of its clients.</Summary>
                 <Dependency>glib2</Dependency>
                 <Dependency>libgee</Dependency>
                 <Dependency>granite</Dependency>
-                <Dependency>mutter6</Dependency>
+                <Dependency>mutter7</Dependency>
+                <Dependency>pantheon-notifications</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/etc</Path>
@@ -2950,7 +3097,7 @@ behalf of its clients.</Summary>
         <Package>
             <Name>wingpanel-devel</Name>
             <RuntimeDependencies>
-                <Dependency release="2">wingpanel</Dependency>
+                <Dependency release="4">wingpanel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
@@ -2962,6 +3109,20 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Added pantheon-notifications dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2021-07-17</Date>
+                <Version>3.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>3.0.0</Version>
@@ -3643,7 +3804,7 @@ behalf of its clients.</Summary>
                 <Dependency>gnome-desktop-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
                 <Dependency>graphene-devel</Dependency>
-                <Dependency>mutter6-devel</Dependency>
+                <Dependency>mutter7-devel</Dependency>
                 <Dependency>intltool</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>plank-devel</Dependency>
@@ -3664,7 +3825,8 @@ behalf of its clients.</Summary>
                 <Dependency>glib2</Dependency>
                 <Dependency>plank</Dependency>
                 <Dependency>libgee</Dependency>
-                <Dependency>mutter6</Dependency>
+                <Dependency>mutter7</Dependency>
+                <Dependency>mutter</Dependency>
                 <Dependency>granite</Dependency>
                 <Dependency>graphene</Dependency>
                 <Dependency>libXfixes</Dependency>
@@ -3692,9 +3854,9 @@ behalf of its clients.</Summary>
             <Name>gala-devel</Name>
             <Summary xml:lang="en">Development files for gala</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">gala</Dependency>
+                <Dependency release="3">gala</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency>mutter6-devel</Dependency>
+                <Dependency>mutter7-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -3703,6 +3865,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-16</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild with mutter7</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -3818,7 +3987,7 @@ behalf of its clients.</Summary>
                 <Dependency>libhandy-devel</Dependency>
                 <Dependency>lightdm-devel</Dependency>
                 <Dependency>meson</Dependency>
-                <Dependency>mutter6-devel</Dependency>
+                <Dependency>mutter7-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
                 <Dependency>wingpanel-devel</Dependency>
                 <Dependency>desktop-file-utils</Dependency>
@@ -3836,13 +4005,13 @@ behalf of its clients.</Summary>
                 <Dependency>libgee</Dependency>
                 <Dependency>granite</Dependency>
                 <Dependency>lightdm</Dependency>
-                <Dependency>mutter6</Dependency>
+                <Dependency>mutter7</Dependency>
                 <Dependency>libhandy</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>accountsservice</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc</Path>
+                <Path fileType="data">/etc</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="executable">/usr/sbin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -3852,6 +4021,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-16</Date>
                 <Version>6.0.0</Version>
@@ -3915,6 +4091,65 @@ behalf of its clients.</Summary>
             <Update release="1">
                 <Date>2021-04-06</Date>
                 <Version>5.1.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-notifications</Name>
+            <Homepage>https://github.com/elementary/notifications</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.base</PartOf>
+            <Summary xml:lang="en">GTK Notifications Server</Summary>
+            <Description xml:lang="en">pantheon-notifications is a GTK notification server for Pantheon.</Description>
+            <Archive sha1sum="93beede86ea97ebafca4b59a4696ddee8ef1260f" name="3fff6ed8c604a0f799fd88bd4b5a844c0495ed65.zip">https://github.com/elementary/notifications/archive/3fff6ed8c604a0f799fd88bd4b5a844c0495ed65.zip</Archive>
+            <BuildDependencies>
+                <Dependency>appstream-glib-devel</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>libcanberra-gtk-devel</Dependency>
+                <Dependency>libcanberra-gtk3-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/base/pantheon-notifications/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-notifications</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libhandy</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>libcanberra-gtk3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-18</Date>
+                <Version>20210713</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -4019,7 +4254,7 @@ behalf of its clients.</Summary>
                 <Dependency>orca</Dependency>
                 <Dependency>plank</Dependency>
                 <Dependency>xdg-user-dirs-gtk</Dependency>
-                <Dependency>applications-menu</Dependency>
+                <Dependency>pantheon-applications-menu</Dependency>
                 <Dependency>dpms</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -4043,6 +4278,110 @@ behalf of its clients.</Summary>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>plank</Name>
+            <Homepage>https://launchpad.net/plank</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.pantheon.base</PartOf>
+            <Summary xml:lang="en">An elementary fork of Plank, the stupidly-simple dock.</Summary>
+            <Description xml:lang="en">Plank is meant to be the simplest dock on the planet. The goal is to provide just what a dock needs and absolutely nothing more. It is, however, a library which can be extended to create other dock programs with more advanced features.</Description>
+            <Archive type="zip" sha1sum="fa01cf92ef8959eeb68f7d7b6c665cc65101ef3e" name="05fd6fccdf1a769f6737a0d7e57e092825348660.zip">https://github.com/elementary/dock/archive/05fd6fccdf1a769f6737a0d7e57e092825348660.zip</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>bamf-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libgee-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gnome-menus-devel</Dependency>
+                <Dependency>libdbusmenu-devel</Dependency>
+                <Dependency>libdbusmenu-gtk3</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>granite-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/base/plank/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>plank</Name>
+            <RuntimeDependencies>
+                <Dependency>bamf</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gnome-menus</Dependency>
+                <Dependency>libdbusmenu-glib</Dependency>
+                <Dependency>libdbusmenu-gtk3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib/plank</Path>
+                <Path fileType="library">/usr/lib/libplank*.so*</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>plank-devel</Name>
+            <Summary xml:lang="en">Development files for plank</Summary>
+            <RuntimeDependencies>
+                <Dependency release="2">plank</Dependency>
+                <Dependency>bamf-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libgee-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>20210715</Version>
+                <Comment>Switched to eOS plank fork</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-03-28</Date>
+                <Version>0.11.89</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
