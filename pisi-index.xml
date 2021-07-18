@@ -2765,6 +2765,7 @@ behalf of its clients.</Summary>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>switchboard</Dependency>
                 <Dependency>gnome-desktop</Dependency>
+                <Dependency>pantheon-settings-daemon</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -2776,6 +2777,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Added pantheon-settings-daemon dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>6.0.0</Version>
@@ -4474,6 +4482,59 @@ behalf of its clients.</Summary>
             <Update release="1">
                 <Date>2021-04-10</Date>
                 <Version>5.0.3</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-settings-daemon</Name>
+            <Homepage>https://github.com/elementary/settings-daemon</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.base</PartOf>
+            <Summary xml:lang="en">Settings Daemon for Pantheon</Summary>
+            <Description xml:lang="en">Settings Daemon for Pantheon</Description>
+            <Archive type="targz" sha1sum="12638b00a0386bf69b93a5fa0ae9c2b2065d2b28" name="1.0.0.tar.gz">https://github.com/elementary/settings-daemon/archive/refs/tags/1.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>accountsservice-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>geoclue-devel</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>vala-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/base/pantheon-settings-daemon/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-settings-daemon</Name>
+            <Summary xml:lang="en">Settings Daemon for Pantheon</Summary>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>geoclue</Dependency>
+                <Dependency>granite</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/accountsservice</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-17</Date>
+                <Version>1.0.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
