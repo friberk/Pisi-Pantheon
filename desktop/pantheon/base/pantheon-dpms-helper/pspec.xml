@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>dpms</Name>
+        <Name>pantheon-dpms-helper</Name>
         <Homepage>https://github.com/elementary/dpms-helper</Homepage>
         <Packager>
             <Name>Berk Çakar</Name>
@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Summary>Sets DPMS settings found in io.elementary.dpms</Summary>
         <Description>This program is designed to be called by PisiLinux Pantheon DE directly when GNOME Settings Daemon is not managing the related settings. It is probably not useful for users.</Description>
-        <Archive sha1sum="277c94bb495ef884444dff0ddb7b9fe0a58a3263">https://github.com/elementary/dpms-helper/archive/1.0.tar.gz</Archive>
+        <Archive type="targz" sha1sum="277c94bb495ef884444dff0ddb7b9fe0a58a3263">https://github.com/elementary/dpms-helper/archive/1.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>meson</Dependency>
             <Dependency>desktop-file-utils</Dependency>
@@ -19,7 +19,7 @@
     </Source>
 
     <Package>
-        <Name>dpms</Name>
+        <Name>pantheon-dpms-helper</Name>
          <RuntimeDependencies>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>dconf</Dependency>
