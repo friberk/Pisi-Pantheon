@@ -10,7 +10,7 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
-    mesontools.configure("--sbindir=/usr/bin")
+    mesontools.configure()
 
 def build():
     mesontools.build()
@@ -18,6 +18,4 @@ def build():
 def install():
     mesontools.install()
 
-    shelltools.system("sed -i 's@Exec=io.elementary.greeter@Exec=/usr/bin/io.elementary.greeter@' %s/usr/share/xgreeters/io.elementary.greeter.desktop" 
-                        % get.installDIR())
     pisitools.dodoc("LICENSE", "README.md")

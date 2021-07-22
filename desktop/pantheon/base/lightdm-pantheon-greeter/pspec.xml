@@ -48,15 +48,24 @@
         <Files>
             <Path fileType="data">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="info">/usr/share/metainfo</Path>
             <Path fileType="data">/usr/share/xgreeters</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/lightdm/lightdm.conf.d/40-io.elementary.greeter.conf">40-io.elementary.greeter.conf</AdditionalFile>
+        </AdditionalFiles>
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>2021-07-19</Date>
+            <Version>6.0.0</Version>
+            <Comment>Rebuild</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="3">
             <Date>2021-07-17</Date>
             <Version>6.0.0</Version>

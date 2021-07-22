@@ -48,6 +48,7 @@
             <Dependency>gstreamer</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>libgda</Dependency>
+            <Dependency>libgda-sqlite</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>libgpod</Dependency>
             <Dependency>libhandy</Dependency>
@@ -91,6 +92,13 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2021-07-19</Date>
+            <Version>5.1.1</Version>
+            <Comment>Added libgda-sqlite dependency</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2021-07-15</Date>
             <Version>5.1.1</Version>

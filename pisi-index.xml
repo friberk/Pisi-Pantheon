@@ -1057,9 +1057,9 @@ behalf of its clients.</Summary>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
             <PartOf>desktop.pantheon.app</PartOf>
-            <Summary xml:lang="en">Calculator app for Pantheon DE</Summary>
+            <Summary xml:lang="en">Calculator app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Calculator app designed for Pantheon DE</Description>
-            <Archive sha1sum="c6cae06fca97338e85ef00199b7e686a80c7fba4" name="1.6.1.tar.gz">https://github.com/elementary/calculator/archive/refs/tags/1.6.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="f612acfbe44430122f1357db47f3bdaf5d64cc6c" name="1.6.2.tar.gz">https://github.com/elementary/calculator/archive/refs/tags/1.6.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>meson</Dependency>
@@ -1084,6 +1084,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-22</Date>
+                <Version>1.6.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>1.6.1</Version>
@@ -1112,7 +1119,7 @@ behalf of its clients.</Summary>
             <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Desktop calendar app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Desktop calendar app designed for Pantheon DE</Description>
-            <Archive type="targz" sha1sum="3f106029b05794a77af87f12828c251ebb2c46af" name="5.1.1.tar.gz">https://github.com/elementary/calendar/archive/refs/tags/5.1.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="17b9d423ddabc52e8da39b6d715295c02f594a0f" name="6.0.0.tar.gz">https://github.com/elementary/calendar/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>clutter-devel</Dependency>
                 <Dependency>evolution-data-server-devel</Dependency>
@@ -1129,6 +1136,7 @@ behalf of its clients.</Summary>
                 <Dependency>libical-devel</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>vala-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/pantheon/apps/pantheon-calendar/pspec.xml</SourceURI>
         </Source>
@@ -1150,6 +1158,7 @@ behalf of its clients.</Summary>
                 <Dependency>libical</Dependency>
                 <Dependency>libsoup</Dependency>
                 <Dependency>clutter-gtk</Dependency>
+                <Dependency>libhandy</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/etc</Path>
@@ -1170,7 +1179,7 @@ behalf of its clients.</Summary>
             <Name>pantheon-calendar-devel</Name>
             <Summary xml:lang="en">Development files for pantheon-calendar</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">pantheon-calendar</Dependency>
+                <Dependency release="3">pantheon-calendar</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
@@ -1186,6 +1195,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>5.1.1</Version>
@@ -1197,6 +1213,66 @@ behalf of its clients.</Summary>
                 <Date>2021-04-23</Date>
                 <Version>5.1.1</Version>
                 <Comment>First release</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-camera</Name>
+            <Homepage>https://github.com/elementary/camera</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Camera app designed for Pantheon DE</Summary>
+            <Description xml:lang="en">Camera app designed for Pantheon DE</Description>
+            <Archive type="targz" sha1sum="7ec11b81fa54ec680944549654b55e12ec208c4d" name="6.0.0.tar.gz">https://github.com/elementary/camera/archive/refs/tags/6.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>libcanberra-devel</Dependency>
+                <Dependency>clutter-gst-devel</Dependency>
+                <Dependency>clutter-gtk-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>meson</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/apps/pantheon-camera/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-camera</Name>
+            <Summary xml:lang="en">Camera app designed for Pantheon DE</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libhandy</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-22</Date>
+                <Version>6.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
             </Update>
@@ -1526,6 +1602,7 @@ behalf of its clients.</Summary>
                 <Dependency>gstreamer</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>libgda</Dependency>
+                <Dependency>libgda-sqlite</Dependency>
                 <Dependency>libgee</Dependency>
                 <Dependency>libgpod</Dependency>
                 <Dependency>libhandy</Dependency>
@@ -1552,7 +1629,7 @@ behalf of its clients.</Summary>
             <Name>pantheon-music-devel</Name>
             <Summary xml:lang="en">Development files for pantheon-music</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">pantheon-music</Dependency>
+                <Dependency release="3">pantheon-music</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
@@ -1567,6 +1644,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-19</Date>
+                <Version>5.1.1</Version>
+                <Comment>Added libgda-sqlite dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>5.1.1</Version>
@@ -1694,12 +1778,11 @@ behalf of its clients.</Summary>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
             <PartOf>desktop.pantheon.app</PartOf>
-            <Summary xml:lang="en">Screenshot app for Pantheon DE</Summary>
-            <Description xml:lang="en">Screenshot app for Pantheon DE</Description>
-            <Archive sha1sum="d5b98c7d0d64f6b5017273c847db097537a0372d" name="1.7.1.tar.gz">https://github.com/elementary/screenshot/archive/1.7.1.tar.gz</Archive>
+            <Summary xml:lang="en">Screenshot tool designed for Pantheon DE</Summary>
+            <Description xml:lang="en">Screenshot tool designed for Pantheon DE</Description>
+            <Archive type="targz" sha1sum="0b5964a6955301cb0423b8c665a4e65bc5cfbc87" name="6.0.0.tar.gz">https://github.com/elementary/screenshot/archive/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
-                <Dependency>libcanberra-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
                 <Dependency>libhandy-devel</Dependency>
@@ -1711,11 +1794,10 @@ behalf of its clients.</Summary>
             <Name>pantheon-screenshot</Name>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>granite</Dependency>
+                <Dependency>libhandy</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>libcanberra</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -1728,6 +1810,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-05-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-05-17</Date>
                 <Version>1.7.1</Version>
@@ -1738,6 +1827,77 @@ behalf of its clients.</Summary>
             <Update release="1">
                 <Date>2021-04-17</Date>
                 <Version>1.7.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-tasks</Name>
+            <Homepage>https://github.com/elementary/tasks</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.app</PartOf>
+            <Summary xml:lang="en">Synced tasks and reminders on Pantheon DE</Summary>
+            <Description xml:lang="en">Synced tasks and reminders on Pantheon DE</Description>
+            <Archive type="targz" sha1sum="2972478da3510ff3cca9e1ec860ba8ed3c6a7657" name="6.0.0.tar.gz">https://github.com/elementary/tasks/archive/refs/tags/6.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libchamplain-devel</Dependency>
+                <Dependency>clutter-gtk-devel</Dependency>
+                <Dependency>evolution-data-server-devel</Dependency>
+                <Dependency>libgdata-devel</Dependency>
+                <Dependency>geoclue-devel</Dependency>
+                <Dependency>geocode-glib-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
+                <Dependency>libical-devel</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>meson</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/apps/pantheon-tasks/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-tasks</Name>
+            <Summary xml:lang="en">Synced tasks and reminders on Pantheon DE</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>clutter</Dependency>
+                <Dependency>geoclue</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libical</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libgdata</Dependency>
+                <Dependency>libhandy</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>clutter-gtk</Dependency>
+                <Dependency>geocode-glib</Dependency>
+                <Dependency>libchamplain</Dependency>
+                <Dependency>evolution-data-server</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-22</Date>
+                <Version>6.0.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -2945,7 +3105,7 @@ behalf of its clients.</Summary>
             <PartOf>desktop.pantheon.app</PartOf>
             <Summary xml:lang="en">Switchboard Printers Plug</Summary>
             <Description xml:lang="en">Switchboard Printers Plug</Description>
-            <Archive type="zip" sha1sum="4063db33725be740ab555c7e851d44ab1a1301d0" name="5eced5ddda6f229d7265ea0a713f6c1cd181a526.zip">https://github.com/elementary/switchboard-plug-printers/archive/5eced5ddda6f229d7265ea0a713f6c1cd181a526.zip</Archive>
+            <Archive type="targz" sha1sum="1a057a77296809f71e7f5c466511f8de457c52f2" name="2.1.10.tar.gz">https://github.com/elementary/switchboard-plug-printers/archive/refs/tags/2.1.10.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>cups-devel</Dependency>
                 <Dependency>granite-devel</Dependency>
@@ -2966,6 +3126,7 @@ behalf of its clients.</Summary>
                 <Dependency>switchboard</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>libgee</Dependency>
+                <Dependency>cups-pk-helper</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -2975,6 +3136,20 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2021-07-22</Date>
+                <Version>2.1.10</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2021-07-19</Date>
+                <Version>20210217</Version>
+                <Comment>Added cups-pk-helper dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>20210217</Version>
@@ -4224,14 +4399,23 @@ behalf of its clients.</Summary>
             <Files>
                 <Path fileType="data">/etc</Path>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="executable">/usr/sbin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="info">/usr/share/metainfo</Path>
                 <Path fileType="data">/usr/share/xgreeters</Path>
             </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/lightdm/lightdm.conf.d/40-io.elementary.greeter.conf" permission="0644" owner="root">40-io.elementary.greeter.conf</AdditionalFile>
+            </AdditionalFiles>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2021-07-19</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2021-07-17</Date>
                 <Version>6.0.0</Version>
@@ -4361,7 +4545,7 @@ behalf of its clients.</Summary>
             <PartOf>desktop.pantheon.base</PartOf>
             <Summary xml:lang="en">GTK Notifications Server</Summary>
             <Description xml:lang="en">pantheon-notifications is a GTK notification server for Pantheon.</Description>
-            <Archive sha1sum="93beede86ea97ebafca4b59a4696ddee8ef1260f" name="3fff6ed8c604a0f799fd88bd4b5a844c0495ed65.zip">https://github.com/elementary/notifications/archive/3fff6ed8c604a0f799fd88bd4b5a844c0495ed65.zip</Archive>
+            <Archive type="targz" sha1sum="e2c21d519fbde0e0fcc7613a2ff5af810d5b289e" name="6.0.0.tar.gz">https://github.com/elementary/notifications/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>appstream-glib-devel</Dependency>
                 <Dependency>gettext-devel</Dependency>
@@ -4399,6 +4583,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-22</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-07-18</Date>
                 <Version>20210713</Version>

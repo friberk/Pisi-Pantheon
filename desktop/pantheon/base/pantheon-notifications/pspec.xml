@@ -11,7 +11,7 @@
         <License>GPLv3</License>
         <Summary>GTK Notifications Server</Summary>
         <Description>pantheon-notifications is a GTK notification server for Pantheon.</Description>
-        <Archive sha1sum="93beede86ea97ebafca4b59a4696ddee8ef1260f">https://github.com/elementary/notifications/archive/3fff6ed8c604a0f799fd88bd4b5a844c0495ed65.zip</Archive>
+        <Archive type="targz" sha1sum="e2c21d519fbde0e0fcc7613a2ff5af810d5b289e">https://github.com/elementary/notifications/archive/refs/tags/6.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>appstream-glib-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
@@ -50,6 +50,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2021-07-22</Date>
+            <Version>6.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2021-07-18</Date>
             <Version>20210713</Version>
