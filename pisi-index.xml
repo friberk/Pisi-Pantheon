@@ -383,6 +383,13 @@
             <Dependency>accountsservice</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="4">
+                <Date>2021-07-19</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2021-07-17</Date>
                 <Version>6.0.0</Version>
@@ -409,11 +416,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>449029</InstalledSize>
+        <InstalledSize>449108</InstalledSize>
         <PackageSize>117921</PackageSize>
-        <PackageHash>a854258d669f02a168a5c54ea47743ea6ef0689d</PackageHash>
-        <InstallTarHash>c902d36251d353628949ac1b19d9ab87d15ac062</InstallTarHash>
-        <PackageURI>l/lightdm-pantheon-greeter/lightdm-pantheon-greeter-6.0.0-3-p2-x86_64.pisi</PackageURI>
+        <PackageHash>09be70016bb8ab414846e7dd7204bbaa2c03803d</PackageHash>
+        <InstallTarHash>ad95b0e1e5d42aaeb73b1b1c080009fb3e2a3852</InstallTarHash>
+        <PackageURI>l/lightdm-pantheon-greeter/lightdm-pantheon-greeter-6.0.0-4-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>lightdm-pantheon-greeter</Name>
@@ -845,7 +852,7 @@
     </Package>
     <Package>
         <Name>pantheon-calculator</Name>
-        <Summary xml:lang="en">Calculator app for Pantheon DE</Summary>
+        <Summary xml:lang="en">Calculator app designed for Pantheon DE</Summary>
         <Description xml:lang="en">Calculator app designed for Pantheon DE</Description>
         <IsA>app:gui</IsA>
         <PartOf>desktop.pantheon.app</PartOf>
@@ -856,6 +863,13 @@
             <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-22</Date>
+                <Version>1.6.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>1.6.1</Version>
@@ -875,11 +889,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>305217</InstalledSize>
-        <PackageSize>75655</PackageSize>
-        <PackageHash>347a06dafd9c050bb40ac0ab061203b536523678</PackageHash>
-        <InstallTarHash>0c2ec30f86de9264e6a1efef9630e50556525a01</InstallTarHash>
-        <PackageURI>p/pantheon-calculator/pantheon-calculator-1.6.1-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>305709</InstalledSize>
+        <PackageSize>75661</PackageSize>
+        <PackageHash>f6984e0fbf6fe4fa8760db7ad643b92fc57de61e</PackageHash>
+        <InstallTarHash>eb00041c7dc6b0a66c79ad39e032d54f6cd3b96b</InstallTarHash>
+        <PackageURI>p/pantheon-calculator/pantheon-calculator-1.6.2-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-calculator</Name>
@@ -897,7 +911,7 @@
         <PartOf>programming.devel</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency release="2">pantheon-calendar</Dependency>
+            <Dependency release="3">pantheon-calendar</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
@@ -907,6 +921,13 @@
             <Dependency>evolution-data-server-devel</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>5.1.1</Version>
@@ -926,11 +947,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>27070</InstalledSize>
-        <PackageSize>5644</PackageSize>
-        <PackageHash>aabcea84fbafc5ab345aa7920f6799e24a5230a0</PackageHash>
+        <InstalledSize>29076</InstalledSize>
+        <PackageSize>5855</PackageSize>
+        <PackageHash>ae23472c71a0955bc361ad18d21d4aba330ec5bb</PackageHash>
         <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>p/pantheon-calendar/pantheon-calendar-devel-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageURI>p/pantheon-calendar/pantheon-calendar-devel-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-calendar</Name>
@@ -980,26 +1001,25 @@
         </Source>
     </Package>
     <Package>
-        <Name>pantheon-notifications</Name>
-        <Summary xml:lang="en">GTK Notifications Server</Summary>
-        <Description xml:lang="en">pantheon-notifications is a GTK notification server for Pantheon.</Description>
-        <PartOf>desktop.pantheon.base</PartOf>
+        <Name>pantheon-camera</Name>
+        <Summary xml:lang="en">Camera app designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Camera app designed for Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>granite</Dependency>
             <Dependency>libhandy</Dependency>
+            <Dependency>gstreamer</Dependency>
             <Dependency>libcanberra</Dependency>
-            <Dependency>libcanberra-gtk3</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
         </RuntimeDependencies>
         <History>
             <Update release="1">
-                <Date>2021-07-18</Date>
-                <Version>20210713</Version>
+                <Date>2021-07-22</Date>
+                <Version>6.0.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -1009,15 +1029,15 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>153577</InstalledSize>
-        <PackageSize>45270</PackageSize>
-        <PackageHash>cad64f446d499738b76e1391a07ea4c6ec92efe2</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>p/pantheon-notifications/pantheon-notifications-20210713-1-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>584307</InstalledSize>
+        <PackageSize>77931</PackageSize>
+        <PackageHash>a68d851120a196b1404c1797fcfb36da810e5d53</PackageHash>
+        <InstallTarHash>ffe3911c34c2fe425d159a0bcdde2a9060a75b0e</InstallTarHash>
+        <PackageURI>p/pantheon-camera/pantheon-camera-6.0.0-1-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
-            <Name>pantheon-notifications</Name>
-            <Homepage>https://github.com/elementary/notifications</Homepage>
+            <Name>pantheon-camera</Name>
+            <Homepage>https://github.com/elementary/camera</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -1045,8 +1065,16 @@
             <Dependency>libical</Dependency>
             <Dependency>libsoup</Dependency>
             <Dependency>clutter-gtk</Dependency>
+            <Dependency>libhandy</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-15</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>5.1.1</Version>
@@ -1066,11 +1094,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>1277104</InstalledSize>
-        <PackageSize>278864</PackageSize>
-        <PackageHash>813d422b24403e68fdb5c62a89d65a880fe619e0</PackageHash>
-        <InstallTarHash>379490e324c29b3efa09dcd5ed78d7682d96bd0b</InstallTarHash>
-        <PackageURI>p/pantheon-calendar/pantheon-calendar-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>1491593</InstalledSize>
+        <PackageSize>296069</PackageSize>
+        <PackageHash>317f2985f11d999f27cb44c480f56e8f0c8f1321</PackageHash>
+        <InstallTarHash>4c1a27175819b0a490e67a6d59f4ac4a0492ee61</InstallTarHash>
+        <PackageURI>p/pantheon-calendar/pantheon-calendar-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-calendar</Name>
@@ -1154,6 +1182,7 @@
             <Dependency>gstreamer</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>libgda</Dependency>
+            <Dependency>libgda-sqlite</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>libgpod</Dependency>
             <Dependency>libhandy</Dependency>
@@ -1165,6 +1194,13 @@
             <Dependency>gdk-pixbuf</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-19</Date>
+                <Version>5.1.1</Version>
+                <Comment>Added libgda-sqlite dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>5.1.1</Version>
@@ -1185,10 +1221,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>3640510</InstalledSize>
-        <PackageSize>699708</PackageSize>
-        <PackageHash>ec8814f1b02464c17f16fe773e2c882c65dcd945</PackageHash>
-        <InstallTarHash>9ef2c3c331455637d67788b8061370e5c94c1587</InstallTarHash>
-        <PackageURI>p/pantheon-music/pantheon-music-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageSize>699193</PackageSize>
+        <PackageHash>a2c2cecff85b015198adf10c9dc31df2a3507822</PackageHash>
+        <InstallTarHash>0612e4c919d9f61faa1b0d8d8509ee5aa5383942</InstallTarHash>
+        <PackageURI>p/pantheon-music/pantheon-music-5.1.1-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-music</Name>
@@ -1288,6 +1324,57 @@
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-tasks</Name>
+        <Summary xml:lang="en">Synced tasks and reminders on Pantheon DE</Summary>
+        <Description xml:lang="en">Synced tasks and reminders on Pantheon DE</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>clutter</Dependency>
+            <Dependency>geoclue</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libical</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libgdata</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>clutter-gtk</Dependency>
+            <Dependency>geocode-glib</Dependency>
+            <Dependency>libchamplain</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-22</Date>
+                <Version>6.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>754801</InstalledSize>
+        <PackageSize>130586</PackageSize>
+        <PackageHash>5cfbe58e2afafc45d0dd5d7da70c394169733365</PackageHash>
+        <InstallTarHash>668f91fc33e93db69e1383f7bea1235cfe394725</InstallTarHash>
+        <PackageURI>p/pantheon-tasks/pantheon-tasks-6.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-tasks</Name>
+            <Homepage>https://github.com/elementary/greeter</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
             </Packager>
         </Source>
     </Package>
@@ -1511,13 +1598,65 @@
         </Source>
     </Package>
     <Package>
+        <Name>pantheon-notifications</Name>
+        <Summary xml:lang="en">GTK Notifications Server</Summary>
+        <Description xml:lang="en">pantheon-notifications is a GTK notification server for Pantheon.</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-22</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-07-18</Date>
+                <Version>20210713</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>154096</InstalledSize>
+        <PackageSize>45484</PackageSize>
+        <PackageHash>fd1456ccad820bc33966abfbb04617c2ffd7ec51</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-notifications/pantheon-notifications-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-notifications</Name>
+            <Homepage>https://github.com/elementary/notifications</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>pantheon-music-devel</Name>
         <Summary xml:lang="en">Development files for pantheon-music</Summary>
         <Description xml:lang="en">Music player and library designed for Pantheon DE</Description>
         <PartOf>programming.devel</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency release="2">pantheon-music</Dependency>
+            <Dependency release="3">pantheon-music</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>granite-devel</Dependency>
@@ -1526,6 +1665,13 @@
             <Dependency>gst-plugins-base-devel</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-19</Date>
+                <Version>5.1.1</Version>
+                <Comment>Added libgda-sqlite dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>5.1.1</Version>
@@ -1546,10 +1692,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>97503</InstalledSize>
-        <PackageSize>13454</PackageSize>
-        <PackageHash>931d3b3b6b0d3ab298e8ab861c38f995c67f3f0a</PackageHash>
+        <PackageSize>13491</PackageSize>
+        <PackageHash>a2d36f549fcfe10b59099affcac0724cec476c0f</PackageHash>
         <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>p/pantheon-music/pantheon-music-devel-5.1.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageURI>p/pantheon-music/pantheon-music-devel-5.1.1-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-music</Name>
@@ -1562,20 +1708,26 @@
     </Package>
     <Package>
         <Name>pantheon-screenshot</Name>
-        <Summary xml:lang="en">Screenshot app for Pantheon DE</Summary>
-        <Description xml:lang="en">Screenshot app for Pantheon DE</Description>
+        <Summary xml:lang="en">Screenshot tool designed for Pantheon DE</Summary>
+        <Description xml:lang="en">Screenshot tool designed for Pantheon DE</Description>
         <IsA>app:gui</IsA>
         <PartOf>desktop.pantheon.app</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
-            <Dependency>cairo</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libcanberra</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-05-17</Date>
+                <Version>6.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-05-17</Date>
                 <Version>1.7.1</Version>
@@ -1595,11 +1747,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>402150</InstalledSize>
-        <PackageSize>75834</PackageSize>
-        <PackageHash>8e6564765c1b0cd50305c896353d35d83b5b0114</PackageHash>
-        <InstallTarHash>96677270a6518bdeb6cbc5e44fbaa0f840973f07</InstallTarHash>
-        <PackageURI>p/pantheon-screenshot/pantheon-screenshot-1.7.1-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>596820</InstalledSize>
+        <PackageSize>87415</PackageSize>
+        <PackageHash>2afa97eec117a25f8f598d64efa78195b57350b4</PackageHash>
+        <InstallTarHash>ad0797fbb2758bdfdf024ba6f3d1d549d1aea110</InstallTarHash>
+        <PackageURI>p/pantheon-screenshot/pantheon-screenshot-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-screenshot</Name>
@@ -2813,8 +2965,23 @@
             <Dependency>switchboard</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
+            <Dependency>cups-pk-helper</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="4">
+                <Date>2021-07-22</Date>
+                <Version>2.1.10</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2021-07-19</Date>
+                <Version>20210217</Version>
+                <Comment>Added cups-pk-helper dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-17</Date>
                 <Version>20210217</Version>
@@ -2834,11 +3001,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>698680</InstalledSize>
-        <PackageSize>143146</PackageSize>
-        <PackageHash>c982525de8e7da33a58bf20fb0c1ed82f066caba</PackageHash>
-        <InstallTarHash>15211705d84183257bcafc3875e15118eed27257</InstallTarHash>
-        <PackageURI>s/switchboard-plug-printers/switchboard-plug-printers-20210217-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>700289</InstalledSize>
+        <PackageSize>143223</PackageSize>
+        <PackageHash>a9e804d5dd7c7f867631d4cedf96f76a3a82454a</PackageHash>
+        <InstallTarHash>74b7c354b32718c760a8df74c632b729bf0a848f</InstallTarHash>
+        <PackageURI>s/switchboard-plug-printers/switchboard-plug-printers-2.1.10-4-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>switchboard-plug-printers</Name>
