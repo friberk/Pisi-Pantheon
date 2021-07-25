@@ -34,13 +34,28 @@
             <Path fileType="data">/usr/share/glib-2.0</Path>
             <Path fileType="data">/usr/share/polkit-1</Path>
         </Files>
-        <!--AdditionalFiles>
-            <AdditionalFile permission="0644" owner="root" target="/usr/share/default-settings/settings.ini" group="root">etc/gtk-3.0/settings.ini</AdditionalFile>
-            <AdditionalFile permission="0644" owner="root" target="/usr/share/default-settings/default-settings.gschema.override" group="root">usr/share/glib-2.0/schemas/default-settings.gschema.override</AdditionalFile>
-        </AdditionalFiles-->
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/gala-multitaskingview.dockitem">launchers/gala-multitaskingview.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.calendar.dockitem">launchers/io.elementary.calendar.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.mail.dockitem">launchers/io.elementary.mail.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.music.dockitem">launchers/io.elementary.music.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.photos.dockitem">launchers/io.elementary.photos.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.switchboard.dockitem">launchers/io.elementary.switchboard.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.tasks.dockitem">launchers/io.elementary.tasks.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/io.elementary.videos.dockitem">launchers/io.elementary.videos.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/skel/.config/plank/dock1/launchers/org.gnome.Epiphany.dockitem">launchers/org.gnome.Epiphany.dockitem</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/glib-2.0/schemas/plank-dockitems.gschema.override">plank-dockitems.gschema.override</AdditionalFile>
+        </AdditionalFiles>
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2021-07-23</Date>
+            <Version>6.0.0</Version>
+            <Comment>Dock items configured</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2021-07-16</Date>
             <Version>6.0.0</Version>
