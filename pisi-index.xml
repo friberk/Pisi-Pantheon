@@ -56,6 +56,13 @@
             <Dependency>xdg-utils</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="2">
+                <Date>2021-07-23</Date>
+                <Version>1.1.3</Version>
+                <Comment>Adapt to eOS 6 settings schema</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-10</Date>
                 <Version>1.1.3</Version>
@@ -68,11 +75,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>1161691</InstalledSize>
-        <PackageSize>529607</PackageSize>
-        <PackageHash>265d4beb1f03d59bc0ab122bcce679f4c2f5803a</PackageHash>
-        <InstallTarHash>66d180066d41d4cf12bfba16c27cd72f709506e8</InstallTarHash>
-        <PackageURI>d/desktopfolder/desktopfolder-1.1.3-1-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>1158204</InstalledSize>
+        <PackageSize>528317</PackageSize>
+        <PackageHash>f736fc751096fa884301ae556ffdd2c8cb260b8d</PackageHash>
+        <InstallTarHash>afc513984bf16ef17876f14aa0ff648a7cc7028c</InstallTarHash>
+        <PackageURI>d/desktopfolder/desktopfolder-1.1.3-2-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>desktopfolder</Name>
@@ -1769,6 +1776,13 @@
         <PartOf>desktop.pantheon.base</PartOf>
         <License>GPLv3</License>
         <History>
+            <Update release="3">
+                <Date>2021-07-23</Date>
+                <Version>6.0.0</Version>
+                <Comment>Dock items configured</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-16</Date>
                 <Version>6.0.0</Version>
@@ -1788,11 +1802,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>135276</InstalledSize>
-        <PackageSize>108942</PackageSize>
-        <PackageHash>14409c556ba841ba5207aeb4b7335d1c73ed3b9c</PackageHash>
-        <InstallTarHash>3150238048e756bb9da369de6f31360e21d903ec</InstallTarHash>
-        <PackageURI>p/pantheon-default-settings/pantheon-default-settings-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>135186</InstalledSize>
+        <PackageSize>109188</PackageSize>
+        <PackageHash>57a3380cf7c695051c555ebaa2cde9ea5bba81e6</PackageHash>
+        <InstallTarHash>8679b8aef82347962c484308d750aca5a7d341de</InstallTarHash>
+        <PackageURI>p/pantheon-default-settings/pantheon-default-settings-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-default-settings</Name>
@@ -1823,8 +1837,16 @@
             <Dependency>pango</Dependency>
             <Dependency>plank</Dependency>
             <Dependency>sqlite</Dependency>
+            <Dependency>gvfs-fuse</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-24</Date>
+                <Version>6.0.0</Version>
+                <Comment>Added gvfs-fuse dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -1845,10 +1867,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>3838917</InstalledSize>
-        <PackageSize>824639</PackageSize>
-        <PackageHash>dafd9248dd1b25d16ffd886608c912e9d1880af9</PackageHash>
-        <InstallTarHash>f7cf496290f37fd1bad2bd2d7275a69133e05c76</InstallTarHash>
-        <PackageURI>p/pantheon-files/pantheon-files-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageSize>824987</PackageSize>
+        <PackageHash>3d873b92488a5045efac58c17e5f680e7acd7576</PackageHash>
+        <InstallTarHash>c277b4fdc18cc5a7b59f2df222a7340dbe131ef3</InstallTarHash>
+        <PackageURI>p/pantheon-files/pantheon-files-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-files</Name>
@@ -1902,18 +1924,25 @@
     </Package>
     <Package>
         <Name>pantheon-files-devel</Name>
-        <Summary xml:lang="en">File browser designed for Pantheon DE</Summary>
+        <Summary xml:lang="en">Development files for pantheon-files</Summary>
         <Description xml:lang="en">File browser designed for Pantheon DE</Description>
         <PartOf>programming.devel</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
-            <Dependency release="2">pantheon-files</Dependency>
+            <Dependency release="3">pantheon-files</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libgee-devel</Dependency>
             <Dependency>granite-devel</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-24</Date>
+                <Version>6.0.0</Version>
+                <Comment>Added gvfs-fuse dependency</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -1934,10 +1963,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>210843</InstalledSize>
-        <PackageSize>27189</PackageSize>
-        <PackageHash>01fc94816e193ac0d3925f06c0836b8eb1965284</PackageHash>
+        <PackageSize>27219</PackageSize>
+        <PackageHash>2f2e26b3b87e84923f3a589cd87102e84efbd9ee</PackageHash>
         <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>p/pantheon-files/pantheon-files-devel-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageURI>p/pantheon-files/pantheon-files-devel-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-files</Name>
