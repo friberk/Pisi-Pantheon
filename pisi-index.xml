@@ -4091,8 +4091,82 @@
             </Packager>
         </Source>
     </Package>
+    <Component>
+        <Name>desktop.pantheon</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.pantheon.apps</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop.apps</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.pantheon.base</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop.base</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.pantheon.lookandfeel</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop.lookandfeel</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
     <Group>
         <Name>pantheon.desktop</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
+    <Group>
+        <Name>pantheon.desktop.apps</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
+    <Group>
+        <Name>pantheon.desktop.base</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
+    <Group>
+        <Name>pantheon.desktop.lookandfeel</Name>
         <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
         <LocalName xml:lang="en">Pantheon Desktop</LocalName>
         <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
