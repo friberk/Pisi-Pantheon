@@ -921,7 +921,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Bring your Pantheon desktop back to life.</Summary>
             <Description xml:lang="en">Organize your Pantheon desktop with panels that hold your things.</Description>
             <Archive type="targz" sha1sum="05b18965253b22470f7e1bab37c3f6d50d9fe3c0" name="desktopfolder-1.1.3.tar.gz">https://github.com/spheras/desktopfolder/releases/download/v1.1.3/desktopfolder-1.1.3.tar.gz</Archive>
@@ -994,7 +994,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Lightweight and stylish app launcher</Summary>
             <Description xml:lang="en">Applications Menu for the Pantheon desktop environment</Description>
             <Archive type="targz" sha1sum="ca33c315f088a38e85fae6d7205d27f2864bf66c" name="2.8.0.tar.gz">https://github.com/elementary/applications-menu/archive/refs/tags/2.8.0.tar.gz</Archive>
@@ -1066,7 +1066,7 @@ behalf of its clients.</Summary>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Calculator app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Calculator app designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="f612acfbe44430122f1357db47f3bdaf5d64cc6c" name="1.6.2.tar.gz">https://github.com/elementary/calculator/archive/refs/tags/1.6.2.tar.gz</Archive>
@@ -1126,7 +1126,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Desktop calendar app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Desktop calendar app designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="17b9d423ddabc52e8da39b6d715295c02f594a0f" name="6.0.0.tar.gz">https://github.com/elementary/calendar/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -1237,7 +1237,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Camera app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Camera app designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="7ec11b81fa54ec680944549654b55e12ec208c4d" name="6.0.0.tar.gz">https://github.com/elementary/camera/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -1297,7 +1297,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Code editor designed for Pantheon DE</Summary>
             <Description xml:lang="en">Code editor designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="81a0c1af11e3fed1dc8877fbca448a9ea28151f1" name="6.0.0.tar.gz">https://github.com/elementary/code/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -1399,7 +1399,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">File browser designed for Pantheon DE</Summary>
             <Description xml:lang="en">File browser designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="b1a7d4cf6e40f591cae21a77384c4b1e974ed9c2" name="6.0.0.tar.gz">https://github.com/elementary/files/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -1509,7 +1509,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Mail app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Mail app designed for Pantheon DE</Description>
             <Archive type="zip" sha1sum="84473021bab04aa30bf2d50a94257d5c8a9f7c5c" name="6.0.0.zip">https://github.com/elementary/mail/archive/refs/tags/6.0.0.zip</Archive>
@@ -1580,7 +1580,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Music player and library designed for Pantheon DE</Summary>
             <Description xml:lang="en">Music player and library designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="6665eaa192b93c4edab8deba38f4adb762e2bdd9" name="5.1.1.tar.gz">https://github.com/elementary/music/archive/refs/tags/5.1.1.tar.gz</Archive>
@@ -1694,7 +1694,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv2.1</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Photo viewer and organizer designed for Pantheon DE</Summary>
             <Description xml:lang="en">Photo viewer and organizer designed for Pantheon DE</Description>
             <Archive type="zip" sha1sum="c926087ee44aa93b468ef96af6406c4905848424" name="2.7.1.zip">https://github.com/elementary/photos/archive/refs/tags/2.7.1.zip</Archive>
@@ -1795,7 +1795,7 @@ behalf of its clients.</Summary>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Screenshot tool designed for Pantheon DE</Summary>
             <Description xml:lang="en">Screenshot tool designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="0b5964a6955301cb0423b8c665a4e65bc5cfbc87" name="6.0.0.tar.gz">https://github.com/elementary/screenshot/archive/6.0.0.tar.gz</Archive>
@@ -1860,7 +1860,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Synced tasks and reminders on Pantheon DE</Summary>
             <Description xml:lang="en">Synced tasks and reminders on Pantheon DE</Description>
             <Archive type="targz" sha1sum="2972478da3510ff3cca9e1ec860ba8ed3c6a7657" name="6.0.0.tar.gz">https://github.com/elementary/tasks/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -1931,7 +1931,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">The Pantheon Terminal Emulator</Summary>
             <Description xml:lang="en">A super lightweight, beautiful, and simple terminal. Comes with sane defaults, browser-class tabs, sudo paste protection, smart copy/paste, and little to no configuration.</Description>
             <Archive type="targz" sha1sum="3152949a73257d6d2db1ae0471ae69e7e09bef4b" name="6.0.0.tar.gz">https://github.com/elementary/terminal/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -1995,7 +1995,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop&apos;s appearance</Summary>
             <Description xml:lang="en">pantheon-tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop&apos;s appearance</Description>
             <Archive type="zip" sha1sum="520f6516445ef2bd12b5fb38a6f9c74d7277897d" name="6c5243f1dadc68227b1e5d662000b6d2d3f28d66.zip">https://github.com/pantheon-tweaks/pantheon-tweaks/archive/6c5243f1dadc68227b1e5d662000b6d2d3f28d66.zip</Archive>
@@ -2060,7 +2060,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Video player and library app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Video player and library app designed for Pantheon DE</Description>
             <Archive type="targz" sha1sum="1acdefcac078a317a4bcebffbf551a104a4bce3d" name="2.7.3.tar.gz">https://github.com/elementary/videos/archive/refs/tags/2.7.3.tar.gz</Archive>
@@ -2129,7 +2129,7 @@ behalf of its clients.</Summary>
             </Packager>
             <License>LGPLv2.1</License>
             <IsA>app:gui</IsA>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Extensible System Settings app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Description>
             <Archive type="targz" sha1sum="cb1ec334f4703fef6bf0827e235bad12ea95aa07" name="6.0.0.tar.gz">https://github.com/elementary/switchboard/archive/6.0.0.tar.gz</Archive>
@@ -2205,7 +2205,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Universal Access Plug</Summary>
             <Description xml:lang="en">Switchboard Universal Access Plug</Description>
             <Archive type="targz" sha1sum="f2c5394af2fcb66ad6193f003c0683ff9b7843d9" name="2.3.0.tar.gz">https://github.com/elementary/switchboard-plug-a11y/archive/refs/tags/2.3.0.tar.gz</Archive>
@@ -2261,7 +2261,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard About Plug</Summary>
             <Description xml:lang="en">Switchboard About Plug</Description>
             <Archive type="targz" sha1sum="845731afee405dabbdac39eaddf0425e26fcc5df" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-about/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -2326,7 +2326,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Applications Plug</Summary>
             <Description xml:lang="en">Switchboard Applications Plug</Description>
             <Archive type="targz" sha1sum="6f74d22d40d589dc92875e1619859c6547b44f1b" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-applications/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -2385,7 +2385,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Bluetooth Plug</Summary>
             <Description xml:lang="en">Switchboard Bluetooth Plug</Description>
             <Archive type="targz" sha1sum="97ed2fb044209a47763e8a2edc75ab14d1629511" name="2.3.6.tar.gz">https://github.com/elementary/switchboard-plug-bluetooth/archive/refs/tags/2.3.6.tar.gz</Archive>
@@ -2441,7 +2441,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Date Time Plug</Summary>
             <Description xml:lang="en">Switchboard Date Time Plug</Description>
             <Archive type="targz" sha1sum="8f0820692a38029c656fd5e8799bff5f0cbbc30d" name="2.2.0.tar.gz">https://github.com/elementary/switchboard-plug-datetime/archive/refs/tags/2.2.0.tar.gz</Archive>
@@ -2497,7 +2497,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Displays Plug</Summary>
             <Description xml:lang="en">Switchboard Displays Plug</Description>
             <Archive type="targz" sha1sum="63ccfe8cd30e3e7521b4bc4a0ec7b6d7b49e1579" name="2.3.0.tar.gz">https://github.com/elementary/switchboard-plug-display/archive/refs/tags/2.3.0.tar.gz</Archive>
@@ -2546,7 +2546,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv2</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Keyboard Plug</Summary>
             <Description xml:lang="en">Switchboard Keyboard Plug</Description>
             <Archive type="targz" sha1sum="22f3c9e14a3eb88a8dd42045f9922d46c38b0b74" name="2.5.0.tar.gz">https://github.com/elementary/switchboard-plug-keyboard/archive/refs/tags/2.5.0.tar.gz</Archive>
@@ -2613,7 +2613,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Locale Plug</Summary>
             <Description xml:lang="en">Switchboard Locale Plug</Description>
             <Archive type="targz" sha1sum="fb4464b87ea023f7e54f244f8f21a31786ea59ec" name="2.5.4.tar.gz">https://github.com/elementary/switchboard-plug-locale/archive/refs/tags/2.5.4.tar.gz</Archive>
@@ -2679,7 +2679,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Mouse Touchpad Plug</Summary>
             <Description xml:lang="en">Switchboard Mouse Touchpad Plug</Description>
             <Archive type="targz" sha1sum="7ed985964e7e7e8a207d32e10a57e6c864c00775" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-mouse-touchpad/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -2736,7 +2736,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Network Plug</Summary>
             <Description xml:lang="en">Switchboard Network Plug</Description>
             <Archive type="targz" sha1sum="a4510eca21ce8e58c74b2fbcc11eb12f1dcced52" name="2.4.0.tar.gz">https://github.com/elementary/switchboard-plug-network/archive/refs/tags/2.4.0.tar.gz</Archive>
@@ -2795,7 +2795,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv2</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Notifications Plug</Summary>
             <Description xml:lang="en">Switchboard Notifications Plug</Description>
             <Archive type="targz" sha1sum="c9a76e39683b15ffff14677f85cabdfcf81cae51" name="2.2.0.tar.gz">https://github.com/elementary/switchboard-plug-notifications/archive/refs/tags/2.2.0.tar.gz</Archive>
@@ -2850,7 +2850,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Online Accounts Plug</Summary>
             <Description xml:lang="en">Switchboard Online Accounts Plug</Description>
             <Archive type="targz" sha1sum="961428b69cd10427d91b29e22eb5f79f23598752" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-onlineaccounts/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -2912,7 +2912,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Desktop Plug</Summary>
             <Description xml:lang="en">Switchboard Desktop Plug</Description>
             <Archive type="targz" sha1sum="c84b38552ffa85e1952229aeef435a84544d3836" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-pantheon-shell/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -2987,7 +2987,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Parental Controls Plug</Summary>
             <Description xml:lang="en">Switchboard Parental Controls Plug</Description>
             <Archive type="targz" sha1sum="c29364de7066d214004712ceb8b7f744e28af91a" name="6.0.0.tar.gz">https://github.com/elementary/switchboard-plug-parental-controls/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -3060,7 +3060,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv2</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Power Plug</Summary>
             <Description xml:lang="en">Switchboard Power Plug</Description>
             <Archive type="targz" sha1sum="eb2b598701bff787b67cc773e770dd3dbf355367" name="2.5.0.tar.gz">https://github.com/elementary/switchboard-plug-power/archive/2.5.0.tar.gz</Archive>
@@ -3120,7 +3120,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Printers Plug</Summary>
             <Description xml:lang="en">Switchboard Printers Plug</Description>
             <Archive type="targz" sha1sum="1a057a77296809f71e7f5c466511f8de457c52f2" name="2.1.10.tar.gz">https://github.com/elementary/switchboard-plug-printers/archive/refs/tags/2.1.10.tar.gz</Archive>
@@ -3193,7 +3193,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Security Privacy Plug</Summary>
             <Description xml:lang="en">Switchboard Security Privacy Plug</Description>
             <Archive type="targz" sha1sum="567af5227af9c114ca3d1fbd01458ab3a33a37f4" name="2.2.5.tar.gz">https://github.com/elementary/switchboard-plug-security-privacy/archive/refs/tags/2.2.5.tar.gz</Archive>
@@ -3247,7 +3247,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Sharing Plug</Summary>
             <Description xml:lang="en">Switchboard Sharing Plug</Description>
             <Archive type="targz" sha1sum="3821ca97bca5f42891a37aa0ee4f5bf5a8fc73f1" name="2.1.5.tar.gz">https://github.com/elementary/switchboard-plug-sharing/archive/refs/tags/2.1.5.tar.gz</Archive>
@@ -3303,7 +3303,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv2.1</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Sound Plug</Summary>
             <Description xml:lang="en">Switchboard Sound Plug</Description>
             <Archive type="targz" sha1sum="2f54695f143ae6b03672b926c8647ea305f32867" name="2.2.7.tar.gz">https://github.com/elementary/switchboard-plug-sound/archive/refs/tags/2.2.7.tar.gz</Archive>
@@ -3364,7 +3364,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard User Accounts Plug</Summary>
             <Description xml:lang="en">Switchboard User Accounts Plug</Description>
             <Archive type="targz" sha1sum="33a9c3b10d5c673c7233ee5b8bc88a27378d19a3" name="2.4.0.tar.gz">https://github.com/elementary/switchboard-plug-useraccounts/archive/refs/tags/2.4.0.tar.gz</Archive>
@@ -3426,7 +3426,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Manage drawing tablets and Wacom devices</Summary>
             <Description xml:lang="en">Manage drawing tablets and Wacom devices</Description>
             <Archive type="zip" sha1sum="0f2eb375064faec3c42bb9fbd33a5dba82fe86e9" name="master.zip">https://github.com/elementary/switchboard-plug-wacom/archive/refs/heads/master.zip</Archive>
@@ -3479,7 +3479,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Switchboard Wallet Plug</Summary>
             <Description xml:lang="en">Manage Payment Methods and related settings</Description>
             <Archive type="zip" sha1sum="1f9d17ad87fcbc860607a9be46071bcb1122ecfb" name="master.zip">https://github.com/elementary/switchboard-plug-wallet/archive/refs/heads/master.zip</Archive>
@@ -3528,7 +3528,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">The extensible top panel for Pantheon.</Summary>
             <Description xml:lang="en">The extensible top panel for Pantheon. Wingpanel is an empty container that accepts indicators as extensions, including the applications menu.</Description>
             <Archive type="targz" sha1sum="191d5eef6c29d8a4019387cbf47f4534f98a23f1" name="3.0.0.tar.gz">https://github.com/elementary/wingpanel/archive/refs/tags/3.0.0.tar.gz</Archive>
@@ -3624,7 +3624,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv2</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Universal Access Indicator</Summary>
             <Description xml:lang="en">Wingpanel Universal Access Indicator</Description>
             <Archive type="targz" sha1sum="2e09813848e8d3cbb35b7e2941bd8f14ae283d64" name="1.0.0.tar.gz">https://github.com/elementary/wingpanel-indicator-a11y/archive/refs/tags/1.0.0.tar.gz</Archive>
@@ -3671,7 +3671,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv2.1</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Bluetooth Indicator</Summary>
             <Description xml:lang="en">Wingpanel Bluetooth Indicator</Description>
             <Archive type="targz" sha1sum="036822e4319b23ddac4f8fa7b7166316489be969" name="2.1.7.tar.gz">https://github.com/elementary/wingpanel-indicator-bluetooth/archive/refs/tags/2.1.7.tar.gz</Archive>
@@ -3731,7 +3731,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Date Time Indicator</Summary>
             <Description xml:lang="en">Wingpanel Date Time Indicator</Description>
             <Archive type="targz" sha1sum="f4f478f70e12c5bb61c6de536b1766a9881bdea9" name="2.3.0.tar.gz">https://github.com/elementary/wingpanel-indicator-datetime/archive/refs/tags/2.3.0.tar.gz</Archive>
@@ -3795,7 +3795,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Keyboard Indicator</Summary>
             <Description xml:lang="en">Wingpanel Keyboard Indicator</Description>
             <Archive type="targz" sha1sum="2a71011db34f567b661628829a503650be8487d4" name="2.4.0.tar.gz">https://github.com/elementary/wingpanel-indicator-keyboard/archive/refs/tags/2.4.0.tar.gz</Archive>
@@ -3857,7 +3857,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv2.1</License>
-            <PartOf>desktop</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Network Indicator</Summary>
             <Description xml:lang="en">Wingpanel Network Indicator</Description>
             <Archive type="targz" sha1sum="277b0cde1ae7db702c1e65d0a61080cbbc1a80e9" name="2.3.0.tar.gz">https://github.com/elementary/wingpanel-indicator-network/archive/refs/tags/2.3.0.tar.gz</Archive>
@@ -3917,7 +3917,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv2</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">A Wingpanel indicator for Night Light</Summary>
             <Description xml:lang="en">A Wingpanel indicator for Night Light</Description>
             <Archive type="targz" sha1sum="27369fa59eb5b8bf03ce104b946d4b0fb197a5c5" name="2.1.0.tar.gz">https://github.com/elementary/wingpanel-indicator-nightlight/archive/refs/tags/2.1.0.tar.gz</Archive>
@@ -3973,7 +3973,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>LGPLv2.1</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Notifications Indicator</Summary>
             <Description xml:lang="en">Wingpanel Notifications Indicator</Description>
             <Archive type="targz" sha1sum="0daff7c298be089e3502390b5268c31ed5e8be85" name="6.0.0.tar.gz">https://github.com/elementary/wingpanel-indicator-notifications/archive/6.0.0.tar.gz</Archive>
@@ -4036,7 +4036,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Power Indicator</Summary>
             <Description xml:lang="en">Wingpanel Power Indicator</Description>
             <Archive type="targz" sha1sum="df6fe3857b6a464d0b2dfaed97c4372d36a1d80c" name="6.0.0.tar.gz">https://github.com/elementary/wingpanel-indicator-power/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -4098,7 +4098,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Session Indicator</Summary>
             <Description xml:lang="en">Wingpanel Session Indicator</Description>
             <Archive type="targz" sha1sum="2c9f52e1808122a52d3e4dfb0a75372c44578469" name="2.3.0.tar.gz">https://github.com/elementary/wingpanel-indicator-session/archive/2.3.0.tar.gz</Archive>
@@ -4161,7 +4161,7 @@ behalf of its clients.</Summary>
                 <Email>berk2238@hotmail.com</Email>
             </Packager>
             <License>GPLv3</License>
-            <PartOf>desktop.pantheon.app</PartOf>
+            <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Wingpanel Sound Indicator</Summary>
             <Description xml:lang="en">Wingpanel Sound Indicator</Description>
             <Archive type="targz" sha1sum="d59104d7eee0942b99a7432cc8b78104c246a8f9" name="6.0.0.tar.gz">https://github.com/elementary/wingpanel-indicator-sound/archive/refs/tags/6.0.0.tar.gz</Archive>
@@ -5150,4 +5150,88 @@ behalf of its clients.</Summary>
             </Update>
         </History>
     </SpecFile>
+    <Component>
+        <Name>desktop.pantheon</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.pantheon.apps</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop.apps</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.pantheon.base</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop.base</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Component>
+        <Name>desktop.pantheon.lookandfeel</Name>
+        <LocalName xml:lang="en">FIXME</LocalName>
+        <Summary xml:lang="en">FIXME</Summary>
+        <Description xml:lang="en">FIXME</Description>
+        <Group>pantheon.desktop.lookandfeel</Group>
+        <Maintainer>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Maintainer>
+    </Component>
+    <Group>
+        <Name>pantheon.desktop</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
+    <Group>
+        <Name>pantheon.desktop.apps</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
+    <Group>
+        <Name>pantheon.desktop.base</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
+    <Group>
+        <Name>pantheon.desktop.lookandfeel</Name>
+        <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+        <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+        <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+        <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+        <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+        <Icon>Pantheon-desktop</Icon>
+    </Group>
 </PISI>

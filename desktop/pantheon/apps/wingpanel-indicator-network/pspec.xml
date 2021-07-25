@@ -9,7 +9,6 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>LGPLv2.1</License>
-        <PartOf>desktop</PartOf>
         <Summary>Wingpanel Network Indicator</Summary>
         <Description>Wingpanel Network Indicator</Description>
         <BuildDependencies>

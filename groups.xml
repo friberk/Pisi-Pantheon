@@ -1,0 +1,45 @@
+<PISI>
+    <Groups>
+        <Group>
+            <Name>pantheon.desktop</Name>
+            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+        </Group>
+        <Group>
+            <Name>pantheon.desktop.apps</Name>
+            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+        </Group>
+        <Group>
+            <Name>pantheon.desktop.base</Name>
+            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+        </Group>
+        <Group>
+            <Name>pantheon.desktop.lookandfeel</Name>
+            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
+            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
+            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
+            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+        </Group>
+    </Groups>
+</PISI>
+  

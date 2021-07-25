@@ -1,123 +1,48 @@
 <PISI>
-    <Component>
-        <Name>desktop.gnome</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>gnome.desktop</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.gnome.base</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>gnome.desktop</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.library</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>other</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.misc</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>other</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.pantheon</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>pantheon.desktop</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.pantheon.apps</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>pantheon.desktop</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.pantheon.base</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>pantheon.desktop</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>desktop.pantheon.lookandfeel</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>pantheon.desktop</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>programming</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>programming</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>programming.language</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>programming</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
-    <Component>
-        <Name>programming.language.python3</Name>
-        <LocalName xml:lang="en">FIXME</LocalName>
-        <Summary xml:lang="en">FIXME</Summary>
-        <Description xml:lang="en">FIXME</Description>
-        <Group>FIXME</Group>
-        <Maintainer>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Maintainer>
-    </Component>
+    <Components>
+        <Component>
+            <Name>desktop.pantheon</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>pantheon.desktop</Group>
+            <Maintainer>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.pantheon.apps</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>pantheon.desktop.apps</Group>
+            <Maintainer>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.pantheon.base</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>pantheon.desktop.base</Group>
+            <Maintainer>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Maintainer>
+        </Component>
+        <Component>
+            <Name>desktop.pantheon.lookandfeel</Name>
+            <LocalName xml:lang="en">FIXME</LocalName>
+            <Summary xml:lang="en">FIXME</Summary>
+            <Description xml:lang="en">FIXME</Description>
+            <Group>pantheon.desktop.lookandfeel</Group>
+            <Maintainer>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Maintainer>
+        </Component>
+    </Components>
 </PISI>
