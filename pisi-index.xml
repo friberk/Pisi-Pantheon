@@ -933,12 +933,14 @@ behalf of its clients.</Summary>
                 <Dependency>json-glib-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
                 <Dependency>xdg-utils</Dependency>
                 <Dependency>meson</Dependency>
                 <Dependency>vala-devel</Dependency>
             </BuildDependencies>
             <Patches>
                 <Patch level="1">0001-Adapt-to-eOS-6-settings-schema.patch</Patch>
+                <Patch level="1">0002-Added-eOS-6-dark-mode-support.patch</Patch>
             </Patches>
             <SourceURI>desktop/pantheon/apps/desktopfolder/pspec.xml</SourceURI>
         </Source>
@@ -955,6 +957,7 @@ behalf of its clients.</Summary>
                 <Dependency>json-glib</Dependency>
                 <Dependency>libgee</Dependency>
                 <Dependency>libwnck3</Dependency>
+                <Dependency>granite</Dependency>
                 <Dependency>xdg-utils</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -969,6 +972,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-25</Date>
+                <Version>1.1.3</Version>
+                <Comment>Added dark mode support</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-23</Date>
                 <Version>1.1.3</Version>
@@ -1512,13 +1522,12 @@ behalf of its clients.</Summary>
             <PartOf>desktop.pantheon.apps</PartOf>
             <Summary xml:lang="en">Mail app designed for Pantheon DE</Summary>
             <Description xml:lang="en">Mail app designed for Pantheon DE</Description>
-            <Archive type="zip" sha1sum="84473021bab04aa30bf2d50a94257d5c8a9f7c5c" name="6.0.0.zip">https://github.com/elementary/mail/archive/refs/tags/6.0.0.zip</Archive>
+            <Archive type="targz" sha1sum="2b51c60f4e05b1a3273249f373fefbf3a2e06d3c" name="6.0.0.tar.gz">https://github.com/elementary/mail/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>evolution-data-server-devel</Dependency>
-                <Dependency>evolution-devel</Dependency>
                 <Dependency>folks-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency>gobject-introspection</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
                 <Dependency>libgee-devel</Dependency>
                 <Dependency>libhandy-devel</Dependency>
                 <Dependency>meson</Dependency>
@@ -1555,6 +1564,13 @@ behalf of its clients.</Summary>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-25</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -1845,6 +1861,63 @@ behalf of its clients.</Summary>
             <Update release="1">
                 <Date>2021-04-17</Date>
                 <Version>1.7.1</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-sideload</Name>
+            <Homepage>https://github.com/elementary/sideload</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.apps</PartOf>
+            <Summary xml:lang="en">Sideload flatpaks on Pantheon DE</Summary>
+            <Description xml:lang="en">pantheon-sideload is a simple application that lets users install flatpaks on Pantheon DE without needing to use a command line application.</Description>
+            <Archive type="targz" sha1sum="22f2511a61eecbc3cc5a0bff11e1ad6d052001a7" name="6.0.0.tar.gz">https://github.com/elementary/sideload/archive/refs/tags/6.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>flatpak-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>vala-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/apps/pantheon-sideload/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-sideload</Name>
+            <Summary xml:lang="en">Sideload flatpaks on Pantheon DE</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgee</Dependency>
+                <Dependency>flatpak</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libhandy</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>6.0.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -4459,6 +4532,110 @@ behalf of its clients.</Summary>
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>pantheon-agent-geoclue2</Name>
+            <Homepage>https://github.com/elementary/pantheon-agent-geoclue2</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.base</PartOf>
+            <Summary xml:lang="en">Pantheon Geoclue2 Agent</Summary>
+            <Description xml:lang="en">Provides a dialog asking for the user&apos;s permission when an application requests access to location services.</Description>
+            <Archive type="targz" sha1sum="9676507511ef4aceb3a1f1879776e0c8e6fd2efa" name="1.0.5.tar.gz">https://github.com/elementary/pantheon-agent-geoclue2/archive/refs/tags/1.0.5.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>geoclue-devel</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>vala-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/base/pantheon-agent-geoclue2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-agent-geoclue2</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="executable">/usr/libexec</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>1.0.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-capnet-assist</Name>
+            <Homepage>https://github.com/elementary/capnet-assist</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.base</PartOf>
+            <Summary xml:lang="en">Captive Portal Assistant for Pantheon DE</Summary>
+            <Description xml:lang="en">Assists users in connective to Captive Portals such as those found on public access points in train stations, coffee shops, universities, etc.</Description>
+            <Archive type="targz" sha1sum="b4e17ab044ed81f2aa3664f24c39a4a4390eeb8f" name="2.3.0.tar.gz">https://github.com/elementary/capnet-assist/archive/refs/tags/2.3.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gcr-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>granite-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>libhandy-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/base/pantheon-capnet-assist/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-capnet-assist</Name>
+            <RuntimeDependencies>
+                <Dependency>gcr</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>granite</Dependency>
+                <Dependency>libhandy</Dependency>
+                <Dependency>webkit2gtk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/glib-2.0</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="info">/usr/share/metainfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>2.3.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>pantheon-default-settings</Name>
             <Homepage>https://github.com/elementary/default-settings</Homepage>
             <Packager>
@@ -4694,6 +4871,51 @@ behalf of its clients.</Summary>
             <Update release="1">
                 <Date>2021-04-10</Date>
                 <Version>1.0.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pantheon-print</Name>
+            <Homepage>https://github.com/elementary/print</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>desktop.pantheon.base</PartOf>
+            <Summary xml:lang="en">Simple shim for printing support via Contractor</Summary>
+            <Description xml:lang="en">Simple shim for printing support via Contractor</Description>
+            <Archive type="targz" sha1sum="f5ef48544d3a8e3815bde24d846dc2ddffba8fad" name="0.1.3.tar.gz">https://github.com/elementary/print/archive/refs/tags/0.1.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>vala-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/pantheon/base/pantheon-print/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pantheon-print</Name>
+            <Summary xml:lang="en">Simple shim for printing support via Contractor</Summary>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>contractor</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/contractor</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>0.1.3</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>

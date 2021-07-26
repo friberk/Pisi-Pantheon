@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pantheon-agent-geoclue2</Name>
+        <Homepage>https://github.com/elementary/pantheon-agent-geoclue2</Homepage>
+        <Packager>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Pantheon Geoclue2 Agent</Summary>
+        <Description>Provides a dialog asking for the user's permission when an application requests access to location services.</Description>
+        <Archive type="targz" sha1sum="9676507511ef4aceb3a1f1879776e0c8e6fd2efa">https://github.com/elementary/pantheon-agent-geoclue2/archive/refs/tags/1.0.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>geoclue-devel</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>vala-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pantheon-agent-geoclue2</Name>
+         <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/etc</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-07-25</Date>
+            <Version>1.0.5</Version>
+            <Comment>First release for Pisi Linux</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
+    </History>
+</PISI>
