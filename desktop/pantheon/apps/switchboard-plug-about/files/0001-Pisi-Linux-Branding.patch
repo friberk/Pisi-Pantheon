@@ -1,0 +1,98 @@
+From: Berk Çakar <berk2238@hotmail.com>
+Date: Mon, 26 Jul 2021 18:18:04 +0300
+Subject: [PATCH] Pisi Linux Branding
+
+---
+ src/Views/OperatingSystemView.vala | 42 ++++++++++++++++--------------
+ 1 file changed, 23 insertions(+), 19 deletions(-)
+
+diff --git a/src/Views/OperatingSystemView.vala b/src/Views/OperatingSystemView.vala
+index fdb92e7..2ffa981 100644
+--- a/src/Views/OperatingSystemView.vala
++++ b/src/Views/OperatingSystemView.vala
+@@ -31,13 +31,14 @@ public class About.OperatingSystemView : Gtk.Grid {
+ 
+         support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
+         if (support_url == "" || support_url == null) {
+-            support_url = "https://elementary.io/support";
++            support_url = "https://www.pisilinux.org/forum";
+         }
+ 
+-        var logo_icon_name = Environment.get_os_info ("LOGO");
+-        if (logo_icon_name == "" || logo_icon_name == null) {
+-            logo_icon_name = "distributor-logo";
+-        }
++        // In Pisi Linux, we do not have those yet.
++        // var logo_icon_name = Environment.get_os_info ("LOGO");
++        // if (logo_icon_name == "" || logo_icon_name == null) {
++        //     logo_icon_name = "distributor-logo";
++        // }
+ 
+         var logo = new Hdy.Avatar (128, "", false) {
+             // In case the wallpaper can't be loaded, we don't want an icon or text
+@@ -45,17 +46,22 @@ public class About.OperatingSystemView : Gtk.Grid {
+             // We need this for the shadow to not get clipped by Gtk.Overlay
+             margin = 6
+         };
+-        logo.set_image_load_func ((size) => {
+-            try {
+-                return new Gdk.Pixbuf.from_file_at_scale ("/usr/share/backgrounds/elementaryos-default", -1, size, true);
+-            } catch (Error e) {
+-                critical (e.message);
+-            }
+-        });
++        
++        // logo.set_image_load_func ((size) => {
++        //     try {
++        //         return new Gdk.Pixbuf.from_file_at_scale ("/usr/share/backgrounds/elementaryos-default", -1, size, true);
++        //     } catch (Error e) {
++        //         critical (e.message);
++        //     }
++        // });
++        
+         logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
++        Gdk.RGBA? color = Gdk.RGBA();
++        color.parse("#00838F");
++        logo.override_background_color(Gtk.StateFlags.NORMAL, color);
+ 
+         var icon = new Gtk.Image () {
+-            icon_name = logo_icon_name + "-symbolic",
++            file = "/usr/share/icons/milky/scalable/actions/pisi.svg",
+             // 128 minus 3px padding on each side
+             pixel_size = 128 - 6
+         };
+@@ -71,8 +75,10 @@ public class About.OperatingSystemView : Gtk.Grid {
+         // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
+         // want more granular control over text formatting
+         var pretty_name = "<b>%s</b> %s".printf (
+-            Environment.get_os_info (GLib.OsInfoKey.NAME),
+-            Environment.get_os_info (GLib.OsInfoKey.VERSION)
++            // Environment.get_os_info (GLib.OsInfoKey.NAME),
++            // Environment.get_os_info (GLib.OsInfoKey.VERSION)
++            "Pisi GNU/Linux",
++            "2.2 Crocus Ancyrensis"
+         );
+ 
+         var title = new Gtk.Label (pretty_name) {
+@@ -90,9 +96,7 @@ public class About.OperatingSystemView : Gtk.Grid {
+         };
+ 
+         var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
+-        if (website_url == "" || website_url == null) {
+-            website_url = "https://elementary.io";
+-        }
++        website_url = "https://www.pisilinux.org";
+ 
+         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website")) {
+             margin_top = 12
+@@ -106,7 +110,7 @@ public class About.OperatingSystemView : Gtk.Grid {
+         };
+ 
+         var translate_button = new Gtk.LinkButton.with_label (
+-            "https://l10n.elementary.io/projects/",
++            "https://l10n.elementary.io/projects",
+             _("Suggest Translations")
+         ) {
+             margin_top = 12
+-- 
+2.24.3 (Apple Git-128)

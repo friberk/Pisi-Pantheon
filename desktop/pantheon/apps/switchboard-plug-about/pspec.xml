@@ -23,6 +23,9 @@
             <Dependency>vala-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="845731afee405dabbdac39eaddf0425e26fcc5df" type="targz">https://github.com/elementary/switchboard-plug-about/archive/refs/tags/6.0.0.tar.gz</Archive>
+        <Patches>
+            <Patch level="1">0001-Pisi-Linux-Branding.patch</Patch>
+        </Patches>
     </Source>
     
     <Package>
@@ -37,8 +40,8 @@
             <Dependency>granite</Dependency>
             <Dependency>libhandy</Dependency>
             <Dependency>appstream</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
             <Dependency>switchboard</Dependency>
+            <Dependency>icon-theme-milky</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -49,6 +52,13 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2021-07-25</Date>
+            <Version>6.0.0</Version>
+            <Comment>Added Pisi Linux branding</Comment>
+            <Name>Berk Çakar</Name>
+            <Email>berk2238@hotmail.com</Email>
+        </Update>
         <Update release="2">
             <Date>2021-07-17</Date>
             <Version>6.0.0</Version>
