@@ -7,9 +7,10 @@
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
-from pisi.actionsapi import get
 
 def setup():
+    shelltools.system("mv 'backgrounds/Pisi-Crocus-Ancyrensis-(C)Mustafa-Orhon.jpg' 'backgrounds/Mustafa Orhon.jpg'")
+
     mesontools.configure()
 
 def build():
@@ -18,5 +19,5 @@ def build():
 def install():
     mesontools.install()
 
-    pisitools.dosym("/usr/share/backgrounds/odin.jpg", "/usr/share/backgrounds/elementaryos-default")
+    pisitools.dosym("/usr/share/backgrounds/Mustafa Orhon.jpg", "/usr/share/backgrounds/elementaryos-default")
     pisitools.dodoc("README.md", "LICENSE.md")
