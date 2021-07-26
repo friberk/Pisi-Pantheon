@@ -41,7 +41,7 @@
         <Name>desktopfolder</Name>
         <Summary xml:lang="en">Bring your Pantheon desktop back to life.</Summary>
         <Description xml:lang="en">Organize your Pantheon desktop with panels that hold your things.</Description>
-        <PartOf>desktop.pantheon.app</PartOf>
+        <PartOf>desktop.pantheon.apps</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
@@ -53,9 +53,17 @@
             <Dependency>json-glib</Dependency>
             <Dependency>libgee</Dependency>
             <Dependency>libwnck3</Dependency>
+            <Dependency>granite</Dependency>
             <Dependency>xdg-utils</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-25</Date>
+                <Version>1.1.3</Version>
+                <Comment>Added dark mode support</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-23</Date>
                 <Version>1.1.3</Version>
@@ -75,11 +83,11 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>1158204</InstalledSize>
-        <PackageSize>528317</PackageSize>
-        <PackageHash>f736fc751096fa884301ae556ffdd2c8cb260b8d</PackageHash>
-        <InstallTarHash>afc513984bf16ef17876f14aa0ff648a7cc7028c</InstallTarHash>
-        <PackageURI>d/desktopfolder/desktopfolder-1.1.3-2-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>1158166</InstalledSize>
+        <PackageSize>529163</PackageSize>
+        <PackageHash>88df2cbd6ae70bb99e3b053aa33a76438d681ae6</PackageHash>
+        <InstallTarHash>34a6a73a213c4a68dd7b2ff716d5b04bd229f169</InstallTarHash>
+        <PackageURI>d/desktopfolder/desktopfolder-1.1.3-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>desktopfolder</Name>
@@ -1008,6 +1016,44 @@
         </Source>
     </Package>
     <Package>
+        <Name>pantheon-agent-geoclue2</Name>
+        <Summary xml:lang="en">Pantheon Geoclue2 Agent</Summary>
+        <Description xml:lang="en">Provides a dialog asking for the user&apos;s permission when an application requests access to location services.</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>1.0.5</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>236817</InstalledSize>
+        <PackageSize>50054</PackageSize>
+        <PackageHash>60f86c285e1816f0e0657c6e538d9175978a9b97</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-agent-geoclue2/pantheon-agent-geoclue2-1.0.5-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-agent-geoclue2</Name>
+            <Homepage>https://github.com/elementary/pantheon-agent-geoclue2</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>pantheon-camera</Name>
         <Summary xml:lang="en">Camera app designed for Pantheon DE</Summary>
         <Description xml:lang="en">Camera app designed for Pantheon DE</Description>
@@ -1045,6 +1091,47 @@
         <Source>
             <Name>pantheon-camera</Name>
             <Homepage>https://github.com/elementary/camera</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-print</Name>
+        <Summary xml:lang="en">Simple shim for printing support via Contractor</Summary>
+        <Description xml:lang="en">Simple shim for printing support via Contractor</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>contractor</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>0.1.3</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>23331</InstalledSize>
+        <PackageSize>6330</PackageSize>
+        <PackageHash>7e676c255843cc2f0cbd0b431623b4e281731a8b</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-print/pantheon-print-0.1.3-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-print</Name>
+            <Homepage>https://github.com/elementary/print</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -1389,7 +1476,7 @@
         <Name>pantheon-mail</Name>
         <Summary xml:lang="en">Mail app designed for Pantheon DE</Summary>
         <Description xml:lang="en">Mail app designed for Pantheon DE</Description>
-        <PartOf>desktop.pantheon.app</PartOf>
+        <PartOf>desktop.pantheon.apps</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
             <Dependency>evolution-data-server</Dependency>
@@ -1404,6 +1491,13 @@
             <Dependency>libsoup</Dependency>
         </RuntimeDependencies>
         <History>
+            <Update release="3">
+                <Date>2021-07-25</Date>
+                <Version>6.0.0</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-15</Date>
                 <Version>6.0.0</Version>
@@ -1424,10 +1518,10 @@
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
         <InstalledSize>1019136</InstalledSize>
-        <PackageSize>213217</PackageSize>
-        <PackageHash>7c2a0ac671b41803dfc779708bf79b46046ffabc</PackageHash>
-        <InstallTarHash>8afe4ea29686c0ff7313fa94b6f8f7cb05b74f22</InstallTarHash>
-        <PackageURI>p/pantheon-mail/pantheon-mail-6.0.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageSize>213224</PackageSize>
+        <PackageHash>4e1c15c555205ffd147865c0fbb7b736aba33e67</PackageHash>
+        <InstallTarHash>af3a4a12f03f36c2da188017d0904e51cf2b1ff7</InstallTarHash>
+        <PackageURI>p/pantheon-mail/pantheon-mail-6.0.0-3-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
             <Name>pantheon-mail</Name>
@@ -1598,6 +1692,48 @@
         <Source>
             <Name>pantheon-polkit</Name>
             <Homepage>https://github.com/elementary/pantheon-agent-polkit</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pantheon-capnet-assist</Name>
+        <Summary xml:lang="en">Captive Portal Assistant for Pantheon DE</Summary>
+        <Description xml:lang="en">Assists users in connective to Captive Portals such as those found on public access points in train stations, coffee shops, universities, etc.</Description>
+        <PartOf>desktop.pantheon.base</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gcr</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>libhandy</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2021-07-25</Date>
+                <Version>2.3.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>216910</InstalledSize>
+        <PackageSize>51139</PackageSize>
+        <PackageHash>f3cfbabf53a77694672f80929edd689e57e6ac81</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/pantheon-capnet-assist/pantheon-capnet-assist-2.3.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-capnet-assist</Name>
+            <Homepage>https://github.com/elementary/capnet-assist</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -1923,6 +2059,61 @@
         </Source>
     </Package>
     <Package>
+        <Name>pantheon-tweaks</Name>
+        <Summary xml:lang="en">A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop&apos;s appearance</Summary>
+        <Description xml:lang="en">pantheon-tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop&apos;s appearance</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="3">
+                <Date>2021-07-16</Date>
+                <Version>20210624</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2021-07-16</Date>
+                <Version>20210624</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>2.0.0</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>372134</InstalledSize>
+        <PackageSize>85933</PackageSize>
+        <PackageHash>9cbed9fcd745396e16af20c4012b7d0fc34c66e7</PackageHash>
+        <InstallTarHash>7c3a14392a8d0b2290fedf1f447cbb39abdc4698</InstallTarHash>
+        <PackageURI>p/pantheon-tweaks/pantheon-tweaks-20210624-3-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pantheon-tweaks</Name>
+            <Homepage>https://github.com/pantheon-tweaks/pantheon-tweaks</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>pantheon-files-devel</Name>
         <Summary xml:lang="en">Development files for pantheon-files</Summary>
         <Description xml:lang="en">File browser designed for Pantheon DE</Description>
@@ -2036,36 +2227,24 @@
         </Source>
     </Package>
     <Package>
-        <Name>pantheon-tweaks</Name>
-        <Summary xml:lang="en">A system settings panel for the Pantheon Desktop that lets you easily and safely customise your desktop&apos;s appearance</Summary>
-        <Description xml:lang="en">pantheon-tweaks is a system settings panel for Pantheon DE that lets you easily and safely customise your desktop&apos;s appearance</Description>
-        <PartOf>desktop.pantheon.app</PartOf>
+        <Name>pantheon-sideload</Name>
+        <Summary xml:lang="en">Sideload flatpaks on Pantheon DE</Summary>
+        <Description xml:lang="en">pantheon-sideload is a simple application that lets users install flatpaks on Pantheon DE without needing to use a command line application.</Description>
+        <PartOf>desktop.pantheon.apps</PartOf>
         <License>GPLv3</License>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libgee</Dependency>
+            <Dependency>flatpak</Dependency>
             <Dependency>granite</Dependency>
-            <Dependency>switchboard</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libhandy</Dependency>
         </RuntimeDependencies>
         <History>
-            <Update release="3">
-                <Date>2021-07-16</Date>
-                <Version>20210624</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2021-07-16</Date>
-                <Version>20210624</Version>
-                <Comment>Version bump</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
             <Update release="1">
-                <Date>2021-04-16</Date>
-                <Version>2.0.0</Version>
+                <Date>2021-07-25</Date>
+                <Version>6.0.0</Version>
                 <Comment>First release for Pisi Linux</Comment>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -2075,15 +2254,15 @@
         <Distribution>PisiLinux</Distribution>
         <DistributionRelease>2.0</DistributionRelease>
         <Architecture>x86_64</Architecture>
-        <InstalledSize>372134</InstalledSize>
-        <PackageSize>85933</PackageSize>
-        <PackageHash>9cbed9fcd745396e16af20c4012b7d0fc34c66e7</PackageHash>
-        <InstallTarHash>7c3a14392a8d0b2290fedf1f447cbb39abdc4698</InstallTarHash>
-        <PackageURI>p/pantheon-tweaks/pantheon-tweaks-20210624-3-p2-x86_64.pisi</PackageURI>
+        <InstalledSize>377074</InstalledSize>
+        <PackageSize>85600</PackageSize>
+        <PackageHash>8af961241b0b5090f2cda164f4bdc7369b1ddf20</PackageHash>
+        <InstallTarHash>eda264f565a0c691435317987f92dbedd39797c5</InstallTarHash>
+        <PackageURI>p/pantheon-sideload/pantheon-sideload-6.0.0-1-p2-x86_64.pisi</PackageURI>
         <PackageFormat>1.2</PackageFormat>
         <Source>
-            <Name>pantheon-tweaks</Name>
-            <Homepage>https://github.com/pantheon-tweaks/pantheon-tweaks</Homepage>
+            <Name>pantheon-sideload</Name>
+            <Homepage>https://github.com/elementary/sideload</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
@@ -2535,54 +2714,6 @@
         </Source>
     </Package>
     <Package>
-        <Name>switchboard-plug-power</Name>
-        <Summary xml:lang="en">Switchboard Power Plug</Summary>
-        <Description xml:lang="en">Switchboard Power Plug</Description>
-        <PartOf>desktop.pantheon.app</PartOf>
-        <License>GPLv2</License>
-        <RuntimeDependencies>
-            <Dependency>gtk3</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgee</Dependency>
-            <Dependency>polkit</Dependency>
-            <Dependency>switchboard</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2021-07-17</Date>
-                <Version>2.5.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2021-04-10</Date>
-                <Version>2.4.2</Version>
-                <Comment>First release for Pisi Linux</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>354522</InstalledSize>
-        <PackageSize>73065</PackageSize>
-        <PackageHash>fd4c623ed44bd53ba87ec97149643dc37f641654</PackageHash>
-        <InstallTarHash>5ba0b431483fb0d2787961681ce3209047dad02b</InstallTarHash>
-        <PackageURI>s/switchboard-plug-power/switchboard-plug-power-2.5.0-2-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>switchboard-plug-power</Name>
-            <Homepage>https://github.com/elementary/switchboard-plug-power</Homepage>
-            <Packager>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
         <Name>switchboard-plug-display</Name>
         <Summary xml:lang="en">Switchboard Displays Plug</Summary>
         <Description xml:lang="en">Switchboard Displays Plug</Description>
@@ -2828,6 +2959,54 @@
         </Source>
     </Package>
     <Package>
+        <Name>switchboard-plug-sharing</Name>
+        <Summary xml:lang="en">Switchboard Sharing Plug</Summary>
+        <Description xml:lang="en">Switchboard Sharing Plug</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv3</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.1.5</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-16</Date>
+                <Version>2.1.4</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>304273</InstalledSize>
+        <PackageSize>67105</PackageSize>
+        <PackageHash>4bfc31d4305e97157e6c4cf8f224a31f85bbcf17</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>s/switchboard-plug-sharing/switchboard-plug-sharing-2.1.5-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>switchboard-plug-sharing</Name>
+            <Homepage>https://github.com/elementary/switchboard-plug-sharing</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>switchboard</Name>
         <Summary xml:lang="en">Extensible System Settings app designed for Pantheon DE</Summary>
         <Description xml:lang="en">Switchboard is just the container application for Switchboard Plugs, which provide the actual settings for various hardware and software.</Description>
@@ -3046,6 +3225,54 @@
         </Source>
     </Package>
     <Package>
+        <Name>switchboard-plug-power</Name>
+        <Summary xml:lang="en">Switchboard Power Plug</Summary>
+        <Description xml:lang="en">Switchboard Power Plug</Description>
+        <PartOf>desktop.pantheon.app</PartOf>
+        <License>GPLv2</License>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>polkit</Dependency>
+            <Dependency>switchboard</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2021-07-17</Date>
+                <Version>2.5.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2021-04-10</Date>
+                <Version>2.4.2</Version>
+                <Comment>First release for Pisi Linux</Comment>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>354522</InstalledSize>
+        <PackageSize>73065</PackageSize>
+        <PackageHash>fd4c623ed44bd53ba87ec97149643dc37f641654</PackageHash>
+        <InstallTarHash>5ba0b431483fb0d2787961681ce3209047dad02b</InstallTarHash>
+        <PackageURI>s/switchboard-plug-power/switchboard-plug-power-2.5.0-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>switchboard-plug-power</Name>
+            <Homepage>https://github.com/elementary/switchboard-plug-power</Homepage>
+            <Packager>
+                <Name>Berk Çakar</Name>
+                <Email>berk2238@hotmail.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
         <Name>switchboard-plug-mouse-touchpad</Name>
         <Summary xml:lang="en">Switchboard Mouse Touchpad Plug</Summary>
         <Description xml:lang="en">Switchboard Mouse Touchpad Plug</Description>
@@ -3088,54 +3315,6 @@
         <Source>
             <Name>switchboard-plug-mouse-touchpad</Name>
             <Homepage>https://github.com/elementary/switchboard-plug-mouse-touchpad</Homepage>
-            <Packager>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>switchboard-plug-sharing</Name>
-        <Summary xml:lang="en">Switchboard Sharing Plug</Summary>
-        <Description xml:lang="en">Switchboard Sharing Plug</Description>
-        <PartOf>desktop.pantheon.app</PartOf>
-        <License>GPLv3</License>
-        <RuntimeDependencies>
-            <Dependency>gtk3</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgee</Dependency>
-            <Dependency>granite</Dependency>
-            <Dependency>switchboard</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2021-07-17</Date>
-                <Version>2.1.5</Version>
-                <Comment>Version bump</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2021-04-16</Date>
-                <Version>2.1.4</Version>
-                <Comment>First release for Pisi Linux</Comment>
-                <Name>Berk Çakar</Name>
-                <Email>berk2238@hotmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>304273</InstalledSize>
-        <PackageSize>67105</PackageSize>
-        <PackageHash>4bfc31d4305e97157e6c4cf8f224a31f85bbcf17</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>s/switchboard-plug-sharing/switchboard-plug-sharing-2.1.5-2-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>switchboard-plug-sharing</Name>
-            <Homepage>https://github.com/elementary/switchboard-plug-sharing</Homepage>
             <Packager>
                 <Name>Berk Çakar</Name>
                 <Email>berk2238@hotmail.com</Email>
