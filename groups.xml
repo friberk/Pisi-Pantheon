@@ -3,43 +3,42 @@
         <Group>
             <Name>pantheon.desktop</Name>
             <LocalName xml:lang="en">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
+            <LocalName xml:lang="nl">Pantheon-bureaublad</LocalName>
+            <LocalName xml:lang="sv">Pantheon-skrivbordet</LocalName>
             <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
-            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
+            <LocalName xml:lang="fr">Bureau du Pantheon</LocalName>
             <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
-            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+            <Icon>Elementary-desktop</Icon>
         </Group>
         <Group>
             <Name>pantheon.desktop.apps</Name>
-            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
-            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
-            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
-            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
-            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+            <LocalName xml:lang="en">Pantheon Desktop Applications</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop-applicaties</LocalName>
+            <LocalName xml:lang="sv">Pantheon Desktop-applikationer</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü Uygulamaları</LocalName>
+            <LocalName xml:lang="fr">Applications de bureau Panthéon</LocalName>
+            <LocalName xml:lang="es">Aplicaciones de escritorio Pantheon</LocalName>
+            <Icon>Elementary-desktop</Icon>
         </Group>
         <Group>
             <Name>pantheon.desktop.base</Name>
-            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
-            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
-            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
-            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
-            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+            <LocalName xml:lang="en">Pantheon Desktop Base</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop-basis</LocalName>
+            <LocalName xml:lang="sv">Pantheon Desktop Base</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü Tabanı</LocalName>
+            <LocalName xml:lang="fr">Base de bureau Panthéon</LocalName>
+            <LocalName xml:lang="es">Base de escritorio Pantheon</LocalName>
+            <Icon>Elementary-desktop</Icon>
         </Group>
         <Group>
             <Name>pantheon.desktop.lookandfeel</Name>
-            <LocalName xml:lang="en">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="nl">Pantheon Desktop</LocalName>
-            <LocalName xml:lang="sv">Skrivbord, Pantheon</LocalName>
-            <LocalName xml:lang="tr">Pantheon Masaüstü</LocalName>
-            <LocalName xml:lang="fr">Bureau Pantheon</LocalName>
-            <LocalName xml:lang="es">Escritorio Pantheon</LocalName>
-            <Icon>Pantheon-desktop</Icon> <!-- FIXME: Pantheon Desktop Icon -->
+            <LocalName xml:lang="en">Pantheon Desktop Look and Feel</LocalName>
+            <LocalName xml:lang="nl">Pantheon Desktop-look en feel</LocalName>
+            <LocalName xml:lang="sv">Pantheon Desktop Utseende</LocalName>
+            <LocalName xml:lang="tr">Pantheon Masaüstü Görünüm ve Hissiyat</LocalName>
+            <LocalName xml:lang="fr">Aspect et convivialité du bureau Pantheon</LocalName>
+            <LocalName xml:lang="es">Apariencia de escritorio Pantheon</LocalName>
+            <Icon>Elementary-desktop</Icon>
         </Group>
     </Groups>
 </PISI>
-  
