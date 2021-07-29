@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>switchboard-plug-wacom</Name>
@@ -7,10 +9,8 @@
             <Email>berk2238@hotmail.com</Email>
         </Packager>
         <License>GPLv3</License>
-        <Summary>Manage drawing tablets and Wacom devices
-
-</Summary>
-        <Description>Manage drawing tablets and Wacom devices</Description>
+        <Summary>Manage drawing tablets and Wacom devices</Summary>
+        <Description>This is a plug for switchboard to configure settings for Wacom tablets.</Description>
         <BuildDependencies>
             <Dependency>granite-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
@@ -19,33 +19,37 @@
             <Dependency>libwacom-devel</Dependency>
             <Dependency>meson</Dependency>
             <Dependency>switchboard-devel</Dependency>
-            <Dependency>vala</Dependency>
+            <Dependency>vala-devel</Dependency>
         </BuildDependencies>
-        <Archive type="zip" sha1sum="0f2eb375064faec3c42bb9fbd33a5dba82fe86e9">https://github.com/elementary/switchboard-plug-wacom/archive/refs/heads/master.zip</Archive>
+        <Archive type="targz" sha1sum="d9da91ff09d0854819add36019dd0e2ab11dcead">https://github.com/elementary/switchboard-plug-wacom/archive/refs/tags/1.0.0.tar.gz</Archive>
     </Source>
+    
     <Package>
         <Name>switchboard-plug-wacom</Name>
-        <Summary>Manage drawing tablets and Wacom devices
-
-</Summary>
+        <Summary>Manage drawing tablets and Wacom devices</Summary>
         <RuntimeDependencies>
-            <Dependency>granite</Dependency>
-            <Dependency>libX11</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libXi</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgee</Dependency>
+            <Dependency>granite</Dependency>
             <Dependency>libgudev</Dependency>
             <Dependency>libwacom</Dependency>
             <Dependency>switchboard</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/*</Path>
-            <Path fileType="doc">/usr/share/doc/*</Path>
-            <Path fileType="localedata">/usr/share/locale/*</Path>
-            <Path fileType="info">/usr/share/metainfo/*</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
         </Files>
     </Package>
+    
     <History>
         <Update release="1">
-            <Date>2021-04-16</Date>
+            <Date>2021-07-28</Date>
             <Version>1.0.0</Version>
             <Comment>First release for Pisi Linux</Comment>
             <Name>Berk Çakar</Name>

@@ -1,20 +1,30 @@
 From: Berk Çakar <berk2238@hotmail.com>
-Date: Mon, 26 Jul 2021 21:26:32 +0300
+Date: Thu, 29 Jul 2021 23:08:27 +0300
 Subject: [PATCH] Redirect issues to Pisi Linux repos
 
 ---
- src/MainWindow.vala | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
+ src/MainWindow.vala | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
 
 diff --git a/src/MainWindow.vala b/src/MainWindow.vala
-index 0e78521..a70ff16 100644
+index 11dc9c8..78f63f1 100644
 --- a/src/MainWindow.vala
 +++ b/src/MainWindow.vala
-@@ -284,23 +284,23 @@ public class Feedback.MainWindow : Gtk.ApplicationWindow {
+@@ -284,39 +284,39 @@ public class Feedback.MainWindow : Gtk.ApplicationWindow {
      static SystemEntry[] system_entries = {
          SystemEntry () {
              name = _("Applications Menu"),
 -            issues_url = "https://github.com/elementary/applications-menu/issues/new/choose"
++            issues_url = "https://github.com/pisilinux/main/issues/new/choose"
+         },
+         SystemEntry () {
+             name = _("Captive Network Assistant"),
+-            issues_url = "https://github.com/elementary/capnet-assist/issues/new/choose"
++            issues_url = "https://github.com/pisilinux/main/issues/new/choose"
+         },
+         SystemEntry () {
+             name = _("Dock"),
+-            issues_url = "https://github.com/elementary/dock/issues/new/choose"
 +            issues_url = "https://github.com/pisilinux/main/issues/new/choose"
          },
          SystemEntry () {
@@ -36,8 +46,18 @@ index 0e78521..a70ff16 100644
              name = _("Notifications"),
 -            issues_url = "https://github.com/elementary/notifications/issues/new/choose"
 +            issues_url = "https://github.com/pisilinux/main/issues/new/choose"
+         },
+         SystemEntry () {
+             name = _("Welcome & Onboarding"),
+-            issues_url = "https://github.com/elementary/onboarding/issues/new/choose"
++            issues_url = "https://github.com/pisilinux/main/issues/new/choose"
+         },
+         SystemEntry () {
+             name = _("Panel"),
+-            issues_url = "https://github.com/elementary/wingpanel/issues/new/choose"
++            issues_url = "https://github.com/pisilinux/main/issues/new/choose"
          }
      };
- 
--- 
+
+--
 2.24.3 (Apple Git-128)

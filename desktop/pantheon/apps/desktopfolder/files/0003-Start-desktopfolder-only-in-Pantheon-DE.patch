@@ -1,0 +1,34 @@
+From: Berk Cakar <berk2238@hotmail.com>
+Date: Tue, 27 Jul 2021 15:54:16 +0300
+Subject: [PATCH] Start desktopfolder only in Pantheon DE
+
+---
+ src/Application.vala | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+
+diff --git a/src/Application.vala b/src/Application.vala
+index 897436c..7aac8d7 100644
+--- a/src/Application.vala
++++ b/src/Application.vala
+@@ -92,11 +92,14 @@ public class DesktopFolderApp : Gtk.Application {
+             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+         });
+ 
+-        base.activate ();
+-        debug ("activate event");
+-        this.hold ();
+-        // we'll init the app in the activate event
+-        init ();
++        // Start the application only in Pantheon DE.
++        if (Environment.get_variable ("DESKTOP_SESSION") == "pantheon") {
++            base.activate ();
++            debug ("activate event");
++            this.hold ();
++            // we'll init the app in the activate event
++            init ();
++        }
+     }
+ 
+     /**
+-- 
+2.24.3 (Apple Git-128)
